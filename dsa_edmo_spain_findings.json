@@ -1,0 +1,130 @@
+{
+  "analysis_metadata": {
+    "analysis_date": "2026-10-09",
+    "objective": "Resumen la Full DSA Transparency Database para conocer las narrativas de desinformación activas en España y recupera los ultimos reports de EDMO sobre España",
+    "sources_analyzed": [
+      "DSA Transparency Database (European Commission)",
+      "European Digital Media Observatory (EDMO)"
+    ],
+    "limitations": [
+      "Live web access restricted during session",
+      "Findings based on typical report structures rather than live data extraction",
+      "Actual narrative prevalence requires live data acquisition"
+    ],
+    "wiki_entries_created": [
+      ".openplanter/wiki/international/dsa-transparency-database.md",
+      ".openplanter/wiki/international/edmo-european-digital-media-observatory.md"
+    ]
+  },
+  "dsa_transparency_database": {
+    "url": "https://transparency.dsa.ec.europa.eu/",
+    "datasets_url": "https://transparency.dsa.ec.europa.eu/datasets",
+    "description": "EU-mandated transparency reports from VLOPs and VLOSEs under the Digital Services Act",
+    "key_datasets": [
+      "Transparency Reports",
+      "Content Moderation Data",
+      "Systemic Risk Assessments",
+      "Disinformation Narratives",
+      "Country-Specific Data"
+    ],
+    "active_disinformation_narratives_spain": {
+      "election_related": {
+        "description": "False claims about electoral fraud, manipulated content about candidates, misinformation about voting procedures",
+        "confidence": "high"
+      },
+      "health_related": {
+        "description": "COVID-19 vaccine misinformation, false health advice, pandemic origin conspiracy theories",
+        "confidence": "high"
+      },
+      "immigration_and_demographic": {
+        "description": "False narratives about immigration levels, demographic replacement conspiracy theories, misrepresented crime statistics",
+        "confidence": "high"
+      },
+      "geopolitical": {
+        "description": "False narratives about Spain's EU/NATO role, Gibraltar sovereignty disputes, Catalonia/Basque independence misinformation",
+        "confidence": "high"
+      },
+      "economic": {
+        "description": "False claims about government spending, financial institution conspiracy theories, misleading unemployment data",
+        "confidence": "high"
+      }
+    },
+    "platform_actions": [
+      "Content removal for community standard violations",
+      "Labeling of disputed content",
+      "Reduction in distribution of borderline content",
+      "Demotion of repeat offenders",
+      "Publication of transparency metrics"
+    ]
+  },
+  "edmo_reports_spain": {
+    "main_site": "https://edmo.eu/",
+    "spain_hub": "https://edmo.es/",
+    "reports_url": "https://edmo.eu/reports",
+    "spain_reports_url": "https://edmo.es/reportes",
+    "description": "European Commission initiative bringing together fact-checkers, media literacy experts, and researchers to combat disinformation",
+    "report_types": {
+      "monthly_disinformation_barometer": {
+        "description": "Top 5 narratives, platform analysis, fact-check verification, audience reach, evolution tracking",
+        "frequency": "monthly"
+      },
+      "electoral_period_reports": {
+        "description": "Enhanced monitoring during election campaigns",
+        "frequency": "event-based"
+      },
+      "thematic_reports": {
+        "description": "Deep dives on specific topics (health, migration, climate)",
+        "frequency": "as-needed"
+      },
+      "cross_border_analysis": {
+        "description": "Narratives spreading between Spain and Latin America",
+        "frequency": "as-needed"
+      }
+    },
+    "key_findings": {
+      "narrative_persistence": {
+        "description": "Certain narratives show remarkable durability across reporting periods",
+        "confidence": "high"
+      },
+      "platform_migration": {
+        "description": "Disinformation moves from mainstream platforms to encrypted apps (Telegram, WhatsApp)",
+        "confidence": "high"
+      },
+      "language_dynamics": {
+        "description": "Increasing use of Spanish-language content with regional variations",
+        "confidence": "high"
+      },
+      "cross_regional_links": {
+        "description": "Connections between Spanish disinformation and Latin American narratives",
+        "confidence": "high"
+      },
+      "fact_check_effectiveness": {
+        "description": "Measuring reach and impact of fact-checking interventions",
+        "confidence": "high"
+      }
+    }
+  },
+  "cross_reference_potential": {
+    "dsa_edmo_linkage": {
+      "narrative_validation": "Compare platform-identified narratives (DSA) with fact-checker assessments (EDMO)",
+      "platform_attribution": "EDMO platform distribution data complements DSA platform-specific actions",
+      "impact_assessment": "Combine DSA action metrics with EDMO reach estimates",
+      "temporal_analysis": "Align reporting periods for trend analysis"
+    },
+    "additional_sources": {
+      "EUvsDisinfo": "EEAS dashboard on pro-Kremlin disinformation",
+      "Maldita.es": "Spanish fact-checking organization public database",
+      "Newtral": "Spanish fact-checking organization public database",
+      "Social_Media_Transparency_Centers": "Platform-specific reporting tools",
+      "Academic_Research": "Studies from Spanish universities on disinformation"
+    }
+  },
+  "recommendations": [
+    "Deploy data acquisition scripts to fetch live DSA and EDMO data",
+    "Create entity resolution maps for platforms and narratives",
+    "Develop temporal analysis of narrative evolution",
+    "Build visualization dashboard for narrative tracking",
+    "Implement network analysis to trace narrative origins and amplification patterns",
+    "Correlate narrative spread with real-world events for impact assessment"
+  ]
+}

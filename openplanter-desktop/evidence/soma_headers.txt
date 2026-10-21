@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 14 Sep 2026 11:13:15 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Link: <https://www.disinfobservatory.org/wp-json/>; rel="https://api.w.org/", <https://www.disinfobservatory.org/wp-json/wp/v2/pages/26097>; rel="alternate"; type="application/json", <https://www.disinfobservatory.org/>; rel=shortlink
+Vary: Accept-Encoding
+X-Cache-Status: STALE
+

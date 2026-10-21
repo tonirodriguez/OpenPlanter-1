@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Date: Mon, 14 Sep 2026 11:04:52 GMT
+Server: Apache
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 20
+X-RateLimit-Remaining: 19
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' unpkg.com cdnjs.cloudflare.com code.jquery.com  *.cloudfront.net  https://webtools.europa.eu *.europa.eu *.webanalytics.europa.eu https://cdnjs.cloudflare.com https://europa.eu *.cloudfront.net https://unpkg.com; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com code.jquery.com https://webtools.europa.eu *.europa.eu *.cloudfront.net; img-src 'self' https://webtools.europa.eu *.webanalytics.europa.eu https://dsa-images-disk.s3.eu-central-1.amazonaws.com *.europa.eu *.cloudfront.net data:; connect-src 'self' *.cloudfront.net *.eu-central-1.elb.amazonaws.com *.europa.eu https://webtools.europa.eu *.webanalytics.europa.eu; frame-src 'self' https://app.powerbi.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: Strict-Transport-Security: max-age=31536000; includeSubDomains
+Set-Cookie: XSRF-TOKEN=eyJpdiI6IkhXbUM5Z2xtTzg3WFRJeG5ld1kxV3c9PSIsInZhbHVlIjoiZURuUFlhRnRodnRhK3BURXdNWHlaUDBYam0rdHZUaEZrVTV0RjVGZG9EaWJVWHFadVBsMmdIcGpCUzlsRzFsZEZvQXlUcVNMdUE0cGlhOTRYajlhTDlzYjQ4RTZzV21KVTllM1F6MG9pYVJFMUtzelAyRmp3Yk1TUFQvdEFDb2IiLCJtYWMiOiI4ZjdkN2RjY2QyMjYxNTg0YTI3OTY5ZGI3YTgxYWM2ZDk5MTY3NWYzOTdjNDAxYTk1ZTk3Njg4ZTQ1NDdhNzcyIiwidGFnIjoiIn0%3D; expires=Mon, 14 Sep 2026 13:04:52 GMT; Max-Age=7200; path=/; secure; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6ImNvNGs3ZGhHOUNoVjZOeHU1a0pVUmc9PSIsInZhbHVlIjoiekVpdTJvOUozSlVtRU1TNDYxQUwwR2ViQ1dRR3RvN28vVkk5RGZZUkM0Zm9NQ2gwRCtoVDcrMFhFUjdUclVEc2JnWXZtd1hJR2picGZYM0Mwb2RCS3A2dzBhR0ljZmVUNDBNMEdQQ1VRc2l1SjNKZGZjSGdETzhicWE5TzQwNnkiLCJtYWMiOiIwYzczODRjMjY1ZTYxNWFkYTQ3NjJlNWM3NTRlNmY0NmUwNjMyMjNiYjA4MjlhZThkNTIzYjZiMzI1YzFiNGE3IiwidGFnIjoiIn0%3D; expires=Mon, 14 Sep 2026 13:04:52 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=utf-8
+Sozu-Id: 01M2FSEQCASAM06T3YNXK92Z46
+

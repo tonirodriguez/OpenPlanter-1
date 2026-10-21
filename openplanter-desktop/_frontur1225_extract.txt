@@ -1,0 +1,13 @@
+Los principales países de residencia de los turistas que visitaron España durante el año 2025 fueron Reino Unido, Francia y Alemania.</p>
+1019 	</div>
+1020 </article>
+1021 	<article  class="parrafo  ">
+1022 			<div>
+1023 				<div class="sup"><p>Los principales países de residencia de los turistas que visitaron España durante el año 2025 fueron Reino Unido, Francia y Alemania.</p>
+1024 
+1025 <p>La llegada de turistas residentes en Reino Unido aumentó un 3,7%, la de los procedentes de Francia bajó un 1,0% y la de los que vinieron de Alemania se incrementó un 0,6%.</p>
+1026 </div>
+1027 				<div  class="contenido grafico  ">
+1028 			<span class="tit">Llegada de turistas internacionales según país de residencia. Año 2025</span>
+1029 			<div>
+1030 		<div class="sup"><p>Millones</p>

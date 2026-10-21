@@ -1,0 +1,116 @@
+{
+  "question": "Tenemos datos cuantitativos del turismo cultural en España y Barcelona?",
+  "generated_at_utc": "2026-09-15",
+  "methodology": {
+    "scope": "Only evidence files already present in the workspace (no live scraping in this step).",
+    "definition_note": "No single official 'cultural tourism' metric was found for Spain in the INE FRONTUR/EGATUR press-release captures. For Barcelona, OTB monthly profile PDFs contain an activity indicator 'Visites culturals' (multiple response). For Spain, we add cultural participation and cultural-system indicators (museums visits, public cultural spending) as quantitative context, clearly labeled as non-tourism.",
+    "parsing_notes": [
+      "OTB 'Visites culturals' extracted from PDF-to-text captures; each report contains three repeated 'Activitats realitzades al municipi' blocks for Barcelona Ciutat, Barcelona Regió, and Destinació Barcelona.",
+      "EHPC (Encuesta de Hábitos y Prácticas Culturales 2024-2025) metric extracted from evidence/02011.xlsx by parsing the underlying OOXML sheet1.xml (inlineStr headers + numeric cells).",
+      "Museum visitor totals and public cultural spending extracted from CulturaJaxiPx direct CSV_SC exports (evidence/T11P1010.csv_sc and evidence/T301001.csv_sc).",
+      "Eurostat COFOG GF08 (recreation, culture and religion) extracted from Eurostat dissemination JSON captures."
+    ]
+  },
+  "barcelona": {
+    "otb_activity_share_visites_culturals": [
+      {
+        "source": "Observatori del Turisme a Barcelona (OTB) — Informe mensual perfil Destinació (Abril 2026)",
+        "evidence_file": "evidence/otb_2604_informe_mensual_perfil_destinacio.pdf.txt",
+        "indicator": "Activitats realitzades al municipi (Resposta múltiple): Visites culturals",
+        "period": "Abril 2026",
+        "segments": [
+          {"segment": "Barcelona Ciutat", "value": "79,8%", "evidence_line": 82},
+          {"segment": "Barcelona Regió", "value": "50,2%", "evidence_line": 145},
+          {"segment": "Destinació Barcelona", "value": "63,0%", "evidence_line": 207}
+        ],
+        "confidence": "confirmed_in_local_capture"
+      },
+      {
+        "source": "Observatori del Turisme a Barcelona (OTB) — Informe mensual perfil Destinació (Maig 2026)",
+        "evidence_file": "evidence/otb_2605_informe_mensual_perfil_destinacio.pdf.txt",
+        "indicator": "Activitats realitzades al municipi (Resposta múltiple): Visites culturals",
+        "period": "Maig 2026",
+        "segments": [
+          {"segment": "Barcelona Ciutat", "value": "76,0%", "evidence_line": 75},
+          {"segment": "Barcelona Regió", "value": "47,1%", "evidence_line": 144},
+          {"segment": "Destinació Barcelona", "value": "59,3%", "evidence_line": 208}
+        ],
+        "confidence": "confirmed_in_local_capture"
+      }
+    ]
+  },
+  "spain": {
+    "no_cultural_tourism_segmentation_in_ine_press_release_captures": {
+      "status": "not_found_in_captures",
+      "evidence_files_checked": [
+        "evidence/ine_FRONTUR1225.html",
+        "evidence/ine_FRONTUR0726.html",
+        "evidence/ine_EGATUR1225.html",
+        "evidence/ine_EGATUR0726.html"
+      ],
+      "note": "This only indicates absence in these specific local captures, not absence in all official statistics.",
+      "confidence": "absence_in_these_captures"
+    },
+    "cultural_participation_context": [
+      {
+        "source": "Ministerio de Cultura (Spain) — Encuesta de Hábitos y Prácticas Culturales 2024-2025 (CulturaJaxiPx XLSX export)",
+        "evidence_file": "evidence/02011.xlsx",
+        "indicator": "Personas según la asistencia o visita… (TOTAL): han visitado en el último año",
+        "period": "2024-2025",
+        "unit": "En % del total de cada colectivo",
+        "values": [
+          {"activity": "Museos", "value": "40.6", "evidence_cells": ["B7", "B8", "B9", "B10"]},
+          {"activity": "Exposiciones", "value": "33.9", "evidence_cells": ["G7", "G8", "G9", "G10"]},
+          {"activity": "Galerías de arte", "value": "18.5", "evidence_cells": ["L7", "L8", "L9", "L10"]}
+        ],
+        "confidence": "confirmed_in_local_file"
+      }
+    ],
+    "cultural_system_context": [
+      {
+        "source": "Ministerio de Cultura (Spain) — Estadística de Museos y Colecciones Museográficas (CSV_SC export)",
+        "evidence_file": "evidence/T11P1010.csv_sc",
+        "indicator": "Visitantes estimados en Museos y Colecciones Museográficas (TOTAL)",
+        "period": "2024",
+        "unit": "Visitantes",
+        "value": "63.980.526",
+        "evidence_line": 8,
+        "confidence": "confirmed_in_local_file"
+      },
+      {
+        "source": "Ministerio de Cultura (Spain) — Estadística de financiación y gasto público en cultura (CSV_SC export)",
+        "evidence_file": "evidence/T301001.csv_sc",
+        "indicator": "Gasto liquidado en cultura — Administración General del Estado — TOTAL (en miles de euros)",
+        "period": "2024",
+        "unit": "miles de euros",
+        "value": "1.248.497",
+        "evidence_line": 9,
+        "confidence": "confirmed_in_local_file"
+      },
+      {
+        "source": "Eurostat — GOV_10A_EXP (COFOG GF08) dissemination JSON",
+        "evidence_file": "evidence/eurostat_gf08_pc_gdp_es_alltime.json",
+        "indicator": "General government expenditure: Recreation, culture and religion (GF08) — Percentage of GDP",
+        "period": "2024",
+        "unit": "PC_GDP",
+        "value": 1.2,
+        "confidence": "confirmed_in_local_file"
+      },
+      {
+        "source": "Eurostat — GOV_10A_EXP (COFOG GF08) dissemination JSON",
+        "evidence_file": "evidence/eurostat_gf08_pc_tot_es_2023.json",
+        "indicator": "General government expenditure: Recreation, culture and religion (GF08) — Percentage of total expenditure",
+        "period": "2023",
+        "unit": "PC_TOT",
+        "value": 2.7,
+        "confidence": "confirmed_in_local_file"
+      }
+    ]
+  },
+  "limitations": [
+    "Barcelona OTB indicator is an activity share from a survey/profile; it is not directly comparable to national tourist-arrivals totals.",
+    "Spain cultural participation metrics are about residents (survey) and are not tourism counts.",
+    "The XLSX extract (02011) is one specific table under EHPC 2024-2025 and does not cover monuments/archives in this extract; other tables exist (02004–02012 etc.) in the CulturaDynPx listing but were not downloaded here.",
+    "All metrics are bounded to the local evidence snapshots and may not reflect subsequent revisions."
+  ]
+}

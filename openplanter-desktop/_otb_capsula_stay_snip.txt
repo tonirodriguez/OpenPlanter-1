@@ -1,0 +1,23 @@
+  2254	2     Demanda turística                                                     Informe de l'activitat turística a Barcelona 2025
+  2255	      Demanda turística                                                 Informe de la actividad turística en Barcelona 2025
+  2256	      Tourism demand
+  2257	                                                                                       Barcelona tourism activity report 2025
+  2258	
+  2259	Estada mitjana en hotels                                                                 Barcelona ciutat / Barcelona ciudad / Barcelona city
+  2260	                                                                                      Barcelona regió / Barcelona región / Barcelona region
+  2261	Estancia media en hoteles                                               Destinació Barcelona / Destino Barcelona / Destination Barcelona
+  2262	
+  2263	Average length of stay in hotels
+  2264	
+  2265	 Nits                                                2024               2025                      Var. 25/24
+  2266	 Noches                                                                             (nits / noches / nights)
+  2267	 Nights                                                2,5                2,4
+  2268	Observatori del Turisme a Barcelona: ciutat i regió    2,7                2,7                              -0,1
+  2269	                                                       2,6                2,5                               0,0
+  2270	                                                                                                           -0,1
+  2271	
+  2272	Evolució de l'estada mitjana en hotels (nits)                                            Barcelona ciutat / Barcelona ciudad / Barcelona city
+  2273	Evolución de la estancia media en hoteles (noches)                                    Barcelona regió / Barcelona región / Barcelona region
+  2274	Average length of stay in hotels evolution (nights)                     Destinació Barcelona / Destino Barcelona / Destination Barcelona
+  2275	
+  2276	                                                                                                                 2,7

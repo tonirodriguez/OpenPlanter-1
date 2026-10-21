@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Descarga ficheros de la tabla Gasto liquidado en cultura por tipo de administración pública y naturaleza económica del gasto.</title>
+	<link rel="shortcut icon" href="/menus/img/favicon-new.ico" type="image/x-icon">
+<link href="/menus/img/favicon-new.png" rel="apple-touch-icon">
+<link href="/menus/img/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/menus/img/apple-touch-icon-60x60-precomposed.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/menus/img/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/menus/img/apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/menus/img/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/menus/img/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/menus/img/apple-touch-icon-160x160-precomposed.png" rel="apple-touch-icon" sizes="160x160">
+<link href="/menus/img/apple-touch-icon-180x180-precomposed.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/menus/img/favicon-192x192.png" rel="icon" sizes="192x192">
+<link href="/menus/img/favicon-160x160.png" rel="icon" sizes="160x160">
+<link href="/menus/img/favicon-128x128.png" rel="icon" sizes="128x128">
+<link href="/menus/img/favicon-96x96.png" rel="icon" sizes="96x96">
+<link href="/menus/img/favicon-32x32.png" rel="icon" sizes="32x32">
+<link href="/menus/img/favicon-16x16.png" rel="icon" sizes="16x16">
+<!-- Google Tag Manager 5-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W3JJ7K76');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:locale" content="es_ES">
+	<meta property="og:type" content="website">
+<meta property="og:site_name" content="INE">
+<meta property="og:image" content="https://www.ine.es/menus/_b/img/logoINESocial.png">
+<meta property="og:image:secure_url" content="https://www.ine.es/menus/_b/img/logoINESocial.png">
+<meta property="og:image:alt" content="Logo">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="326">
+<meta property="og:image:height" content="126">
+<meta content="True" name="HandheldFriendly">
+<meta name="viewport" content="width=device-width,maximum-scale=3.0,initial-scale=1.0,minimum-scale=0.9,user-scalable=yes"><!--<script src="/jaxi/js/Messages.js"></script>-->
+<script>
+var paramLanguage='L0';
+var primero='Es el primero';
+var ultimo='Es el Ãºltimo';
+var reducir='Ha seleccionado m&aacute;s de 30.000 datos. <br>Puede descargar la tabla completa en distintos formatos haciendo clic en el icono de descarga <a class="icoDescargarLink" style="width:20px;height:20px;"></a> que aparece en esta pantalla. <br>Tambi&eacute;n puede descargar la tabla desde la lista de tablas haciendo clic sobre el mismo icono. <br>Para ver los resultados en su pantalla, por favor reduzca su selecci&oacute;n.';
+var reducirMegatabla='Ha seleccionado mÃ¡s de 5.000 datos. Por favor reduzca la selecciÃ³n para consulta en lÃ­nea. <br>Puede disponer de todos los datos de esta tabla en diferentes formatos. Pulse en el botÃ³n <a href="javascript:void(0)" onclick=\"dlgModalLink(\'#btnDescarga\')\"><u>Descarga</u></a> para acceder.';
+var seleccionar='Debe escoger un valor en las variables con 0 valores seleccionados';
+var maxSelection=30000;
+var maxSelecHastaCarga=1000;
+var maxSelecHastaCargaMegatabla=10000;
+var esperacarga='5000';
+var filasVacias='Debe de haber al menos una variable en las filas';
+var columnasVacias='Debe de haber al menos una variable en las columnas';
+var numPeticionesMax='40';
+var timeOutRequests='30000';
+var peticion='PeticiÃ³n en curso';
+var mensajesCarga = ["Procesando peticiÃ³n","Consultando a base de datos","Cargando series","Cargando datos","Procesando salida"];
+var txtMsgMaxCeldasInLoad='En estos momentos se estan procesando los datos y por ello solo se puede servir un mÃ¡ximo de 1000 celdas. Â¿Desea esperar con su selecciÃ³n actual?';
+var txtMsgMaxIntentosLoad='Tiempo de espera agotado. Por favor, vuelva a intentarlo mÃ¡s tarde.';
+var MenuUrl = '/menus/';
+var numPeticionesMaxCargaDetalle = '20';
+var tiemposMaxCargaDetalle = '10000';
+var avisoGrafico_1 = 'Debe de seleccionar valores distintos en las columnas y eje horizontal';
+var avisoGrafico_2 = 'Debe de seleccionar al menos un valor de cada variable';
+var avisoGrafico_3 = 'Debe de seleccionar al menos un periodo';
+var avisoGrafico_4 = 'Debe de seleccionar al menos una operaciÃ³n';
+var avisoGrafico = 'Para visualizar el mapa actualice su navegador.';
+var textoNotas = 'Notas';
+var textoMetadatos = 'MetodologÃ­a';
+var textoInfo = 'Notas/InformaciÃ³n';
+var tablaId = '';
+var timeResizeMapMilis='';
+var avisoMapa = 'Para visualizar el mapa actualice su navegador.';
+var changeColorGraf = 'Cambiar color';
+var graphicColorsEnabled = '1';
+var modosGrafico = '2~2~2~2~2~1~1';
+var tiposGrafico = 'lineas~barras~barrashorizontales~barrasapiladas~barrashorizapiladas~circular';
+var msgZip_1 = 'No es posible descargar el fichero, hay tablas errÃ³neas';
+var msgZip_2 = 'Actualmente se estÃ¡ ejecutando el proceso de generaciÃ³n de tablas, espere por favor...';
+var msgZip_3 = 'URL invÃ¡lida, parÃ¡metros errÃ³neos';
+var textoMapaIntervalos = 'Seleccionar el nÃºmero de intervalos';
+var textoMapaGama = 'Seleccionar gama de colores';
+</script><script src="/menus/js/es/treeGrp.js" charset="UTF-8"></script>
+<script src="/menus/_b/js/es/general.js" charset="UTF-8"></script><script src="/menus/lib/jquery-3.6.3.js"></script>
+<script src="/menus/_b/js/general.js"></script>
+<script src="/menus/lib/jquery-ui/1.13.2/jquery-ui.js"></script><script src="/menus/plantillas/jaxi/js/jquery.sortElements.js"></script>
+<script src="/menus/js//es/textoTooltip.js" charset="UTF-8"></script><link rel="stylesheet" as="style" media="screen" href="/menus/lib/jquery-ui/1.13.2/jquery-ui.css" onload="this.rel='stylesheet'; this.onload=null">
+<link rel="stylesheet" as="style" media="screen" href="/menus/_b/css/bootstrapINE.min.css" onload="this.rel='stylesheet'; this.onload=null">
+<link rel="stylesheet" as="style" href="/menus/_b/fonts/fontAwesome/css/all.min.css" onload="this.rel='stylesheet'; this.onload=null"><script>
+	var sepMil= ".";var sepDec= ",";
+	var docIsLoaded=false;
+	var HM_Menu_Dir="/menus/";
+	var HM_Menu_DirVersion="/menus/_b/";
+	var HM_imgDir="/menus/img/";
+	var HM_DirJs="/menus/js/";
+	var HM_idioma="es";
+	var HM_idiomaINE="0";
+	var othethickbox="";
+	var INE_Servidor="";
+	var INE_ServidorAbsoluta="https://www.ine.es";
+	var HTMLVersion=5;
+	var showBtnAddCesta=false;
+	var isIE=false;
+</script><script async="" src="/menus/js/loading.js"></script>
+<link rel="stylesheet" as="style" href="/menus/_b/css/component/components.css?s=0&amp;ilp=1&amp;sv=1&amp;tbs=1&amp;pnls=1" onload="this.rel='stylesheet'; this.onload=null">
+<script src="/menus/_b/js/component/components.js?s=0&amp;ilp=1&amp;sv=1&amp;tbs=1&amp;pnls=1" charset=""></script><link rel="stylesheet" href="/menus/_b/css/baseINE.css?st=0">
+<link rel="stylesheet" href="/menus/_b/css/iconos.css">
+<link rel="stylesheet" href="/menus/_b/css/cabecera_pie.css">
+<link rel="stylesheet" href="/menus/_b/css/cabecera_pie_print.css" media="print">
+<link rel="stylesheet" href="/menus/_b/css/nav.css">
+<link rel="stylesheet" href="/menus/_b/css/nav_print.css" media="print">
+<link rel="stylesheet" href="/menus/_b/css/global.css">
+<script async="" src="/menus/js/cookie.js"></script>
+<script async="" src="/menus/js/tooltip.min.js"></script>
+<script async="" src="/menus/_b/js/cabecera.js"></script>
+<script async="" src="/menus/_b/js/social.js"></script>
+<script async="" src="/menus/js/thickboxINE.js"></script>	<script>
+var dirPlantilla='/menus/plantillas/jaxiPx/';
+var dirApp='./';
+</script>
+<script src="/menus/js/validators.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/liveSearchJaxiT3.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/jaxi.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/recargaPagina.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/jaxiT3Json.js"></script><script>LoadToolTipAuto=false;</script>
+<script src="/menus/plantillas/jaxiPx/js/excanvas.js"></script>
+<link rel="stylesheet" href="/menus/plantillas/jaxiPx/css/jaxiT3.css"><link rel="stylesheet" href="/menus/css/mapas.css">
+<link rel="stylesheet" href="/menus/css/treeGrp.css">
+<script src="/menus/js/treeGrp.js"></script>
+<script>
+try{if ( isMobile.any() ) {
+	loadUrlStyle('/menus/plantillas/jaxiPx/css/jaxiT3_mob.css',null,null);
+	loadUrlStyle(HM_Menu_DirVersion +"css/media_query.css",null,null);
+}}catch(e){}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) Interior-->
+<noscript><iframe src="
+	https://www.googletagmanager.com/ns.html?id=GTM-W3JJ7K76"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<!--Cabecera pÃ¡ginas interior-->
+<div class="contenedor">
+	<header>
+		<div id="cabecera" style="margin-top: 0px;"><!--Inicio cabecera 1-->
+				<div class=" row col ImagenLogoIne">
+					<a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/portada.html"><img src="/menus/_b/img/logoINE.gif" alt="Logotio INE"></a>
+				</div>
+				<a id="escudo" rel="external" href="https://www.cultura.gob.es/" title="Enlace externo, se abre en ventana nueva." target="_blank">
+					<img title="Ministerio de Cultura" alt="Ministerio de Cultura" src="/menus/_b/img/escudo-mcd.gif">
+					<img class="rwd" alt="Escudo del Ministerio de Cultura, formato responsive" src="/menus/_b/img/escudo-mcd-rwd.jpg">
+				<span class="ns">Enlace externo, se abre en ventana nueva</span></a>
+		</div>			
+	</header>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+		<div class="container-fluid">
+			<a href="/index.html" class="thickbox btn btn-info" title="JaxiPx (Standalone)" tabindex="0" role="button">
+				<img src="/menus/_b/img/home.jpg" alt="Standalone">
+			</a>
+		</div>
+	</nav>
+	<script src="/menus/plantillas/jaxiPx/js/jaxiTabla.js"></script>
+<div class="AppToolBarFondo AppToolBarImg2">
+		   <div class="AppToolBarContent">
+		      <div class="Inf">
+				  <div id="capaMiga">
+						<ul class="miga">
+		<li><a href="/inebmenu/indice.htm">INEbase</a></li></ul>
+		</div>
+		         </div>
+		      </div>
+		   <a class="AppToolBarLogo" href="/inebmenu/indice.htm" title="Inicio inebase"><img src="/menus//img/logoinebase.gif" class="sinborde" alt="Inicio inebase"></a>
+		</div>
+		<br class="limpia">
+<h1 class="export">Descargar la tabla en formato:</h1>
+<ul class="export">
+		<li><a target="_blank" href="files/_px/es/xls/t3/p3/a2005/l0/T301001.xls" title="Excel: extension XLS" >Excel: extension XLS</a></li>
+						<li><a target="_blank" href="files/_px/es/xlsx/t3/p3/a2005/l0/T301001.xlsx" title="Excel: extension XLSx" >Excel: extension XLSx</a></li>
+						<li><a target="_blank" href="files/_px/es/csv_bd/t3/p3/a2005/l0/T301001.csv_bd" title="CSV: separado por tabuladores" >CSV: separado por tabuladores</a></li>
+						<li><a target="_blank" href="files/_px/es/csv_bdsc/t3/p3/a2005/l0/T301001.csv_bdsc" title="CSV: separado por ;" >CSV: separado por ;</a></li>
+						<li><a target="_blank" href="files/_px/es/px/t3/p3/a2005/l0/T301001.px" title="Pc-Axis" >Pc-Axis</a></li>
+						<li><a target="_blank" href="files/_px/es/csv/t3/p3/a2005/l0/T301001.csv" title="Texto plano: separado por tabuladores" >Texto plano: separado por tabuladores</a></li>
+						<li><a target="_blank" href="files/_px/es/csv_c/t3/p3/a2005/l0/T301001.csv_c" title="Texto plano: separado por ," >Texto plano: separado por ,</a></li>
+						<li><a target="_blank" href="files/_px/es/csv_sc/t3/p3/a2005/l0/T301001.csv_sc" title="Texto plano: separado por ;" >Texto plano: separado por ;</a></li>
+						</ul>
+	<div id="loading"></div>
+
+<footer>
+	<!-- PIE Interior-->
+				  <div id="pie">
+					  <div class="bloque-superior">
+						  <div class="centrado">
+							  <p>CULTURABase. NIPO: 190-25-180-0</p>
+						  </div>
+						  <div class="clear"></div>
+					  </div>
+					  <div class="bloque-inferior">
+						  <div class="izq">
+							  <p>
+								&#169; Ministerio de Cultura - Gobierno de Espa&ntilde;a
+							  </p>
+						  </div>
+						  <div class="dcha">
+							  <ul class="comunes">
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/accesibilidad.html" target="_blank">Accesibilidad</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/aviso-legal.html" target="_blank">Aviso Legal</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/mapa-web.html" target="_blank">Mapa Web</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/politica-cookies.html" target="_blank">Pol&iacute;tica de cookies</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/politica-privacidad.html" target="_blank">Pol&iacute;tica de Privacidad</a>
+								  </li>
+								  <li class="ultimo">
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/aviso-traduccion.html" target="_blank">Traducci&oacute;n</a>
+								  </li>
+							  </ul>
+						  </div>
+					  </div>
+					  <div class="clear"></div>
+				  </div>			</footer>
+</body>
+</html>

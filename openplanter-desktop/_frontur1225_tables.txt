@@ -1,0 +1,94 @@
+idx_count 3 sample [494, 496, 501]
+495     "table_1_Alemania",
+496     "table_1_Belgica",
+497     "table_1_Francia",
+498     "table_1_Irlanda",
+499     "table_1_Italia",
+500     "table_1_Paises_Bajos",
+501     "table_1_Portugal",
+502     "table_1_Reino_Unido",
+503     "table_1_Suiza",
+504     "table_1_Paises_Nordicos",
+505     "table_1_Resto_de_Europa",
+506     "table_1_Estados_Unidos",
+507     "table_1_Resto_de_America",
+508     "table_1_Resto_del_mundo"
+509   ],
+510   "col": [
+511     [
+512       "0",
+513       "2"
+514     ],
+515     [
+516       "",
+517       "3"
+518     ],
+519     [
+520       "1",
+521       "2"
+522     ],
+523     [
+524       "",
+---
+497     "table_1_Francia",
+498     "table_1_Irlanda",
+499     "table_1_Italia",
+500     "table_1_Paises_Bajos",
+501     "table_1_Portugal",
+502     "table_1_Reino_Unido",
+503     "table_1_Suiza",
+504     "table_1_Paises_Nordicos",
+505     "table_1_Resto_de_Europa",
+506     "table_1_Estados_Unidos",
+507     "table_1_Resto_de_America",
+508     "table_1_Resto_del_mundo"
+509   ],
+510   "col": [
+511     [
+512       "0",
+513       "2"
+514     ],
+515     [
+516       "",
+517       "3"
+518     ],
+519     [
+520       "1",
+521       "2"
+522     ],
+523     [
+524       "",
+525       "3"
+526     ]
+---
+502     "table_1_Reino_Unido",
+503     "table_1_Suiza",
+504     "table_1_Paises_Nordicos",
+505     "table_1_Resto_de_Europa",
+506     "table_1_Estados_Unidos",
+507     "table_1_Resto_de_America",
+508     "table_1_Resto_del_mundo"
+509   ],
+510   "col": [
+511     [
+512       "0",
+513       "2"
+514     ],
+515     [
+516       "",
+517       "3"
+518     ],
+519     [
+520       "1",
+521       "2"
+522     ],
+523     [
+524       "",
+525       "3"
+526     ]
+527   ],
+528   "row": [
+529     [
+530       "4"
+531     ],
+---

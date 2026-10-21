@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 14 Sep 2026 11:15:49 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Link: <https://www.mappingmediafreedom.org/wp-json/>; rel="https://api.w.org/", <https://www.mappingmediafreedom.org/wp-json/wp/v2/pages/100410>; rel="alternate"; title="JSON"; type="application/json", <https://www.mappingmediafreedom.org/>; rel=shortlink
+X-Cache-Status: HIT
+

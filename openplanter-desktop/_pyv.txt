@@ -1,0 +1,3 @@
+Python 3.12.7
+C:\Users\trodriguez\AppData\Local\miniconda3\python.exe
+json ok

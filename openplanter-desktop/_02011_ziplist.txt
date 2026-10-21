@@ -1,0 +1,14 @@
+Archive:  evidence/02011.xlsx
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     1052  1980-00-00 00:00   [Content_Types].xml
+      585  1980-00-00 00:00   _rels/.rels
+      183  1980-00-00 00:00   docProps/app.xml
+      432  1980-00-00 00:00   docProps/core.xml
+      137  1980-00-00 00:00   xl/sharedStrings.xml
+     4900  1980-00-00 00:00   xl/styles.xml
+      350  1980-00-00 00:00   xl/workbook.xml
+      563  1980-00-00 00:00   xl/_rels/workbook.xml.rels
+    26246  1980-00-00 00:00   xl/worksheets/sheet1.xml
+---------                     -------
+    34448                     9 files

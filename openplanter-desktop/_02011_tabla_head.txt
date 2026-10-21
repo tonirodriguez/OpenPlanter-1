@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por nivel de estudios y situación laboral.</title>
+  <meta name="description" content="INE. Instituto Nacional de Estad&iacute;stica. National Statistics Institute. Spanish Statistical Office. El INE elabora y distribuye estadisticas de Espana. Este servidor contiene: Censos de Poblacion y Viviendas 2001, Informacion general, Productos de difusion, Espana en cifras, Datos coyunturales, Datos municipales, etc.. Q2016.es">
+    <meta name="keywords" content="Nivel de estudios y situación laboral, Indicador, Asistencia, , null">
+
+    <script>
+	  var pathJaxi = "/CulturaJaxiPx/";
+      var tablaId = 0;
+      var fechaInicio= new Date();
+      var fechaFin= new Date();
+      var idioma = 0;
+      var notas =  0;
+      isLoadData = true;
+      var isMegatabla =false;
+      var sepMil = ".";
+      var sepDec = ",";
+
+    </script>
+	<link rel="shortcut icon" href="/menus/img/favicon-new.ico" type="image/x-icon">
+<link href="/menus/img/favicon-new.png" rel="apple-touch-icon">
+<link href="/menus/img/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/menus/img/apple-touch-icon-60x60-precomposed.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/menus/img/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/menus/img/apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/menus/img/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/menus/img/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/menus/img/apple-touch-icon-160x160-precomposed.png" rel="apple-touch-icon" sizes="160x160">
+<link href="/menus/img/apple-touch-icon-180x180-precomposed.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/menus/img/favicon-192x192.png" rel="icon" sizes="192x192">
+<link href="/menus/img/favicon-160x160.png" rel="icon" sizes="160x160">
+<link href="/menus/img/favicon-128x128.png" rel="icon" sizes="128x128">
+<link href="/menus/img/favicon-96x96.png" rel="icon" sizes="96x96">
+<link href="/menus/img/favicon-32x32.png" rel="icon" sizes="32x32">
+<link href="/menus/img/favicon-16x16.png" rel="icon" sizes="16x16">
+<!-- Google Tag Manager 5-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W3JJ7K76');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:locale" content="es_ES">
+	<meta property="og:type" content="website">
+<meta property="og:site_name" content="INE">
+<meta property="og:image" content="https://www.ine.es/menus/_b/img/logoINESocial.png">
+<meta property="og:image:secure_url" content="https://www.ine.es/menus/_b/img/logoINESocial.png">
+<meta property="og:image:alt" content="Logo">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="326">
+<meta property="og:image:height" content="126">
+<meta content="True" name="HandheldFriendly">
+<meta name="viewport" content="width=device-width,maximum-scale=3.0,initial-scale=1.0,minimum-scale=0.9,user-scalable=yes"><!--<script src="/jaxi/js/Messages.js"></script>-->
+<script>
+var paramLanguage='L0';
+var primero='Es el primero';
+var ultimo='Es el Ãºltimo';
+var reducir='Ha seleccionado m&aacute;s de 30.000 datos. <br>Puede descargar la tabla completa en distintos formatos haciendo clic en el icono de descarga <a class="icoDescargarLink" style="width:20px;height:20px;"></a> que aparece en esta pantalla. <br>Tambi&eacute;n puede descargar la tabla desde la lista de tablas haciendo clic sobre el mismo icono. <br>Para ver los resultados en su pantalla, por favor reduzca su selecci&oacute;n.';

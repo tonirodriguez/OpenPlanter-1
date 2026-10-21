@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por nivel de estudios y situación laboral.</title>
+  <meta name="description" content="INE. Instituto Nacional de Estad&iacute;stica. National Statistics Institute. Spanish Statistical Office. El INE elabora y distribuye estadisticas de Espana. Este servidor contiene: Censos de Poblacion y Viviendas 2001, Informacion general, Productos de difusion, Espana en cifras, Datos coyunturales, Datos municipales, etc.. Q2016.es">
+    <meta name="keywords" content="Nivel de estudios y situación laboral, Indicador, Asistencia, , null">
+
+    <script>
+	  var pathJaxi = "/CulturaJaxiPx/";
+      var tablaId = 0;
+      var fechaInicio= new Date();
+      var fechaFin= new Date();
+      var idioma = 0;
+      var notas =  0;
+      isLoadData = true;
+      var isMegatabla =false;
+      var sepMil = ".";
+      var sepDec = ",";
+
+    </script>
+	<link rel="shortcut icon" href="/menus/img/favicon-new.ico" type="image/x-icon">
+<link href="/menus/img/favicon-new.png" rel="apple-touch-icon">
+<link href="/menus/img/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/menus/img/apple-touch-icon-60x60-precomposed.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/menus/img/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/menus/img/apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/menus/img/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/menus/img/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/menus/img/apple-touch-icon-160x160-precomposed.png" rel="apple-touch-icon" sizes="160x160">
+<link href="/menus/img/apple-touch-icon-180x180-precomposed.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/menus/img/favicon-192x192.png" rel="icon" sizes="192x192">
+<link href="/menus/img/favicon-160x160.png" rel="icon" sizes="160x160">
+<link href="/menus/img/favicon-128x128.png" rel="icon" sizes="128x128">
+<link href="/menus/img/favicon-96x96.png" rel="icon" sizes="96x96">
+<link href="/menus/img/favicon-32x32.png" rel="icon" sizes="32x32">
+<link href="/menus/img/favicon-16x16.png" rel="icon" sizes="16x16">
+<!-- Google Tag Manager 5-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W3JJ7K76');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:locale" content="es_ES">
+	<meta property="og:type" content="website">
+<meta property="og:site_name" content="INE">
+<meta property="og:image" content="https://www.ine.es/menus/_b/img/logoINESocial.png">
+<meta property="og:image:secure_url" content="https://www.ine.es/menus/_b/img/logoINESocial.png">
+<meta property="og:image:alt" content="Logo">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="326">
+<meta property="og:image:height" content="126">
+<meta content="True" name="HandheldFriendly">
+<meta name="viewport" content="width=device-width,maximum-scale=3.0,initial-scale=1.0,minimum-scale=0.9,user-scalable=yes"><!--<script src="/jaxi/js/Messages.js"></script>-->
+<script>
+var paramLanguage='L0';
+var primero='Es el primero';
+var ultimo='Es el Ãºltimo';
+var reducir='Ha seleccionado m&aacute;s de 30.000 datos. <br>Puede descargar la tabla completa en distintos formatos haciendo clic en el icono de descarga <a class="icoDescargarLink" style="width:20px;height:20px;"></a> que aparece en esta pantalla. <br>Tambi&eacute;n puede descargar la tabla desde la lista de tablas haciendo clic sobre el mismo icono. <br>Para ver los resultados en su pantalla, por favor reduzca su selecci&oacute;n.';
+var reducirMegatabla='Ha seleccionado mÃ¡s de 5.000 datos. Por favor reduzca la selecciÃ³n para consulta en lÃ­nea. <br>Puede disponer de todos los datos de esta tabla en diferentes formatos. Pulse en el botÃ³n <a href="javascript:void(0)" onclick=\"dlgModalLink(\'#btnDescarga\')\"><u>Descarga</u></a> para acceder.';
+var seleccionar='Debe escoger un valor en las variables con 0 valores seleccionados';
+var maxSelection=30000;
+var maxSelecHastaCarga=1000;
+var maxSelecHastaCargaMegatabla=10000;
+var esperacarga='5000';
+var filasVacias='Debe de haber al menos una variable en las filas';
+var columnasVacias='Debe de haber al menos una variable en las columnas';
+var numPeticionesMax='40';
+var timeOutRequests='30000';
+var peticion='PeticiÃ³n en curso';
+var mensajesCarga = ["Procesando peticiÃ³n","Consultando a base de datos","Cargando series","Cargando datos","Procesando salida"];
+var txtMsgMaxCeldasInLoad='En estos momentos se estan procesando los datos y por ello solo se puede servir un mÃ¡ximo de 1000 celdas. Â¿Desea esperar con su selecciÃ³n actual?';
+var txtMsgMaxIntentosLoad='Tiempo de espera agotado. Por favor, vuelva a intentarlo mÃ¡s tarde.';
+var MenuUrl = '/menus/';
+var numPeticionesMaxCargaDetalle = '20';
+var tiemposMaxCargaDetalle = '10000';
+var avisoGrafico_1 = 'Debe de seleccionar valores distintos en las columnas y eje horizontal';
+var avisoGrafico_2 = 'Debe de seleccionar al menos un valor de cada variable';
+var avisoGrafico_3 = 'Debe de seleccionar al menos un periodo';
+var avisoGrafico_4 = 'Debe de seleccionar al menos una operaciÃ³n';
+var avisoGrafico = 'Para visualizar el mapa actualice su navegador.';
+var textoNotas = 'Notas';
+var textoMetadatos = 'MetodologÃ­a';
+var textoInfo = 'Notas/InformaciÃ³n';
+var tablaId = '';
+var timeResizeMapMilis='';
+var avisoMapa = 'Para visualizar el mapa actualice su navegador.';
+var changeColorGraf = 'Cambiar color';
+var graphicColorsEnabled = '1';
+var modosGrafico = '2~2~2~2~2~1~1';
+var tiposGrafico = 'lineas~barras~barrashorizontales~barrasapiladas~barrashorizapiladas~circular';
+var msgZip_1 = 'No es posible descargar el fichero, hay tablas errÃ³neas';
+var msgZip_2 = 'Actualmente se estÃ¡ ejecutando el proceso de generaciÃ³n de tablas, espere por favor...';
+var msgZip_3 = 'URL invÃ¡lida, parÃ¡metros errÃ³neos';
+var textoMapaIntervalos = 'Seleccionar el nÃºmero de intervalos';
+var textoMapaGama = 'Seleccionar gama de colores';
+</script><script src="/menus/js/es/treeGrp.js" charset="UTF-8"></script>
+<script src="/menus/_b/js/es/general.js" charset="UTF-8"></script><script src="/menus/lib/jquery-3.6.3.js"></script>
+<script src="/menus/_b/js/general.js"></script>
+<script src="/menus/lib/jquery-ui/1.13.2/jquery-ui.js"></script><script src="/menus/plantillas/jaxi/js/jquery.sortElements.js"></script>
+<script src="/menus/js//es/textoTooltip.js" charset="UTF-8"></script><link rel="stylesheet" as="style" media="screen" href="/menus/lib/jquery-ui/1.13.2/jquery-ui.css" onload="this.rel='stylesheet'; this.onload=null">
+<link rel="stylesheet" as="style" media="screen" href="/menus/_b/css/bootstrapINE.min.css" onload="this.rel='stylesheet'; this.onload=null">
+<link rel="stylesheet" as="style" href="/menus/_b/fonts/fontAwesome/css/all.min.css" onload="this.rel='stylesheet'; this.onload=null"><script>
+	var sepMil= ".";var sepDec= ",";
+	var docIsLoaded=false;
+	var HM_Menu_Dir="/menus/";
+	var HM_Menu_DirVersion="/menus/_b/";
+	var HM_imgDir="/menus/img/";
+	var HM_DirJs="/menus/js/";
+	var HM_idioma="es";
+	var HM_idiomaINE="0";
+	var othethickbox="";
+	var INE_Servidor="";
+	var INE_ServidorAbsoluta="https://www.ine.es";
+	var HTMLVersion=5;
+	var showBtnAddCesta=false;
+	var isIE=false;
+</script><script async="" src="/menus/js/loading.js"></script>
+<link rel="stylesheet" as="style" href="/menus/_b/css/component/components.css?s=0&amp;ilp=1&amp;sv=1&amp;tbs=1&amp;pnls=1" onload="this.rel='stylesheet'; this.onload=null">
+<script src="/menus/_b/js/component/components.js?s=0&amp;ilp=1&amp;sv=1&amp;tbs=1&amp;pnls=1" charset=""></script><link rel="stylesheet" href="/menus/_b/css/baseINE.css?st=0">
+<link rel="stylesheet" href="/menus/_b/css/iconos.css">
+<link rel="stylesheet" href="/menus/_b/css/cabecera_pie.css">
+<link rel="stylesheet" href="/menus/_b/css/cabecera_pie_print.css" media="print">
+<link rel="stylesheet" href="/menus/_b/css/nav.css">
+<link rel="stylesheet" href="/menus/_b/css/nav_print.css" media="print">
+<link rel="stylesheet" href="/menus/_b/css/global.css">
+<script async="" src="/menus/js/cookie.js"></script>
+<script async="" src="/menus/js/tooltip.min.js"></script>
+<script async="" src="/menus/_b/js/cabecera.js"></script>
+<script async="" src="/menus/_b/js/social.js"></script>
+<script async="" src="/menus/js/thickboxINE.js"></script>	<script>
+var dirPlantilla='/menus/plantillas/jaxiPx/';
+var dirApp='./';
+</script>
+<script src="/menus/js/validators.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/liveSearchJaxiT3.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/jaxi.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/recargaPagina.js"></script>
+<script src="/menus/plantillas/jaxiPx/js/jaxiT3Json.js"></script><script>LoadToolTipAuto=false;</script>
+<script src="/menus/plantillas/jaxiPx/js/excanvas.js"></script>
+<link rel="stylesheet" href="/menus/plantillas/jaxiPx/css/jaxiT3.css"><link rel="stylesheet" href="/menus/css/mapas.css">
+<link rel="stylesheet" href="/menus/css/treeGrp.css">
+<script src="/menus/js/treeGrp.js"></script>
+<script>
+try{if ( isMobile.any() ) {
+	loadUrlStyle('/menus/plantillas/jaxiPx/css/jaxiT3_mob.css',null,null);
+	loadUrlStyle(HM_Menu_DirVersion +"css/media_query.css",null,null);
+}}catch(e){}
+</script>
+</head>
+  <body id="t0" >
+    <!-- Google Tag Manager (noscript) Interior-->
+<noscript><iframe src="
+	https://www.googletagmanager.com/ns.html?id=GTM-W3JJ7K76"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<!--Cabecera pÃ¡ginas interior-->
+<div class="contenedor">
+	<header>
+		<div id="cabecera" style="margin-top: 0px;"><!--Inicio cabecera 1-->
+				<div class=" row col ImagenLogoIne">
+					<a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/portada.html"><img src="/menus/_b/img/logoINE.gif" alt="Logotio INE"></a>
+				</div>
+				<a id="escudo" rel="external" href="https://www.cultura.gob.es/" title="Enlace externo, se abre en ventana nueva." target="_blank">
+					<img title="Ministerio de Cultura" alt="Ministerio de Cultura" src="/menus/_b/img/escudo-mcd.gif">
+					<img class="rwd" alt="Escudo del Ministerio de Cultura, formato responsive" src="/menus/_b/img/escudo-mcd-rwd.jpg">
+				<span class="ns">Enlace externo, se abre en ventana nueva</span></a>
+		</div>			
+	</header>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+		<div class="container-fluid">
+			<a href="/index.html" class="thickbox btn btn-info" title="JaxiPx (Standalone)" tabindex="0" role="button">
+				<img src="/menus/_b/img/home.jpg" alt="Standalone">
+			</a>
+		</div>
+	</nav>
+	<script src="/menus/plantillas/jaxiPx/js/jaxiTabla.js"></script>
+<div class="AppToolBarFondo AppToolBarImg2">
+<a class="AppToolBarLogo" href="/inebmenu/indice.htm" title="Lista completa de operaciones">
+				<img src="/menus//img/logoinebase.gif" class="sinborde" alt="Inicio inebase">
+			</a>
+		<div class="AppToolBarContent">
+   	<div class="Sup"><ul class="miga">
+		<li><a href="/inebmenu/indice.htm">INEbase</a></li><li class="medio"><a href="/CulturaDynPx/inebase/index.htm?type=pcaxis&path=/t9/p9/a1a2024-2025/c02/&file=pcaxis&L=0">Encuesta de Hábitos y Prácticas Culturales 2024-2025</a>
+						</li>
+					</ul></div>
+      <div class="Inf"></div>
+   </div>
+</div><br class="limpia">
+    <form id="tablaForm" name="tablaForm" action="Datos.htm?path=/t9/p9/a1a2024-2025/c02/l0/&file=02011.px" method="POST"
+      onsubmit="return enviarTabla(event, $('#tablaForm'),0, timeOutRequests);" >
+    <input type="hidden" name="isPx" id ="isPx" value="true">
+    <input type="hidden" name="L" value="0">
+    <input type="hidden" name="fromTabla" value="1"/>
+    <input type="hidden" name="formatoVisible" value="1"/>
+    <input type="hidden" id="oper" name="oper" value="-9223372036854775808">
+         <input type="hidden" id="sel_oper" name="sel_oper" class="input_seleccionados" value="1" >
+      <span class="cab1">Encuesta de Hábitos y Prácticas Culturales 2024-2025</span>
+      <span class="cab2">2. Museos, monumentos y archivos</span>
+        <h1 class="cab3">Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por nivel de estudios y situación laboral.</h1>
+      <div id="capaIconos" class="titulo_detalle">
+          <span id="tablaDetalle"><strong class="paddingRight">Unidades:</strong>En % del total de cada colectivo</span>
+          <div class="right">
+          	<a role="button" title="Descargar" id="btnDescarga" href="dlgExport.htm?path=/t9/p9/a1a2024-2025/c02/l0/&file=02011.px" class="thickbox icoDescargarLink">
+          		<span class="sr-only">Descargar</span>
+          	</a>
+           </div>
+      </div>
+      <ul class="secciones">
+      <li>
+        <span tabindex=0 title="Plegar/Desplegar" class="title titleOpen texto_variables borderSeccion">Seleccione valores a consultar</span>
+        <ul id="variables" class="variables">
+          <li id ="tg0" >
+    <div class="marcoINE">
+		<fieldset>
+			<legend><label for="cri0">Nivel de estudios y situación laboral</label></legend>
+               <div class="capaSelecBusqueda">
+	               	<label for="busc_0" class="oculto">Valores que contienen</label>
+	                <input title="Valores que contienen" size="10" type="text" id="busc_0" name="busc_0" class="cajaBusquedaVar" value="" >
+	                <button type="button" class="icoBuscar" title="Valores que contienen" onclick="buscar('sel_0','cri0',document.forms['tablaForm'].busc_0.value,'content');"></button>
+            	</div>
+            	<div class="capaSelecTodosNinguno">
+            		<input type="hidden" name="orden_0" id="orden_0" >
+	               	<button type="button" class="icoSeleccionTodos opcionesvarDer" title="Seleccionar todos" onclick="todos(true,'cri0','sel_0');return false;"></button>
+	               	<button type="button" class="icoSeleccionNinguno" title="Borrar seleccion" onclick="todos(false,'cri0','sel_0');return false;"></button>
+	               	<button type="button" class="icoCambioSentidoASC" title="Ordenar" onclick="if (this.className.indexOf('ASC')>0){ ordena('#cri'+0,'ASC'); this.className=this.className.replace('ASC','DESC'); $('#orden_'+0).val('ASC');}else {ordena('#cri'+0,'DESC'); this.className=this.className.replace('DESC','ASC');$('#orden_'+0).val('DESC');} return false;"></button>
+					</div>
+
+				<select id="cri0" name="cri0" class="cajaVariables jax_SELECT" multiple="multiple" size="8" onchange="cuantos('sel_0','cri0');">
+					<option class="jP_0" value="0" selected="selected">TOTAL</option>
+						<option class="jP_0" value="1" selected="selected">Primera etapa de educación secundaria e inferior: Total</option>
+						<option class="jP_0" value="2" selected="selected">Primera etapa de educación secundaria e inferior: Educación primaria e inferior</option>
+						<option class="jP_0" value="3" selected="selected">Primera etapa de educación secundaria e inferior: Primera etapa de educación secundaria</option>
+						<option class="jP_0" value="4" selected="selected">Segunda etapa de educación secundaria: Total</option>
+						<option class="jP_0" value="5" selected="selected">Segunda etapa de educación secundaria: Orientación general</option>
+						<option class="jP_0" value="6" selected="selected">Segunda etapa de educación secundaria: Orientación profesional</option>
+						<option class="jP_0" value="7" selected="selected">Educación superior: Total</option>
+						<option class="jP_0" value="8" selected="selected">Educación superior: FP superior y similares</option>
+						<option class="jP_0" value="9" selected="selected">Educación superior: Educación universitaria y similares</option>
+						<option class="jP_0" value="10" selected="selected">Sit. laboral: trabajando</option>
+						<option class="jP_0" value="11" selected="selected">Sit. laboral: en paro</option>
+						<option class="jP_0" value="12" selected="selected">Sit. laboral: jubilación, retiro o percibiendo pensión</option>
+						<option class="jP_0" value="13" selected="selected">Sit. laboral: estudiante</option>
+						<option class="jP_0" value="14" selected="selected">Sit. laboral: trabajo doméstico no remunerado</option>
+						<option class="jP_0" value="15" selected="selected">Sit. laboral: otros</option>
+						</select>
+				<div class="capaClear">
+					<div class="capaSeleccionadosEstado">
+						<span class="paddingRight">Seleccionados:</span><span id="sel_0">16</span>
+					</div>
+					<div class="capaTotalSeleccionadosEstado">
+						<span class="paddingRight">Total:</span><span id="totalvar0">16</span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+</li><li id="caja_periodo">
+                      <div class="marcoINE">
+                        <fieldset>
+                          <legend><label for="periodo">periodo</label></legend>
+                                  <div class="capaClear"></div>
+                          <div class="capaSelecBusqueda">
+                            <label for="busc_periodo" class="oculto">Valores que comienzan por...</label>
+                            <input size="10" type="text" id="busc_periodo" name="busc_periodo" class="cajaBusquedaVar" value="" title="Valores que comienzan por...">
+                            <button type="button" title="Valores que comienzan por..." class="icoBuscar" onclick="buscar('sel_periodo','periodo',document.forms['tablaForm'].busc_periodo.value,'content');"></button>
+                          </div>
+                                  <div class="capaSelecTodosNinguno">
+                                    <input type="hidden" name="orden_periodo" id="orden_periodo" value="DESC">
+                                      <button type="button" title="Seleccionar todos" class="icoSeleccionTodos opcionesvarDer" onclick="todos(true,'periodo','sel_periodo');return false;"></button>
+                            <button type="button" title="Borrar seleccion" class="icoSeleccionNinguno" onclick="todos(false,'periodo','sel_periodo');return false;"></button>
+                            <button type="button" title="Ordenar" class="icoCambioSentidoASC" onclick="if (this.className.indexOf('ASC')>0){ ordena('#periodo','ASC'); this.className=this.className.replace('ASC','DESC'); $('#orden_periodo').val('ASC');}else {ordena('#periodo','DESC'); this.className=this.className.replace('DESC','ASC');$('#orden_periodo').val('DESC');} return false;"></button>
+                          </div>
+
+
+                          <select id="periodo" name="periodo" class="cajaVariables" size="8" multiple="multiple" onchange="cuantos('sel_periodo','periodo');">
+
+                            <option title="0"
+									 data-order="0~00000"
+									value="-2147483648~0" selected="selected">2024-2025</option>
+                                  </select>
+                                  <div class="capaClear"></div>
+                          <div class="capaSeleccionadosEstado">
+                                    <span>Seleccionados:</span><span id="sel_periodo" class="paddingLeft">1</span>
+                                    <!-- <input type="text" id="sel_1" name="sel_1" class="input_seleccionados" readonly size="1" value="0" > -->
+                                </div>
+                                <div class="capaTotalSeleccionadosEstado">
+                                    <span>Total:</span><span id="totalvar_Per" class="paddingLeft">1</span>
+                                  </div>
+                                </fieldset>
+                              </div>
+                    </li>
+
+                <li id ="tg1" >
+    <div class="marcoINE">
+		<fieldset>
+			<legend><label for="cri1">Indicador</label></legend>
+               <div class="capaSelecBusqueda">
+	               	<label for="busc_1" class="oculto">Valores que contienen</label>
+	                <input title="Valores que contienen" size="10" type="text" id="busc_1" name="busc_1" class="cajaBusquedaVar" value="" >
+	                <button type="button" class="icoBuscar" title="Valores que contienen" onclick="buscar('sel_1','cri1',document.forms['tablaForm'].busc_1.value,'content');"></button>
+            	</div>
+            	<div class="capaSelecTodosNinguno">
+            		<input type="hidden" name="orden_1" id="orden_1" >
+	               	<button type="button" class="icoSeleccionTodos opcionesvarDer" title="Seleccionar todos" onclick="todos(true,'cri1','sel_1');return false;"></button>
+	               	<button type="button" class="icoSeleccionNinguno" title="Borrar seleccion" onclick="todos(false,'cri1','sel_1');return false;"></button>
+	               	<button type="button" class="icoCambioSentidoASC" title="Ordenar" onclick="if (this.className.indexOf('ASC')>0){ ordena('#cri'+1,'ASC'); this.className=this.className.replace('ASC','DESC'); $('#orden_'+1).val('ASC');}else {ordena('#cri'+1,'DESC'); this.className=this.className.replace('DESC','ASC');$('#orden_'+1).val('DESC');} return false;"></button>
+					</div>
+
+				<select id="cri1" name="cri1" class="cajaVariables jax_SELECT" multiple="multiple" size="8" onchange="cuantos('sel_1','cri1');">
+					<option class="jP_0" value="16" selected="selected">Museos</option>
+						<option class="jP_0" value="17" >Exposiciones</option>
+						<option class="jP_0" value="18" >Galerías de arte</option>
+						<option class="jP_0" value="19" >Monumentos</option>
+						<option class="jP_0" value="20" >Yacimientos arqueológicos</option>
+						</select>
+				<div class="capaClear">
+					<div class="capaSeleccionadosEstado">
+						<span class="paddingRight">Seleccionados:</span><span id="sel_1">1</span>
+					</div>
+					<div class="capaTotalSeleccionadosEstado">
+						<span class="paddingRight">Total:</span><span id="totalvar1">5</span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+</li><li id ="tg2" >
+    <div class="marcoINE">
+		<fieldset>
+			<legend><label for="cri2">Asistencia</label></legend>
+               <div class="capaSelecBusqueda">
+	               	<label for="busc_2" class="oculto">Valores que contienen</label>
+	                <input title="Valores que contienen" size="10" type="text" id="busc_2" name="busc_2" class="cajaBusquedaVar" value="" >
+	                <button type="button" class="icoBuscar" title="Valores que contienen" onclick="buscar('sel_2','cri2',document.forms['tablaForm'].busc_2.value,'content');"></button>
+            	</div>
+            	<div class="capaSelecTodosNinguno">
+            		<input type="hidden" name="orden_2" id="orden_2" >
+	               	<button type="button" class="icoSeleccionTodos opcionesvarDer" title="Seleccionar todos" onclick="todos(true,'cri2','sel_2');return false;"></button>
+	               	<button type="button" class="icoSeleccionNinguno" title="Borrar seleccion" onclick="todos(false,'cri2','sel_2');return false;"></button>
+	               	<button type="button" class="icoCambioSentidoASC" title="Ordenar" onclick="if (this.className.indexOf('ASC')>0){ ordena('#cri'+2,'ASC'); this.className=this.className.replace('ASC','DESC'); $('#orden_'+2).val('ASC');}else {ordena('#cri'+2,'DESC'); this.className=this.className.replace('DESC','ASC');$('#orden_'+2).val('DESC');} return false;"></button>
+					</div>
+
+				<select id="cri2" name="cri2" class="cajaVariables jax_SELECT" multiple="multiple" size="8" onchange="cuantos('sel_2','cri2');">
+					<option class="jP_0" value="21" selected="selected">Total han visitado en el último año</option>
+						<option class="jP_0" value="22" >En los últimos tres meses</option>
+						<option class="jP_0" value="23" >Entre tres meses y un año</option>
+						<option class="jP_0" value="24" >Hace más de un año</option>
+						<option class="jP_0" value="25" >Nunca o casi nunca</option>
+						</select>
+				<div class="capaClear">
+					<div class="capaSeleccionadosEstado">
+						<span class="paddingRight">Seleccionados:</span><span id="sel_2">1</span>
+					</div>
+					<div class="capaTotalSeleccionadosEstado">
+						<span class="paddingRight">Total:</span><span id="totalvar2">5</span>
+					</div>
+				</div>
+			</fieldset>
+		</div>
+</li></ul>
+      </li>
+
+        <li id="capaFormato">
+              <span tabindex=0 title="Plegar/Desplegar" class="title titleOpen titulo_formato borderSeccion">
+               Elija forma de presentacion de la tabla</span>
+               <ul id="capaFilasColumnas" class="floatLeft">
+               <li>
+                 <table class="formato" title="formato">
+                 <tr>
+                 <td  class='celdacabeceravacia'><img id="swap" title="Intercambiar filas por columnas" alt="Intercambiar filas por columnas"  src="/menus/plantillas/CulturaJaxiPx/img/intercambio.gif"></td>
+                 <th colspan="3" class="tCL_0" id="tCL_col">
+                   <ul id="OrderColumns" class="connectedSortable">
+                            <li>periodo<input type="hidden" name="columns" value="p_per"><div class="swapContent">
+	<img class="swapDown swapButtons" tabindex=0 role="button" alt="Desplazar abajo" title="Desplazar abajo" src="/menus/plantillas/CulturaJaxiPx/img/triAba.gif">
+	<img class="swapUp swapButtons" tabindex=0 role="button" alt="Desplazar arriba" title="Desplazar arriba" src="/menus/plantillas/CulturaJaxiPx/img/triArri.gif">
+	<img class="swapColumn swapChange swapButtons" tabindex=0 role="button" alt="Pasar a fila" title="Pasar a fila" src="/menus/plantillas/CulturaJaxiPx/img/interDown.gif">
+	<img class="swapRown swapChange swapButtons" tabindex=0 role="button" alt="Pasar a columna" title="Pasar a columna" src="/menus/plantillas/CulturaJaxiPx/img/interUp.gif"></div></li>
+                              <li>Indicador<input type="hidden" name="columns" value="1"><div class="swapContent">
+	<img class="swapDown swapButtons" tabindex=0 role="button" alt="Desplazar abajo" title="Desplazar abajo" src="/menus/plantillas/CulturaJaxiPx/img/triAba.gif">
+	<img class="swapUp swapButtons" tabindex=0 role="button" alt="Desplazar arriba" title="Desplazar arriba" src="/menus/plantillas/CulturaJaxiPx/img/triArri.gif">
+	<img class="swapColumn swapChange swapButtons" tabindex=0 role="button" alt="Pasar a fila" title="Pasar a fila" src="/menus/plantillas/CulturaJaxiPx/img/interDown.gif">
+	<img class="swapRown swapChange swapButtons" tabindex=0 role="button" alt="Pasar a columna" title="Pasar a columna" src="/menus/plantillas/CulturaJaxiPx/img/interUp.gif"></div></li>
+                            	<li>Asistencia<input type="hidden" name="columns" value="2"><div class="swapContent">
+	<img class="swapDown swapButtons" tabindex=0 role="button" alt="Desplazar abajo" title="Desplazar abajo" src="/menus/plantillas/CulturaJaxiPx/img/triAba.gif">
+	<img class="swapUp swapButtons" tabindex=0 role="button" alt="Desplazar arriba" title="Desplazar arriba" src="/menus/plantillas/CulturaJaxiPx/img/triArri.gif">
+	<img class="swapColumn swapChange swapButtons" tabindex=0 role="button" alt="Pasar a fila" title="Pasar a fila" src="/menus/plantillas/CulturaJaxiPx/img/interDown.gif">
+	<img class="swapRown swapChange swapButtons" tabindex=0 role="button" alt="Pasar a columna" title="Pasar a columna" src="/menus/plantillas/CulturaJaxiPx/img/interUp.gif"></div></li>
+                            	</ul>
+                 </th>
+                 </tr>
+                 <tr>
+                 <th rowspan="3" class="tCL_0"  id="tCL_row">
+                 <ul id="OrderRows" class="connectedSortable">
+                      <li>Nivel de estudios y situación laboral<input type="hidden" name="rows" value="0"><div class="swapContent">
+	<img class="swapDown swapButtons" tabindex=0 role="button" alt="Desplazar abajo" title="Desplazar abajo" src="/menus/plantillas/CulturaJaxiPx/img/triAba.gif">
+	<img class="swapUp swapButtons" tabindex=0 role="button" alt="Desplazar arriba" title="Desplazar arriba" src="/menus/plantillas/CulturaJaxiPx/img/triArri.gif">
+	<img class="swapColumn swapChange swapButtons" tabindex=0 role="button" alt="Pasar a fila" title="Pasar a fila" src="/menus/plantillas/CulturaJaxiPx/img/interDown.gif">
+	<img class="swapRown swapChange swapButtons" tabindex=0 role="button" alt="Pasar a columna" title="Pasar a columna" src="/menus/plantillas/CulturaJaxiPx/img/interUp.gif"></div></li>
+                            </ul>
+                 </th>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 </tr>
+                 <tr>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 </tr>
+                 <tr>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 <td class='dCIe' headers="tCL_row tCL_col">.</td>
+                 </tr>
+               </table>
+              </li>
+            <li>
+                    <div id="capa_tabla_showdec">
+                      <label for="formato_tabla_dec">
+                        <span>Decimales a mostrar:</span>
+                      </label>
+                      <select id="formato_tabla_dec" name="formato_tabla_dec">
+                             <option title="Por defecto" value="">Por defecto</option>
+                            <option title="0" value="0">0</option>
+                                 <option title="1" value="1">1</option>
+                                 </select>
+                      </div>
+                    </li>
+               </ul>
+
+
+            </li>
+
+          </ul>
+       <div class="capaClear"></div>
+
+       <div id="capaSeparacion"></div>
+         <div id="capaTotalSeriesCeldas" role="status">
+             <span id="totalSeriesCeldas">Total:</span>
+             <span id="NumSeries" class="paddingRight">0</span><span>series</span><span class="paddingBothSides">y </span><span id="NumCeldas" class="paddingRight">0</span><span>datos</span>
+          </div>
+
+
+          <div id="capaBotones">
+                 <input type="hidden" name=totalOps value="5">
+                 <input type="hidden" name="numCri" value="-1">
+                  <input type="submit" class="botonSel" id="botonConsulSele" name="consulsele" value="Consultar seleccion"
+                      onmouseover="">
+<!-- 				      	 	   		onmouseover="">		 -->
+<input type="submit" class="botonSel all" id="botonConsulTodo" name="ct" value="Consultar todo"
+                          onmouseover="">
+                    </div>
+
+      <div class="capaClear"></div>
+
+
+      <ul class="piePx">
+        <li><span class="textoFuente">Fuente:Ministerio de Cultura. Encuesta de Hábitos y Prácticas Culturales en España 2024-2025.</span></li>
+        </ul>
+      </form>
+    
+<footer>
+	<!-- PIE Interior-->
+				  <div id="pie">
+					  <div class="bloque-superior">
+						  <div class="centrado">
+							  <p>CULTURABase. NIPO: 190-25-180-0</p>
+						  </div>
+						  <div class="clear"></div>
+					  </div>
+					  <div class="bloque-inferior">
+						  <div class="izq">
+							  <p>
+								&#169; Ministerio de Cultura - Gobierno de Espa&ntilde;a
+							  </p>
+						  </div>
+						  <div class="dcha">
+							  <ul class="comunes">
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/accesibilidad.html" target="_blank">Accesibilidad</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/aviso-legal.html" target="_blank">Aviso Legal</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/mapa-web.html" target="_blank">Mapa Web</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/politica-cookies.html" target="_blank">Pol&iacute;tica de cookies</a>
+								  </li>
+								  <li>
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/politica-privacidad.html" target="_blank">Pol&iacute;tica de Privacidad</a>
+								  </li>
+								  <li class="ultimo">
+								  <a href="https://www.cultura.gob.es/servicios-al-ciudadano/estadisticas/cultura/mc/culturabase/comunes/aviso-traduccion.html" target="_blank">Traducci&oacute;n</a>
+								  </li>
+							  </ul>
+						  </div>
+					  </div>
+					  <div class="clear"></div>
+				  </div>			</footer>
+</body>
+</html>

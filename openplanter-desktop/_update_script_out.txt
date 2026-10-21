@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\trodriguez\src\OpenPlanter\openplanter-desktop\update_tourism_report.py", line 189, in <module>
+    flines = replace_title(flines,
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\trodriguez\src\OpenPlanter\openplanter-desktop\update_tourism_report.py", line 23, in replace_title
+    raise ValueError('Old title not found')
+ValueError: Old title not found

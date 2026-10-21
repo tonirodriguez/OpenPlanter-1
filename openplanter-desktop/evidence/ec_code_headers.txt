@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Mon, 14 Sep 2026 11:14:54 GMT
+Cache-Control: public, max-age=300, s-maxage=300
+X-Age: 0
+Content-Language: en
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Last-Modified: Mon, 14 Sep 2026 11:14:54 GMT
+ETag: W/"1789384494-gzip"
+Accept-Ranges: bytes
+X-FPFIS: 5169135853
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload;
+Vary: Cookie,Accept-Encoding
+X-Cache: Hit from cloudfront
+Via: 1.1 e48a14501e2d5f7f3b7b6724900bcac0.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MAD53-P6
+X-Amz-Cf-Id: 9Y4DQTMxY036u3o4oZJTAULrRN8yFz2oUiFB_19nQYKg6jQpYsz6-Q==
+Age: 54
+

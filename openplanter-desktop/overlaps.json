@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "payments_source": null,
+    "lobbying_source": null,
+    "payments_records": 0,
+    "lobbying_records": 0,
+    "overlap_records": 0,
+    "confidence_counts": {
+      "confirmed": 0,
+      "probable": 0
+    },
+    "note": "Stub output: no vendor payment / lobbying disclosure datasets were found in the workspace at report time. Run crossref_payments_lobbying.py after adding input files to compute real overlaps."
+  },
+  "overlaps": []
+}

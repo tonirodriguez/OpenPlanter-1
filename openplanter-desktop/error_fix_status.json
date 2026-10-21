@@ -1,0 +1,38 @@
+{
+  "question": "¿ya está corregido el error que habías reportado en error_report.md?",
+  "status": "not_fixed",
+  "summary": "El repo todavía usa /bin/sh como shell por defecto y ejecuta comandos con '-c', sin lógica específica para Windows; por tanto el error reportado no aparece corregido en el código.",
+  "evidence": [
+    {
+      "claim": "El shell por defecto sigue siendo /bin/sh",
+      "source_file": "crates/op-core/src/config.rs",
+      "source_snippet": "shell: \"/bin/sh\".into(),",
+      "location_hint": "impl Default for AgentConfig"
+    },
+    {
+      "claim": "run_shell usa shell -c <command>",
+      "source_file": "crates/op-core/src/tools/shell.rs",
+      "source_snippet": "Command::new(shell).args([\"-c\", command])",
+      "location_hint": "fn run_shell"
+    },
+    {
+      "claim": "No se observa soporte explícito para Windows (cmd.exe/powershell/cfg!(windows))",
+      "source_file": "crates/** (búsqueda)",
+      "source_snippet": "sin coincidencias para cmd.exe, powershell, cfg!(windows)",
+      "location_hint": "search_files"
+    },
+    {
+      "claim": "Hay soporte de configuración vía OPENPLANTER_SHELL, pero sigue teniendo default /bin/sh",
+      "source_file": "crates/op-core/src/config.rs",
+      "source_snippet": "shell: env_or(\"OPENPLANTER_SHELL\", \"/bin/sh\"),",
+      "location_hint": "AgentConfig::from_env"
+    }
+  ],
+  "notes": {
+    "runtime_symptom_in_this_session": "Los comandos de run_shell fallan con '/usr/bin/bash: Files\\Git\\bin\\bash.exe: No such file or directory', lo que sugiere que el runtime está intentando usar un bash de Git inexistente en este entorno.",
+    "recommended_remediation": [
+      "Implementar selección de shell por SO (Windows: cmd.exe /C o powershell.exe -Command; Unix: /bin/sh -c).",
+      "O documentar/configurar OPENPLANTER_SHELL a un ejecutable existente en Windows (p.ej. Git Bash)."
+    ]
+  }
+}

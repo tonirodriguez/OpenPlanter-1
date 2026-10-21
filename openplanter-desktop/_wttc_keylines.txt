@@ -1,0 +1,5 @@
+LINE 394 The direct contribution of Travel & Tourism to GDP is expected to grow by 1.8% pa to EUR128.6bn (6.6% of GDP) from 2026 to 2036.
+LINE 479 By 2036, Travel & Tourism will account for 1,364,490 jobs directly (6.0% of total employment), an increase of 1.8% pa from 2026.
+LINE 525 By 2036, Travel & Tourism is forecast to support 3,906,171 jobs (17.2% of total employment), an increase of 1.8% pa since 2026.
+LINE 563 By 2036, international tourist arrivals are forecast to total 143,565,000, generating expenditure of EUR145.3bn, an increase of 1.8% pa since 2026.
+LINE 689     58.7%                                                                               Visitor exports are expected to rise by 1.8% pa to

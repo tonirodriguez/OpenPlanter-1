@@ -21,6 +21,18 @@ fn env_or(key: &str, default: &str) -> String {
     env::var(key).unwrap_or_else(|_| default.to_string())
 }
 
+fn default_shell() -> &'static str {
+    #[cfg(windows)]
+    {
+        "cmd.exe"
+    }
+
+    #[cfg(not(windows))]
+    {
+        "/bin/sh"
+    }
+}
+
 fn env_opt(key: &str) -> Option<String> {
     env::var(key).ok().filter(|s| !s.trim().is_empty())
 }
@@ -113,7 +125,7 @@ impl Default for AgentConfig {
             max_steps_per_call: 100,
             max_observation_chars: 6000,
             command_timeout_sec: 45,
-            shell: "/bin/sh".into(),
+            shell: default_shell().into(),
             max_files_listed: 400,
             max_file_chars: 20000,
             max_search_hits: 200,
@@ -211,7 +223,7 @@ impl AgentConfig {
             max_steps_per_call: env_int("OPENPLANTER_MAX_STEPS", 100),
             max_observation_chars: env_int("OPENPLANTER_MAX_OBS_CHARS", 6000),
             command_timeout_sec: env_int("OPENPLANTER_CMD_TIMEOUT", 45),
-            shell: env_or("OPENPLANTER_SHELL", "/bin/sh"),
+            shell: env_or("OPENPLANTER_SHELL", default_shell()),
             max_files_listed: env_int("OPENPLANTER_MAX_FILES", 400),
             max_file_chars: env_int("OPENPLANTER_MAX_FILE_CHARS", 20000),
             max_search_hits: env_int("OPENPLANTER_MAX_SEARCH_HITS", 200),

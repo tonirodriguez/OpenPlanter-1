@@ -1,0 +1,4 @@
+/c/Users/trodriguez/AppData/Local/Microsoft/WindowsApps/python3
+/c/Users/trodriguez/AppData/Local/miniconda3/python
+/c/nvm4w/nodejs/node
+MINGW64_NT-10.0-26200 ITN-TRODRIGUEZ 3.6.10-710e5275.x86_64 2026-07-28 09:32 UTC x86_64 Msys

@@ -1,0 +1,136 @@
+{
+    "question": "Tenemos datos cuantitativos del turismo cultural en Espa\u00f1a y Barcelona?",
+    "generated_at_utc": "2026-09-15",
+    "scope_note": "This file summarizes quantitative indicators found in the local workspace evidence files. It does not attempt to exhaust all possible official sources.",
+    "spain": {
+        "datasets": [
+            {
+                "source": "INE (Spain) \u2014 FRONTUR press release HTML (captured)",
+                "evidence_file": "evidence/ine_FRONTUR1225.html",
+                "indicator": "Inbound international tourists (all motives; not specifically cultural)",
+                "period": "Year 2025",
+                "value": "96,8 millones de turistas",
+                "yoy_change": "3,2%",
+                "evidence_line": 963,
+                "note": "The captured FRONTUR press release provides national inbound tourist totals and YoY change, but does not include a 'cultural tourism' breakdown in the captured HTML.",
+                "cultural_breakdown_present_in_capture": false
+            },
+            {
+                "source": "INE (Spain) \u2014 EGATUR press release HTML (captured)",
+                "evidence_file": "evidence/ine_EGATUR1225.html",
+                "indicator": "Inbound international tourist expenditure (all purposes; not specifically cultural)",
+                "period": "Year 2025",
+                "value": "134.712 millones de euros",
+                "yoy_change": "6,8%",
+                "evidence_lines": [
+                    361,
+                    1103
+                ],
+                "note": "The captured EGATUR press release provides national inbound expenditure totals and YoY change, but does not include a 'cultural tourism' breakdown in the captured HTML.",
+                "cultural_breakdown_present_in_capture": false
+            },
+            {
+                "source": "Ministerio de Cultura (Spain) \u2014 Encuesta de H\u00e1bitos y Pr\u00e1cticas Culturales 2024-2025 (CulturaJaxiPx XLSX export)",
+                "evidence_file": "evidence/02011.xlsx",
+                "indicator": "Cultural participation proxy (not tourism): share of people who visited museums / exhibitions / art galleries in the last year",
+                "period": "2024-2025",
+                "unit": "En % del total de cada colectivo",
+                "values": {
+                    "Museos \u2014 Total han visitado en el \u00faltimo a\u00f1o": {
+                        "value": "40.6",
+                        "evidence_cells": [
+                            "B7",
+                            "B8",
+                            "B9",
+                            "B10"
+                        ],
+                        "note": "TOTAL row. Column header group 'Museos'."
+                    },
+                    "Exposiciones \u2014 Total han visitado en el \u00faltimo a\u00f1o": {
+                        "value": "33.9",
+                        "evidence_cells": [
+                            "G7",
+                            "G8",
+                            "G9",
+                            "G10"
+                        ],
+                        "note": "TOTAL row. Column header group 'Exposiciones'."
+                    },
+                    "Galer\u00edas de arte \u2014 Total han visitado en el \u00faltimo a\u00f1o": {
+                        "value": "18.5",
+                        "evidence_cells": [
+                            "L7",
+                            "L8",
+                            "L9",
+                            "L10"
+                        ],
+                        "note": "TOTAL row. Column header group 'Galer\u00edas de arte'."
+                    }
+                },
+                "note": "This is a cultural participation indicator for residents (survey), included as supporting quantitative context. It is not a tourist-arrivals metric and does not isolate 'cultural tourists'."
+            }
+        ],
+        "bottom_line": "In the local INE FRONTUR/EGATUR press-release captures, there are national quantitative tourism totals (arrivals and spend) but no explicit cultural-tourism segmentation.",
+        "cultural_tourism_quantitative_data_found": false
+    },
+    "barcelona": {
+        "datasets": [
+            {
+                "source": "Observatori del Turisme a Barcelona (OTB) \u2014 'Informe mensual perfil Destinaci\u00f3' PDF text extract",
+                "evidence_file": "evidence/otb_2604_informe_mensual_perfil_destinacio.pdf.txt",
+                "indicator": "Activity preference: 'Visites culturals'",
+                "period": "Abril 2026",
+                "observations": [
+                    {
+                        "segment": "Barcelona Ciutat",
+                        "value": "79,8%",
+                        "evidence_line": 82
+                    },
+                    {
+                        "segment": "Barcelona Regi\u00f3",
+                        "value": "50,2%",
+                        "evidence_line": 145
+                    },
+                    {
+                        "segment": "Destinaci\u00f3 Barcelona",
+                        "value": "63,0%",
+                        "evidence_line": 207
+                    }
+                ],
+                "note": "The PDF text contains three repeated 'Activitats realitzades al municipi' blocks corresponding to the three sections of the report (Barcelona Ciutat, Barcelona Regi\u00f3, Destinaci\u00f3 Barcelona). The 'Visites culturals' percentage is taken from each section's block."
+            },
+            {
+                "source": "Observatori del Turisme a Barcelona (OTB) \u2014 'Informe mensual perfil Destinaci\u00f3' PDF text extract",
+                "evidence_file": "evidence/otb_2605_informe_mensual_perfil_destinacio.pdf.txt",
+                "indicator": "Activity preference: 'Visites culturals'",
+                "period": "Maig 2026",
+                "observations": [
+                    {
+                        "segment": "Barcelona Ciutat",
+                        "value": "76,0%",
+                        "evidence_line": 75
+                    },
+                    {
+                        "segment": "Barcelona Regi\u00f3",
+                        "value": "47,1%",
+                        "evidence_line": 144
+                    },
+                    {
+                        "segment": "Destinaci\u00f3 Barcelona",
+                        "value": "59,3%",
+                        "evidence_line": 208
+                    }
+                ],
+                "note": "The PDF text contains three repeated 'Activitats realitzades al municipi' blocks corresponding to the three sections of the report (Barcelona Ciutat, Barcelona Regi\u00f3, Destinaci\u00f3 Barcelona). The 'Visites culturals' percentage is taken from each section's block."
+            }
+        ],
+        "bottom_line": "In the local OTB monthly profile report text extracts, there is a quantitative 'Visites culturals' activity-preference indicator with percentages for April and May 2026.",
+        "cultural_tourism_quantitative_data_found": true
+    },
+    "limitations": [
+        "This summary is restricted to evidence files already present in the workspace.",
+        "The OTB PDF-to-text extraction shows activity names and percentages but may omit headers that explain which population/segment each percentage refers to.",
+        "Absence of 'cultural' breakdown in the captured INE press-release HTML does not prove that Spain has no official cultural-tourism statistics; it only indicates it was not present in these specific captures."
+    ]
+}
+0

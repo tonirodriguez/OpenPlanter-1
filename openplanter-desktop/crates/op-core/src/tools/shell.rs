@@ -46,6 +46,31 @@ fn check_shell_policy(command: &str) -> Option<String> {
     None
 }
 
+fn shell_args<'a>(shell: &str, command: &'a str) -> [&'a str; 2] {
+    #[cfg(windows)]
+    {
+        let executable = shell
+            .rsplit(['\\', '/'])
+            .next()
+            .unwrap_or(shell)
+            .to_ascii_lowercase();
+
+        if executable == "cmd" || executable == "cmd.exe" {
+            return ["/C", command];
+        }
+
+        if executable == "powershell"
+            || executable == "powershell.exe"
+            || executable == "pwsh"
+            || executable == "pwsh.exe"
+        {
+            return ["-Command", command];
+        }
+    }
+
+    ["-c", command]
+}
+
 /// State for background shell processes.
 pub struct BgJobs {
     jobs: HashMap<u32, BgJob>,
@@ -93,7 +118,7 @@ pub fn run_shell(
     let effective_timeout = timeout_sec.max(1).min(600);
 
     let mut child = match Command::new(shell)
-        .args(["-c", command])
+        .args(shell_args(shell, command))
         .current_dir(root)
         .stdout(Stdio::piped())
         .stderr(Stdio::piped())
@@ -167,7 +192,7 @@ pub fn run_shell_bg(
     };
 
     let child = match Command::new(shell)
-        .args(["-c", command])
+        .args(shell_args(shell, command))
         .current_dir(root)
         .stdout(Stdio::from(outfile))
         .stderr(Stdio::from(errfile))
@@ -246,13 +271,55 @@ mod tests {
     use super::*;
     use tempfile::TempDir;
 
+    fn test_shell() -> &'static str {
+        #[cfg(windows)]
+        {
+            "cmd.exe"
+        }
+
+        #[cfg(not(windows))]
+        {
+            "/bin/sh"
+        }
+    }
+
+    fn long_running_command() -> &'static str {
+        #[cfg(windows)]
+        {
+            "ping -n 61 127.0.0.1 > NUL"
+        }
+
+        #[cfg(not(windows))]
+        {
+            "sleep 60"
+        }
+    }
+
     #[test]
     fn test_run_shell_basic() {
         let dir = TempDir::new().unwrap();
-        let result = run_shell(dir.path(), "/bin/sh", "echo hello", 10, 16000);
+        let result = run_shell(dir.path(), test_shell(), "echo hello", 10, 16000);
         assert!(!result.is_error);
         assert!(result.content.contains("hello"));
         assert!(result.content.contains("exit_code=0"));
+    }
+
+    #[test]
+    fn test_bash_uses_dash_c() {
+        assert_eq!(shell_args("bash", "echo hello"), ["-c", "echo hello"]);
+    }
+
+    #[cfg(windows)]
+    #[test]
+    fn test_windows_shell_arguments() {
+        assert_eq!(shell_args("cmd.exe", "echo hello"), ["/C", "echo hello"]);
+        assert_eq!(
+            shell_args(
+                "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "echo hello"
+            ),
+            ["-Command", "echo hello"]
+        );
     }
 
     #[test]
@@ -260,7 +327,7 @@ mod tests {
         let dir = TempDir::new().unwrap();
         let result = run_shell(
             dir.path(),
-            "/bin/sh",
+            test_shell(),
             "cat << EOF\nhello\nEOF",
             10,
             16000,
@@ -272,7 +339,7 @@ mod tests {
     #[test]
     fn test_run_shell_interactive_blocked() {
         let dir = TempDir::new().unwrap();
-        let result = run_shell(dir.path(), "/bin/sh", "vim test.txt", 10, 16000);
+        let result = run_shell(dir.path(), test_shell(), "vim test.txt", 10, 16000);
         assert!(result.is_error);
         assert!(result.content.contains("BLOCKED"));
     }
@@ -282,7 +349,7 @@ mod tests {
         let dir = TempDir::new().unwrap();
         let mut bg = BgJobs::new();
 
-        let result = run_shell_bg(dir.path(), "/bin/sh", "echo bg_test", &mut bg);
+        let result = run_shell_bg(dir.path(), test_shell(), "echo bg_test", &mut bg);
         assert!(!result.is_error);
         assert!(result.content.contains("job_id=1"));
 
@@ -299,7 +366,7 @@ mod tests {
         let dir = TempDir::new().unwrap();
         let mut bg = BgJobs::new();
 
-        let result = run_shell_bg(dir.path(), "/bin/sh", "sleep 60", &mut bg);
+        let result = run_shell_bg(dir.path(), test_shell(), long_running_command(), &mut bg);
         assert!(!result.is_error);
 
         let result = kill_shell_bg(1, &mut bg);

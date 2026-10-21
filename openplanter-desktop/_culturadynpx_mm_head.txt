@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="es">
+<head>
+<title>CULTURAbase. Estadisticas Culturales</title>
+<title>Estadisticas de Cultura. CULTURABase</title>
+<link rel="shortcut icon" href="/menus/img/favicon-new.ico" type="image/x-icon">
+<!--pruebaportada-->
+<link href="/menus/img/favicon-new.png" rel="apple-touch-icon">
+<link href="/menus/img/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/menus/img/apple-touch-icon-60x60-precomposed.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/menus/img/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/menus/img/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/menus/img/apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/menus/img/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/menus/img/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/menus/img/apple-touch-icon-160x160-precomposed.png" rel="apple-touch-icon" sizes="160x160">
+<link href="/menus/img/apple-touch-icon-180x180-precomposed.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/menus/img/favicon-192x192.png" rel="icon" sizes="192x192">
+<link href="/menus/img/favicon-160x160.png" rel="icon" sizes="160x160">
+<link href="/menus/img/favicon-128x128.png" rel="icon" sizes="128x128">
+<link href="/menus/img/favicon-96x96.png" rel="icon" sizes="96x96">
+<link href="/menus/img/favicon-32x32.png" rel="icon" sizes="32x32">
+<link href="/menus/img/favicon-16x16.png" rel="icon" sizes="16x16">
+<!-- Google Tag Manager 2-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W3JJ7K76');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="INE">
+<meta property="og:image" content="/menus/_b/img/logoINESocial.png">
+<meta property="og:image:secure_url" content="/menus/_b/img/logoINESocial.png">
+<meta property="og:image:alt" content="Logo">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="326">
+<meta property="og:image:height" content="126">
+<meta content="True" name="HandheldFriendly">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<script src="/menus/_b/../plantillas/inebase/js/es/widget-grid.js"></script>
+<script src="/menus/js/loading.js"></script>
+<script src="/menus/_b/js/es/general.js"></script><link rel="stylesheet" as="style" media="screen" href="/menus/lib/jquery-ui/1.13.2/jquery-ui.css" onload="this.rel='stylesheet'; this.onload=null">
+<link rel="stylesheet" as="style" media="screen" href="/menus/_b/css/bootstrapINE.min.css" onload="this.rel='stylesheet'; this.onload=null">
+<link rel="stylesheet" as="style" href="/menus/_b/fonts/fontAwesome/css/all.min.css" onload="this.rel='stylesheet'; this.onload=null"><script>
+	var sepMil= ".";var sepDec= ",";
+	var docIsLoaded=false;
+	var HM_Menu_Dir="/menus/";
+	var HM_Menu_DirVersion="/menus/_b/";
+	var HM_imgDir="/menus/img/";
+	var HM_DirJs="/menus/js/";
+	var HM_idioma="es";
+	var HM_idiomaINE="0";
+	var othethickbox="";
+	var INE_Servidor="http://www.ine.es";
+	var INE_ServidorAbsoluta="http://www.ine.es";
+	var HTMLVersion=5;
+	var showBtnAddCesta=false;
+	var isIE=false;
+</script>
+<script src="/menus/lib/jquery-3.6.3.js"></script>
+<script src="/menus/_b/js/general.js"></script>
+<!--<script async="" src="/menus/lib/bootstrap/5.3.1/js/bootstrap.min.js"></script>-->
+<script async="" src="/menus/lib/jquery-ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" as="style" href="/menus/_b/css/component/components.css?s=0&amp;ilp=1&amp;sv=2&amp;pnls=1" onload="this.rel='stylesheet'; this.onload=null">
+<script src="/menus/_b/js/component/components.js?s=0&amp;ilp=1&amp;sv=2&amp;pnls=1" charset=""></script>
+<link rel="stylesheet" href="/menus/_b/css/baseINE.css">
+<link rel="stylesheet" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/iconos.css">
+<link rel="stylesheet" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/cabecera_pie.css">
+<link rel="preload" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/cabecera_pie_print.css" media="print">
+<link rel="stylesheet" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/nav.css">
+<link rel="preload" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/nav_print.css" media="print">
+<link rel="stylesheet" as="style" onload="this.rel='stylesheet'; this.onload=null" href="/menus/_b/css/global.css">
+<link rel="stylesheet" href="/menus/_b/css/oldMigration.css">
+<script async="" src="/menus/js/cookie.js"></script>
+<script async="" src="/menus/_b/js/cabecera.js"></script>
+<script async="" src="/menus/_b/js/social.js"></script>
+<script async="" src="/menus/js/thickboxINE.js"></script>
+<script src="/menus/_b/js/oldMigration.js"></script>
+<!--<script src="/menus/lib/jquery-migrate-3.4.0.min.js"></script>-->

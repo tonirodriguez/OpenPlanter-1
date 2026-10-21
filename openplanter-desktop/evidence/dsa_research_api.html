@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+
+    <title>Research API - DSA Transparency Database</title>
+
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <script>
+        var cl = document.querySelector('html').classList;
+        cl.remove('no-js');
+        cl.add('has-js');
+    </script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.2/pikaday.js"
+        crossorigin="anonymous"
+    ></script>
+
+    <link rel="icon" href="https://transparency.dsa.ec.europa.eu/favicon.ico" type="image/x-icon">
+
+    <link
+        rel="stylesheet"
+        href="https://transparency.dsa.ec.europa.eu/static/ecl/styles/optional/ecl-reset.css"
+        media="screen"
+    />
+
+    <link
+        rel="stylesheet"
+        href="https://transparency.dsa.ec.europa.eu/static/ecl/styles/ecl-ec.css"
+        crossorigin="anonymous"
+        media="screen"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://transparency.dsa.ec.europa.eu/static/ecl/styles/optional/ecl-ec-utilities.css"
+        crossorigin="anonymous"
+        media="screen"
+    />
+
+    <link
+        rel="stylesheet"
+        href="https://transparency.dsa.ec.europa.eu/static/ecl/styles/ecl-ec-print.css"
+        crossorigin="anonymous"
+        media="print"
+    >
+
+    <link rel="stylesheet" href="/css/app.css">
+
+
+        <style>
+
+        code {
+            background: #2b2b2b;
+            color: #f8f8f2;
+            padding: .1em;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid;
+            color: rgb(205, 213, 239);
+        }
+
+    </style>
+
+</head>
+<body class="ecl">
+<div id="root" style="padding-top: 0 !important;">
+
+    <header class="ecl-site-header ecl-site-header--has-menu" data-ecl-auto-init="SiteHeader">
+    <div class="ecl-site-header__background">
+        <div class="ecl-site-header__header">
+            <div class="ecl-site-header__container ecl-container">
+                <div class="ecl-site-header__top" data-ecl-site-header-top>
+                    <a href="https://transparency.dsa.ec.europa.eu"
+                       class="ecl-link ecl-link--standalone ecl-site-header__logo-link"
+                       aria-label="European Commission">
+                        <picture class="ecl-picture ecl-site-header__picture" title="European Commission">
+                            <source srcset="https://transparency.dsa.ec.europa.eu/static/ecl/images/logo/positive/logo-ec--en.svg"
+                                media="(min-width: 576px)">
+                            <source srcset="https://transparency.dsa.ec.europa.eu/static/ecl/images/logo/logo-ec--mute.svg"
+                                media="(min-width: 1px)">
+                            <img class="ecl-site-header__logo-image"
+                                 src="https://transparency.dsa.ec.europa.eu/static/ecl/images/logo/positive/logo-ec--en.svg"
+                                 alt="European Commission logo"/>
+                        </picture>
+                    </a>
+                    <div class="ecl-site-header__action">
+
+                                                
+                        <div class="ecl-site-header__login-container">
+
+            <a class="ecl-button ecl-button--tertiary ecl-site-header__login-toggle"
+           href="https://transparency.dsa.ec.europa.eu/profile/start">
+            <svg class="ecl-icon ecl-icon--s ecl-site-header__icon"
+                 focusable="false"
+                 aria-hidden="false"
+                 role="img"
+            >
+                <title>Log in</title>
+                <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#log-in"></use>
+
+            </svg>
+            Log In</a>
+        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="ecl-site-header__banner">
+            <div class="ecl-container">
+                <div class="ecl-site-header__site-name">DSA Transparency Database</div>
+            </div>
+        </div>
+
+
+        <nav class="ecl-menu"
+             data-ecl-menu
+             data-ecl-menu-max-lines="2"
+             data-ecl-auto-init="Menu"
+             data-ecl-menu-label-open="Menu"
+             data-ecl-menu-label-close="Close"
+             aria-expanded="false"
+             role="navigation">
+            <div class="ecl-menu__overlay"></div>
+            <div class="ecl-container ecl-menu__container">
+
+
+                <a href="https://transparency.dsa.ec.europa.eu"
+                   class="ecl-link ecl-link--standalone ecl-link--icon ecl-button ecl-button--tertiary ecl-menu__open ecl-link--icon-only"
+                   data-ecl-menu-open>
+                    <svg class="ecl-icon ecl-icon--m ecl-link__icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#hamburger"></use>
+
+                    </svg>
+                    <svg class="ecl-icon ecl-icon--m ecl-link__icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#close"></use>
+
+                    </svg>
+                    <span class="ecl-link__label">Menu</span>
+                </a>
+
+                <section class="ecl-menu__inner" data-ecl-menu-inner role="application" aria-label="Menu">
+
+                    <header class="ecl-menu__inner-header">
+
+                        <button class="ecl-button ecl-button--ghost ecl-menu__back"
+                                type="submit" data-ecl-menu-back>
+                            <span class="ecl-button__container">
+                                <svg class="ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-button__icon"
+                                     focusable="false" aria-hidden="true"
+                                     data-ecl-icon>
+                                    <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#corner-arrow"></use>
+
+                                </svg>
+                                <span class="ecl-button__label" data-ecl-label="true">Back</span>
+                            </span>
+                        </button>
+
+                    </header>
+
+
+                    <ul class="ecl-menu__list" data-ecl-menu-list>
+
+                        <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-home">
+                            <a href="https://transparency.dsa.ec.europa.eu"
+                               class="ecl-link ecl-link--standalone ecl-menu__link"
+                               data-ecl-menu-link
+                               id="ecl-menu-home-link">Home</a>
+                        </li>
+
+                        <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-home">
+                            <a href="https://transparency.dsa.ec.europa.eu/dashboard"
+                               class="ecl-link ecl-link--standalone ecl-menu__link"
+                               data-ecl-menu-link
+                               id="ecl-menu-home-link">Dashboard</a>
+                        </li>
+
+                        <li class="ecl-menu__item ecl-menu__item--has-children" data-ecl-menu-item=""
+                            data-ecl-has-children=""
+                            aria-expanded="false" id="ecl-menu-item-platforms">
+                            <a href="https://transparency.dsa.ec.europa.eu/explore-data/overview"
+                               class="ecl-link ecl-link--standalone ecl-menu__link"
+                               data-ecl-menu-link=""
+                               id="ecl-menu-item-platforms-link">Explore Data</a>
+                            <button class="ecl-button ecl-button--ghost ecl-menu__button-caret ecl-button--icon-only"
+                                    type="button"
+                                    data-ecl-menu-caret="" aria-label="Explore Data"
+                                    aria-expanded="false">
+                                        <span class="ecl-button__container">
+                                            <svg
+                                                class="ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-button__icon--after"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                data-ecl-icon="">
+                                                <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#corner-arrow"></use>
+
+                                            </svg>
+                                        </span>
+                            </button>
+
+                            <div class="ecl-menu__mega" data-ecl-menu-mega="">
+                                <ul class="ecl-menu__sublist">
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/explore-data/overview"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">
+                                            Overview
+                                        </a>
+                                    </li>
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/explore-data/download"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">
+                                            Download
+                                        </a>
+                                    </li>
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/explore-data/toolbox"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">
+                                            Toolbox
+                                        </a>
+                                    </li>
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/page/research-api"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">Research API</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+
+
+                        <li class="ecl-menu__item" data-ecl-menu-item id="ecl-menu-home">
+                            <a href="https://transparency.dsa.ec.europa.eu/statement"
+                               class="ecl-link ecl-link--standalone ecl-menu__link"
+                               data-ecl-menu-link
+                               id="ecl-menu-home-link">Search for Statements of Reasons</a>
+                        </li>
+
+
+                        <li class="ecl-menu__item ecl-menu__item--has-children" data-ecl-menu-item=""
+                            data-ecl-has-children=""
+                            aria-expanded="false" id="ecl-menu-item-platforms">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/documentation"
+                               class="ecl-link ecl-link--standalone ecl-menu__link"
+                               data-ecl-menu-link=""
+                               id="ecl-menu-item-platforms-link">Documentation</a>
+                            <button class="ecl-button ecl-button--ghost ecl-menu__button-caret ecl-button--icon-only"
+                                    type="button"
+                                    data-ecl-menu-caret="" aria-label="Platforms"
+                                    aria-expanded="false">
+                                        <span class="ecl-button__container">
+                                            <svg
+                                                class="ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-button__icon ecl-button__icon--after"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                data-ecl-icon="">
+                                                <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#corner-arrow"></use>
+
+                                            </svg>
+                                        </span>
+                            </button>
+
+                            <div class="ecl-menu__mega" data-ecl-menu-mega="">
+                                <ul class="ecl-menu__sublist">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/page/documentation"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">
+                                            Overview
+                                        </a>
+                                    </li>
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/page/onboarding-documentation"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">Platform
+                                            Onboarding</a>
+                                    </li>
+
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/page/api-documentation"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">API and Schema</a>
+                                    </li>
+
+
+
+                                    
+                                    
+                                    
+                                    
+
+
+                                    <li class="ecl-menu__subitem" data-ecl-menu-subitem="">
+                                        <a href="https://transparency.dsa.ec.europa.eu/page/webform-documentation"
+                                           class="ecl-link ecl-link--standalone ecl-menu__sublink">Webform</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+    <div class="ecl-container ecl-u-mb-xl">
+        <div class="ecl-row">
+            <div class="ecl-col-12">
+
+                <nav class="ecl-breadcrumb ecl-page-header__breadcrumb" aria-label="You&#x20;are&#x20;here&#x3A;"
+                     data-ecl-breadcrumb="true" data-ecl-auto-init="Breadcrumb">
+                    <ol class="ecl-breadcrumb__container">
+                            <li class="ecl-breadcrumb__segment " data-ecl-breadcrumb-item="static">
+            <a href="https://transparency.dsa.ec.europa.eu"
+           class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-breadcrumb__link">Home</a>
+        <svg class="ecl-icon ecl-icon--2xs ecl-icon--rotate-90 ecl-breadcrumb__icon" focusable="false"
+             aria-hidden="true" role="presentation">
+            <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#corner-arrow"></use>
+
+        </svg>
+            <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page " data-ecl-breadcrumb-item="static">
+            <li class="ecl-breadcrumb__segment ecl-breadcrumb__current-page" data-ecl-breadcrumb-item="static"
+    aria-current="page">Research API</li>
+
+                    </ol>
+                </nav>
+
+                
+                
+                
+            </div>
+        </div>
+        <div class="ecl-row">
+            <div class="ecl-col-12">
+                
+    <h1 class="ecl-u-type-heading-1">Research API</h1>
+
+    <div class="ecl-row data-ecl-inpage-navigation-container">
+        <div class="ecl-col-l-3 ecl-u-d-none" id="toc-wrapper">
+
+
+            <nav class="ecl-inpage-navigation"
+                 data-ecl-auto-init="InpageNavigation"
+                 data-ecl-inpage-navigation="true"
+                 aria-labelledby="ecl-inpage-navigation-default">
+                <div class="ecl-inpage-navigation__title" id="ecl-inpage-navigation-default">Page contents</div>
+
+                <div class="ecl-inpage-navigation__body">
+
+                    <div id="toc-area">
+                        <div class="ecl-inpage-navigation__trigger-wrapper">
+                            <button type="button" class="ecl-inpage-navigation__trigger"
+                                    id="ecl-inpage-navigation-default-trigger"
+                                    data-ecl-inpage-navigation-trigger="true"
+                                    aria-controls="ecl-inpage-navigation-list" aria-expanded="false"
+                                    aria-label="inpage-navigation trigger">
+                                <span class="ecl-inpage-navigation__trigger-current"
+                                      data-ecl-inpage-navigation-trigger-current="true">
+                                </span>
+                                <svg class="ecl-icon ecl-icon--xs ecl-icon--rotate-180 ecl-inpage-navigation__trigger-icon"
+                                     focusable="false" aria-hidden="true">
+                                    <use xlink:href="/static/ecl/images/icons/sprites/icons.svg#corner-arrow"></use>
+
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="ecl-inpage-navigation__list"
+                            data-ecl-inpage-navigation-list="true"
+                            id="ecl-inpage-navigation-default-list"
+                        >
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <div class="ecl-col-l-12" id="content-wrapper">
+            <div id="content-area">
+                <h2 id="overview">Overview</h2>
+<p>This documentation describes the DSA Transparency Database Research API. Its endpoints are designed to enable
+programmatic access to and queries of statements of reasons (SORs) for academic and policy research into platforms’
+content moderation practices.</p>
+<p>By providing specialized access to search and analyse data within the statement_index of the DSA Transparency Database
+in OpenSearch, the Research API supports a wide range of technically advanced research and investigative applications.
+In enabling programmatic analysis, the DSA Transparency Database Research API complements the other analytical tools of
+the DSA Transparency Database, namely its public <a href="/dashboard">dashboard</a> for quick exploration and visualisation of the
+data and the <a href="https://code.europa.eu/dsa/transparency-database/dsa-tdb">dsa-tdb</a> analytical package enabling advanced
+analysis of individually downloaded statements of reasons.</p>
+<h2 id="purpose-and-scope">Purpose and Scope</h2>
+<p>The DSA Transparency Database Research API empowers interested stakeholders with the relevant technical knowledge to
+retrieve specific subsets of data within the OpenSearch statement_index of the DSA Transparency Database and to perform
+complex queries based on their research interests. As such, it lends itself in particular to facilitate longitudinal and
+cross-platform studies, i.e. to the systematic investigation of trends and patterns in the data.</p>
+<p>In line with the DSA Transparency Database <a href="/page/data-retention-policy">data retention policy</a>, the statement_index
+only contains statements of reasons submitted by platforms within the last 6 months. Older statements of reasons are not
+available through the Research API endpoints. The DSA Transparency Database Research API endpoints are specifically
+designed for programmatic statistical and pattern analysis, NOT for bulk data collection. You can find an overview of
+other tools to analyse the data in the DSA Transparency Database <a href="/explore-data/overview">here</a>.</p>
+<h2 id="how-to-get-access">How to Get Access</h2>
+<p>1.&nbsp;Create an EU Login Account. Please find the instructions to create an EU Login
+Account <a href="https://trusted-digital-identity.europa.eu/eu-login-help/external-self-registered-account-faq/how-do-i-create-my-eu-login-account_en">here</a>.</p>
+<p>2.&nbsp;Visit the DSA Transparency Database Page by
+clicking <a href="https://transparency.dsa.ec.europa.eu/profile/start">here</a>.</p>
+<p>3.&nbsp;Contact the DSA Helpdesk at <a href="mailto:CNECT-DSA-HELPDESK@ec.europa.eu">CNECT-DSA-HELPDESK@ec.europa.eu</a> with your
+EU Login details and express your interest in obtaining an authentication token for the Research API. The DSA Helpdesk
+will process your request and update your account with the appropriate permissions.</p>
+<p>4.&nbsp;Log into the DSA Transparency Database website with your EU Login Account and test your access with basic
+queries</p>
+<h2 id="use-conditions-&amp;-limitations">Use Conditions &amp; Limitations</h2>
+<p>1.&nbsp;By receiving your authentication token, you agree to use it responsibly &amp; within the limitations specified in
+this documentation.</p>
+<p>2.&nbsp;You must keep your authentication token confidential and not share it with any third party. You are solely and
+entirely responsible for all uses of your authentication token.</p>
+<p>3.&nbsp;Limits are placed on the number of API requests you can make using your authentication token. You agree to, and
+will not attempt to circumvent, such limitations. Exceeding these limits will lead to your authentication token being
+temporarily blocked from making further requests.</p>
+<p>4.&nbsp;The maximum response size of an API request is 5MB.</p>
+<p>5.&nbsp;The maximum execution time of an API request is 30 seconds.</p>
+<p>6.&nbsp;The maximum result size is 1000 rows per query and there is no pagination support.</p>
+<p>7.&nbsp;In line with the DSA Transparency Database <a href="/page/data-retention-policy">data retention policy</a>, the
+statement_index only contains statements of reasons submitted by platforms within the last 6 months. As such, older
+statements are not available through these API endpoints.</p>
+<p>8.&nbsp;All endpoints are read-only. No modifications to the statement_index data are possible through these endpoints.</p>
+<p>9.&nbsp;The Research endpoints are NOT intended for downloading large volumes of individual statements of reasons.
+The <a href="/explore-data/download">data download</a> section of the website enables bulk data download.</p>
+<h2 id="available-endpoints">Available Endpoints</h2>
+<table class="ecl-table">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/search</code></td>
+      <td>POST</td>
+      <td>Complex search using OpenSearch DSL</td>
+      <td>Detailed filtering and complex queries</td>
+    </tr>
+    <tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/sql</code></td>
+      <td>POST</td>
+      <td>SQL-like queries for analysis</td>
+      <td>Statistical analysis and aggregations</td>
+    </tr>
+<tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/count</code></td>
+      <td>POST</td>
+      <td>Count documents matching query</td>
+      <td>Quick statistics and volume analysis</td>
+    </tr>
+    <tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/query</code></td>
+      <td>POST</td>
+      <td>Search using OpenSearch DQL</td>
+      <td>Domain-specific querying</td>
+    </tr>
+    <tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/{date}[/{fields}]</code></td>
+      <td>GET</td>
+      <td>Aggregated statistics by date</td>
+      <td>Trend analysis and patterns</td>
+    </tr>
+    <tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/labels</code></td>
+      <td>GET</td>
+      <td>Available label definitions</td>
+      <td>Understanding classification values</td>
+    </tr>
+    <tr>
+      <td><code>https://transparency.dsa.ec.europa.eu/api/v1/research/platforms</code></td>
+      <td>GET</td>
+      <td>Platform information</td>
+      <td>Platform metadata and identifiers</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="authentication">Authentication</h2>
+<p>All endpoints require authentication using a Bearer token. See <a href="#how-to-get-access">How to get access</a> for the process
+of obtaining an authentication token. All requests must use HTTPS.</p>
+<p><strong>Header Format:</strong></p>
+<pre><code class="language-http">Authorization: Bearer &lt;your-token&gt;</code></pre>
+<p><strong>Base URL:</strong>
+All Research API endpoints are accessible under the base URL:</p>
+<pre><code class="language-http">https://transparency.dsa.ec.europa.eu/api/v1/research</code></pre>
+<p>For detailed information on how to construct OpenSearch DSL queries, refer to
+the <a href="https://opensearch.org/docs/latest/query-dsl/">OpenSearch Query DSL Documentation</a>.</p>
+<h2 id="statement-index-schema">Statement Index Schema</h2>
+<p>The statement_index contains the following fields that can be used in your queries:</p>
+<table class="ecl-table">
+  <thead>
+    <tr>
+      <th scope="col">Field</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>account_type</td><td>keyword</td><td>Type of account</td></tr>
+    <tr><td>application_date</td><td>date</td><td>Date of application of a moderation decision</td></tr>
+    <tr><td>automated_decision</td><td>keyword</td><td>Automated decision indicator</td></tr>
+    <tr><td>automated_detection</td><td>boolean</td><td>Whether detection was automated</td></tr>
+    <tr><td>category</td><td>keyword</td><td>Statement category</td></tr>
+    <tr><td>category_addition</td><td>text</td><td>Additional category information</td></tr>
+    <tr><td>category_specification</td><td>text</td><td>Category specification details</td></tr>
+    <tr><td>content_date</td><td>date</td><td>Date of the content</td></tr>
+    <tr><td>content_language</td><td>keyword</td><td>Language of the content</td></tr>
+    <tr><td>content_type</td><td>text</td><td>Type of content</td></tr>
+    <tr><td>content_type_other</td><td>text</td><td>Other content type details</td></tr>
+    <tr><td>content_type_single</td><td>keyword</td><td>Single content type identifier</td></tr>
+    <tr><td>created_at</td><td>date</td><td>Creation timestamp</td></tr>
+    <tr><td>decision_account</td><td>keyword</td><td>Account decision</td></tr>
+    <tr><td>decision_facts</td><td>text</td><td>Decision facts</td></tr>
+    <tr><td>decision_ground</td><td>keyword</td><td>Ground for decision</td></tr>
+    <tr><td>decision_monetary</td><td>keyword</td><td>Monetary decision</td></tr>
+    <tr><td>decision_monetary_other</td><td>text</td><td>Other monetary decision details</td></tr>
+    <tr><td>decision_provision</td><td>keyword</td><td>Decision provision</td></tr>
+    <tr><td>decision_visibility</td><td>text</td><td>Visibility decision</td></tr>
+    <tr><td>decision_visibility_other</td><td>text</td><td>Other visibility decision details</td></tr>
+    <tr><td>decision_visibility_single</td><td>keyword</td><td>Single visibility decision</td></tr>
+    <tr><td>id</td><td>long</td><td>Unique identifier</td></tr>
+    <tr><td>illegal_content_explanation</td><td>text</td><td>Explanation of illegal content</td></tr>
+    <tr><td>illegal_content_legal_ground</td><td>text</td><td>Legal ground for illegal content</td></tr>
+    <tr><td>incompatible_content_explanation</td><td>text</td><td>Explanation of incompatible content</td></tr>
+    <tr><td>incompatible_content_ground</td><td>text</td><td>Ground for incompatible content</td></tr>
+    <tr><td>method</td><td>keyword</td><td>Method used</td></tr>
+    <tr><td>platform_id</td><td>long</td><td>Platform identifier</td></tr>
+    <tr><td>platform_name</td><td>text</td><td>Name of the platform</td></tr>
+    <tr><td>platform_uuid</td><td>text</td><td>Platform UUID</td></tr>
+    <tr><td>platform_vlop</td><td>boolean</td><td>Platform VLOP status</td></tr>
+    <tr><td>puid</td><td>text</td><td>PUID identifier</td></tr>
+    <tr><td>received_date</td><td>date</td><td>Date received</td></tr>
+    <tr><td>source_identity</td><td>text</td><td>Identity of the source</td></tr>
+    <tr><td>source_type</td><td>keyword</td><td>Type of source</td></tr>
+    <tr><td>territorial_scope</td><td>text</td><td>Territorial scope</td></tr>
+    <tr><td>url</td><td>text</td><td>URL reference</td></tr>
+    <tr><td>uuid</td><td>text</td><td>UUID identifier</td></tr>
+  </tbody>
+</table>
+<h4 id="notes:">Notes:</h4>
+<ul>
+<li>Fields of type keyword can be used for exact matches and/or as keys for aggregations (as in an SQL group-by).</li>
+<li>Fields of type text are indexed and can be queried with text search (for instance, filtering with an SQL LIKE - statement)</li>
+<li>Fields of type date accept ISO 8601 format</li>
+<li>Fields of type boolean accept true/false values</li>
+<li>Fields of type long are numeric identifiers</li>
+</ul>
+<h2 id="detailed-endpoint-documentation">Detailed Endpoint Documentation</h2>
+<h2 id="search">SEARCH</h2>
+<p>This endpoint enables complex search using OpenSearch DSL. For detailed information on how to construct OpenSearch DSL
+queries, refer to the <a href="https://opensearch.org/docs/latest/query-dsl/">OpenSearch Query DSL Documentation</a>.</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>POST</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/search</code></p>
+<h3 id="endpoint-specific-limitations">Endpoint-Specific Limitations</h3>
+<ul>
+<li>Results are limited to <strong>1000 rows</strong> per query.</li>
+<li>Total hits are tracked accurately (<code>track_total_hits</code> is enabled).</li>
+<li>For bulk downloads, please use the <a href="/explore-data/download">data download</a> section of the website.</li>
+</ul>
+<h3 id="example-use-cases">Example Use Cases</h3>
+<h4 id="analysis-of-scams-&amp;-fraud-moderation-patterns">Analysis of Scams &amp; Fraud Moderation Patterns</h4>
+<ul>
+<li>Tracks scams &amp; fraud moderation across a six-month period.</li>
+<li>Compares platform responses to scams &amp; fraud.</li>
+<li>Identifies temporal patterns in scams &amp; fraud content moderation.</li>
+</ul>
+<pre><code class="language-json">{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "category": "STATEMENT_CATEGORY_SCAMS_AND_FRAUD"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "received_date": {
+                            "gte": "2024-01-01",
+                            "lte": "2024-06-30"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+<h4 id="regional-content-moderation-analysis">Regional Content Moderation Analysis</h4>
+<ul>
+<li>Compares content moderation approaches across EU member states.</li>
+<li>Analyzes regional variations in moderation decisions based on illegality.</li>
+<li>Exposes cross-border differences.</li>
+</ul>
+<pre><code class="language-json">{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "terms": {
+                        "territorial_scope": [
+                            "DE",
+                            "FR",
+                            "IT"
+                        ]
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "term": {
+                        "decision_ground": "DECISION_GROUND_ILLEGAL_CONTENT"
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+<h4 id="analysis-of-the-use-of-automated-means-in-content-moderation">Analysis of the Use of Automated Means in Content Moderation</h4>
+<ul>
+<li>Evaluates the use of automated means in content moderation.</li>
+</ul>
+<pre><code class="language-json">{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term": {
+                        "automated_detection": true
+                    }
+                }
+            ],
+            "should": [
+                {
+                    "term": {
+                        "decision_ground": "DECISION_GROUND_ILLEGAL_CONTENT"
+                    }
+                },
+                {
+                    "term": {
+                        "decision_ground": "DECISION_GROUND_INCOMPATIBLE_CONTENT"
+                    }
+                }
+            ],
+            "minimum_should_match": 1
+        }
+    }
+}</code></pre>
+<h4 id="basic-temporal-analysis:">Basic Temporal Analysis:</h4>
+<ul>
+<li>Displays daily trends in content moderation</li>
+<li>Tracks changes in platforms’ behaviour over time</li>
+<li>Reveals category-specific patterns</li>
+</ul>
+<pre><code class="language-json">{
+  "size": 0,
+  "query": {
+    "term": {
+      "received_date": "2026-01-01"
+    }
+  },
+  "aggs": {
+    "by_platform": {
+      "terms": {
+        "field": "platform_name.keyword",
+        "size": 100
+      },
+      "aggs": {
+        "by_category": {
+          "terms": {
+            "field": "category",
+            "size": 100
+          },
+          "aggs": {
+            "statement_count": {
+              "value_count": {
+                "field": "_id"
+              }
+            },
+            "automation_rate": {
+              "avg": {
+                "script": {
+                  "source": "doc['automated_detection'].size() != 0 &amp;&amp; doc['automated_detection'].value ? 1 : 0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</code></pre>
+<p>* Use <code>platform_name.keyword</code> whenever you need to group, sort, or aggregate by this field. <code>platform_name</code> is a full-text (analyzed) field, meaning its value is broken into tokens for search (e.g. "TikTok EU" → ["tiktok", "eu"]). Aggregations require exact values, so OpenSearch provides a <code>.keyword</code> subfield that stores the original string unchanged.</p>
+<h3 id="example-request-body-&amp;-response">Example Request Body &amp; Response</h3>
+<h3 id="request-body">Request Body</h3>
+<pre><code class="language-json">{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term": {
+                        "platform_id": 22
+                    }
+                },
+                {
+                    "term": {
+                        "category": "STATEMENT_CATEGORY_ANIMAL_WELFARE"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "received_date": {
+                            "gte": "2024-01-01",
+                            "lte": "2024-06-30"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+<h3 id="response">Response</h3>
+<pre><code class="language-json">{
+    "status": "success",
+    "data": {
+        "took": 476,
+        "timed_out": false,
+        "num_reduce_phases": 2,
+        "_shards": {
+            "total": 640,
+            "successful": 640,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 177303,
+                "relation": "eq"
+            },
+            "max_score": 31.229053,
+            "hits": [
+                {
+                    "_index": "statement_product_640_2",
+                    "_id": "26271619559",
+                    "_score": 31.229053,
+                    "_source": {
+                        "id": 26271619559,
+                        "platform_name": "Example Platform",
+                        "category": "STATEMENT_CATEGORY_ILLEGAL_OR_HARMFUL_SPEECH",
+                        "decision_ground": "DECISION_GROUND_ILLEGAL_CONTENT",
+                        "content_type": [
+                            "CONTENT_TYPE_TEXT"
+                        ],
+                        "territorial_scope": [
+                            "AT",
+                            "BE",
+                            "DE"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+<h3 id="response-fields">Response Fields</h3>
+<ul>
+<li><strong>took</strong>: Time in milliseconds for OpenSearch to execute the search.</li>
+<li><strong>timed_out</strong>: Whether the search timed out.</li>
+<li><strong>num_reduce_phases</strong>: Number of reduce phases in the search.</li>
+<li><strong>_shards</strong>: Information about the shards searched.<ul>
+<li><strong>total</strong>: Total number of shards.</li>
+<li><strong>successful</strong>: Number of shards that responded successfully.</li>
+<li><strong>skipped</strong>: Number of shards skipped.</li>
+<li><strong>failed</strong>: Number of shards that failed.</li>
+</ul>
+</li>
+<li><strong>hits</strong>: Search results.<ul>
+<li><strong>total.value</strong>: Total number of matching documents.</li>
+<li><strong>total.relation</strong>: Relationship of the count ("eq" means exact).</li>
+<li><strong>max_score</strong>: Highest relevance score among results.</li>
+<li><strong>hits</strong>: Array of matching documents.<ul>
+<li><strong>_index</strong>: Index name.</li>
+<li><strong>_id</strong>: Document ID.</li>
+<li><strong>_score</strong>: Document's relevance score.</li>
+<li><strong>_source</strong>: Original document data.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>The request body should be a valid OpenSearch DSL query.</li>
+<li>The search is performed on the <code>statement_index</code>.</li>
+<li>Results are paginated by default (size: 10).</li>
+<li>A maximum size limit may apply to protect server resources.</li>
+</ul>
+<hr />
+<h2 id="sql">SQL</h2>
+<p>This endpoint enables SQL-like queries using OpenSearch SQL functionality. For detailed guidance, refer to
+the <a href="https://opensearch.org/docs/latest/sql/">OpenSearch SQL Documentation</a>.</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>POST</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/sql</code></p>
+<h3 id="endpoint-specific-limitations">Endpoint-Specific Limitations</h3>
+<ul>
+<li>OpenSearch SQL is a subset of standard SQL with specific limitations.</li>
+<li>Queries can ONLY be executed against the <code>statement_index</code>.</li>
+<li>Any <code>LIMIT/OFFSET</code> in queries will be automatically replaced with <code>LIMIT 1000 OFFSET 0</code>.</li>
+<li>No support for complex window functions.</li>
+<li>Limited support for subqueries.</li>
+<li>No support for <code>HAVING</code> clause.</li>
+<li>Limited <code>JOIN</code> support (no other indices to join with).</li>
+<li>Limited function availability.</li>
+<li>No support for <code>CTEs</code> (Common Table Expressions).</li>
+<li>No support for <code>UNION</code> operations.</li>
+</ul>
+<h3 id="query-constraints">Query Constraints</h3>
+<ul>
+<li><code>FROM</code> clause must always be <code>FROM statement_index</code>.</li>
+<li>Results are always limited to <strong>1000 rows</strong>.</li>
+<li>No pagination support (<code>OFFSET</code> is always <code>0</code>).</li>
+</ul>
+<p>For larger result sets:</p>
+<ul>
+<li>Use aggregations where possible</li>
+<li>Break queries into smaller time ranges</li>
+<li>Consider using the Search or Aggregates endpoints instead</li>
+</ul>
+<p>For more complex analysis needs that exceed OpenSearch SQL capabilities (such as window functions or complex
+aggregations), consider</p>
+<ul>
+<li>Using the Search API with DSL queries</li>
+<li>Using the Aggregates endpoint</li>
+<li>Performing additional analysis in your preferred statistical software</li>
+<li>Breaking down complex queries into simpler parts</li>
+</ul>
+<h3 id="example-use-cases">Example use cases</h3>
+<p>1.&nbsp;Comparative platform analysis:</p>
+<ul>
+<li>Analyses the distribution of moderation decisions across platforms</li>
+<li>Performs basic cross-platforms comparisons</li>
+</ul>
+<pre><code class="language-json">SELECT
+    platform_name.keyword,
+    decision_ground,
+    COUNT(*) as decision_count
+FROM statement_index
+WHERE received_date &gt;= '2024-01-01'
+AND received_date &lt;= '2024-06-30'
+GROUP BY platform_name, decision_ground
+ORDER BY platform_name, decision_count DESC;</code></pre>
+<p>2.&nbsp;Automated vs Manual Decision Analysis:</p>
+<ul>
+<li>Reveals automation patterns across content types</li>
+<li>Displays platform-specific use of automation in content moderation</li>
+<li>Performs comparisons across different content types</li>
+</ul>
+<pre><code class="language-json">SELECT
+    content_type_single,
+    automated_decision,
+    platform_name.keyword,
+    COUNT(*) as decision_count
+FROM statement_index
+WHERE received_date = '2024-06-26'
+GROUP BY content_type_single, automated_decision, platform_name
+ORDER BY decision_count DESC;</code></pre>
+<p>* Use <code>platform_name.keyword</code> whenever you need to group, sort, or aggregate by this field. <code>platform_name</code> is a full-text (analyzed) field, meaning its value is broken into tokens for search (e.g. "TikTok EU" → ["tiktok", "eu"]). Aggregations require exact values, so OpenSearch provides a <code>.keyword</code> subfield that stores the original string unchanged.</p>
+<h3 id="example-request-body-&amp;-response">Example Request Body &amp; Response</h3>
+<h3 id="request-body:">Request Body:</h3>
+<pre><code class="language-json">{
+    "query": "SELECT * FROM statement_index WHERE platform_name = 'example'",
+    "format": "json"
+    // Optional: returns results in JSON format
+}</code></pre>
+<h3 id="response-formats:">Response Formats:</h3>
+<h4 id="default-format:">Default format:</h4>
+<pre><code class="language-json">{
+    "schema": [
+        {
+            "name": "decision_account",
+            "type": "keyword"
+        },
+        {
+            "name": "account_type",
+            "type": "keyword"
+        },
+        {
+            "name": "decision_provision",
+            "type": "keyword"
+        }
+        // ... additional fields
+    ],
+    "datarows": [
+        [
+            null,
+            null,
+            "DECISION_PROVISION_PARTIAL_SUSPENSION",
+            "2024-07-07 01:31:21",
+            "AUTOMATED_DECISION_PARTIALLY",
+            "CONTENT_TYPE_PRODUCT",
+            "a1d9afd8-2fc9-4e29-827b-80578117f200",
+            null,
+            null,
+            "CONTENT_TYPE_PRODUCT",
+            null,
+            "The affected listings do not meet the requirements of the Electronical and Electronic Equipment Act (ElektroG – the German WEEE law).",
+            "bfea46d8e2fe89727d3d351f8818f0f3cd076741f43ecab9d47beda4872fb0f8d1c43b40c943be8e2b33b6b6be998824de1e1f29d9daf27dc4ce22de7db942ac",
+            "1ebd7d59-6f2f-48b0-92ea-2fe3265b52f5",
+            "2024-07-07 00:00:00",
+            null,
+            null,
+            "Amazon Store",
+            21177743029,
+            "API_MULTI",
+            "DECISION_VISIBILITY_CONTENT_DISABLED",
+            true,
+            null,
+            "SOURCE_VOLUNTARY",
+            null,
+            null,
+            null,
+            null,
+            "DECISION_VISIBILITY_CONTENT_DISABLED",
+            "Violation of the Electronical and Electronic Equipment Act (ElektroG – the German WEEE law).",
+            "DE",
+            null,
+            28
+        ]
+        // ... additional rows
+    ]
+}</code></pre>
+<h4 id="json-format-(when "format":-"json" is-specified):">JSON format (when "format": "json" is specified):</h4>
+<pre><code class="language-json">{
+    "took": 170,
+    "timed_out": false,
+    "num_reduce_phases": 2,
+    "_shards": {
+        "total": 640,
+        "successful": 640,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 5467899,
+            "relation": "gte"
+        },
+        "max_score": 1,
+        "hits": [
+            {
+                "_index": "statement_product_640_2",
+                "_id": "21177743029",
+                "_score": 1,
+                "_source": {
+                    "id": 21177743029,
+                    "decision_visibility": [
+                        "DECISION_VISIBILITY_CONTENT_DISABLED"
+                    ],
+                    "decision_visibility_single": "DECISION_VISIBILITY_CONTENT_DISABLED",
+                    "category_specification": [],
+                    "decision_visibility_other": null,
+                    "decision_monetary": null,
+                    "decision_monetary_other": null
+                }
+            }
+            // ... additional results
+        ]
+    }
+}</code></pre>
+<h2 id="count">COUNT</h2>
+<p>This endpoint returns the count of documents matching the provided OpenSearch DSL query.</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>POST</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/count</code></p>
+<h3 id="example-use-cases">Example use cases</h3>
+<p>1.&nbsp;Volume analysis of moderated content:</p>
+<ul>
+<li>Measures illegal content prevalence</li>
+<li>Tracks moderation volume over time</li>
+</ul>
+<pre><code class="language-json">{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term": {
+                        "decision_ground": "DECISION_GROUND_ILLEGAL_CONTENT"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "range": {
+                        "received_date": {
+                            "gte": "2024-01-01",
+                            "lte": "2024-06-30"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+<p>2.&nbsp;Analysis of Content Type distribution:</p>
+<ul>
+<li>Shows distribution of content types across VLOPs</li>
+<li>Reveals platform-specific content patterns</li>
+</ul>
+<pre><code class="language-json">{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "exists": {
+                        "field": "content_type_single"
+                    }
+                }
+            ],
+            "filter": [
+                {
+                    "term": {
+                        "platform_vlop": true
+                    }
+                }
+            ]
+        }
+    }
+}</code></pre>
+<h3 id="response-format">Response Format</h3>
+<pre><code class="language-json">{
+    "status": "success",
+    "data": {
+        "count": 9630559766,
+        "_shards": {
+            "total": 640,
+            "successful": 640,
+            "skipped": 0,
+            "failed": 0
+        }
+    }
+}</code></pre>
+<h2 id="query">QUERY</h2>
+<p>Performs searches using OpenSearch
+DQL (<a href="https://opensearch.org/docs/latest/dashboards/dql/">Dashboards Query Language</a>). DQL is a simple text-based query
+language that uses field:value syntax to filter data. This query language resembles the Apache Lucene Query language.</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>POST</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/query</code></p>
+<h3 id="request-format:">Request Format:</h3>
+<pre><code class="language-json">{
+    "query": "decision_visibility_single: DECISION_VISIBILITY_CONTENT_REMOVED and automated_detection: true"
+}</code></pre>
+<h3 id="example-use-cases">Example use cases</h3>
+<p>1.&nbsp;Content Removal Pattern Analysis:</p>
+<p>Helps researchers:</p>
+<ul>
+<li>Find automatically detected content removals</li>
+<li>Analyze removal patterns</li>
+</ul>
+<pre><code class="language-json">decision_visibility_single: DECISION_VISIBILITY_CONTENT_REMOVED and automated_detection: true</code></pre>
+<p>2.&nbsp;Regional Analysis:</p>
+<p>For analyzing:</p>
+<ul>
+<li>Content moderation in specific regions</li>
+<li>Illegal content patterns by territory</li>
+</ul>
+<pre><code class="language-json">territorial_scope: DE and decision_ground: DECISION_GROUND_ILLEGAL_CONTENT</code></pre>
+<p>Important Notes:</p>
+<ul>
+<li>Use field:value syntax (e.g., <code>field: value</code>)</li>
+<li>Boolean operators: <code>and</code>, <code>or</code>, <code>not</code></li>
+<li>Use quotes for phrases: <code>field: "exact phrase"</code></li>
+<li>Supports wildcards (*) in both field names and values</li>
+<li>Supports ranges with &gt;, &lt;, &gt;=, &lt;= operators for numeric and date fields</li>
+</ul>
+<h2 id="aggregates">AGGREGATES</h2>
+<p>This endpoint returns aggregated statistics for statements for the specified date. Aggregates in OpenSearch are a
+powerful way to group and analyze data based on specific fields, similar to SQL's GROUP BY functionality. They help in
+summarizing and analyzing large datasets by grouping similar data together, calculating metrics, and discovering
+patterns in the data.</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>GET</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/{date}[/{fields}]</code></p>
+<h3 id="parameters">Parameters</h3>
+<ul>
+<li>date: Required.<ul>
+<li>Format: YYYY-MM-DD (e.g., 2024-02-26)</li>
+</ul>
+</li>
+<li>fields: Optional.<ul>
+<li>List of specific fields to aggregate on, separated by double underscores (e.g., decision_ground__platform_id)</li>
+<li>The keyword all to aggregate on all available fields</li>
+</ul>
+</li>
+</ul>
+<h3 id="available-aggregation-fields:">Available Aggregation Fields:</h3>
+<ul>
+<li>automated_decision</li>
+<li>automated_detection- category</li>
+<li>content_type_single</li>
+<li>decision_account- decision_ground- decision_monetary</li>
+<li>decision_provision</li>
+<li>decision_visibility_single- platform_id- received_date- source_type</li>
+</ul>
+<h3 id="using-specific-fields-vs-'all'">Using Specific Fields vs 'all'</h3>
+<h3 id="specific-fields-approach:">Specific Fields Approach:</h3>
+<ul>
+<li>More focused and performant</li>
+<li>Useful when you have specific questions to answer</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-json">GET https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/2024-06-26/decision_ground__platform_id</code></pre>
+<ul>
+<li>Shows how many decisions of each type were made by each platform</li>
+<li>Provides focused view for comparing platform moderation approaches</li>
+</ul>
+<h3 id="using-'all':">Using 'all':</h3>
+<ul>
+<li>Calculates aggregations for all available fields</li>
+<li>More resource-intensive but provides comprehensive overview</li>
+<li>Useful for exploratory analysis and pattern discovery</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-json">GET https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/2024-06-26/all</code></pre>
+<ul>
+<li>Shows all possible breakdowns (by platform, decision type, content type, etc.)</li>
+<li>Helps discover unexpected patterns</li>
+<li>More comprehensive but potentially slower</li>
+</ul>
+<h3 id="example-use-cases">Example use cases</h3>
+<p>1.&nbsp;Default (total for date):</p>
+<pre><code class="language-json">GET https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/2024-06-26</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    "aggregates": [
+        {
+            "received_date": "2024-06-26",
+            "permutation": "received_date:2024-06-26",
+            "total": 55225872
+        }
+    ],
+    "total": 55225872,
+    "total_aggregates": 1,
+    "date": "2024-06-26",
+    "attributes": {
+        "1": "received_date"
+    },
+    "key": "osa__2024-06-26__received_date",
+    "cache": "hit",
+    "duration": 0.0019,
+    "size": 269
+}</code></pre>
+<p>2.&nbsp;Aggregation by platform:</p>
+<pre><code class="language-json">GET https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/2024-06-26/platform_id</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    "aggregates": [
+        {
+            "platform_id": 22,
+            "permutation": "platform_id:22",
+            "platform_name": "X",
+            "total": 2783
+        },
+        {
+            "platform_id": 23,
+            "permutation": "platform_id:23",
+            "platform_name": "App Store",
+            "total": 660
+        }
+    ],
+    "total": 3443,
+    "total_aggregates": 2,
+    "date": "2024-06-26",
+    "attributes": {
+        "1": "platform_id"
+    }
+    // ... additional metadata
+}</code></pre>
+<p>3.&nbsp;Aggregation on all fields:</p>
+<pre><code class="language-json">GET https://transparency.dsa.ec.europa.eu/api/v1/research/aggregates/2024-06-26/all</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    "aggregates": [
+        {
+            "automated_decision": true,
+            "permutation": "automated_decision:true",
+            "total": 25000
+        },
+        {
+            "platform_id": 22,
+            "permutation": "platform_id:22",
+            "platform_name": "X",
+            "total": 2783
+        }
+        // ... results for all other fields
+    ],
+    "total": 55225872,
+    "total_aggregates": 12,
+    "date": "2024-06-26",
+    "attributes": {
+        "1": "automated_decision",
+        "2": "automated_detection",
+        "3": "category"
+        // ... all available fields
+    }
+    // ... additional metadata
+}</code></pre>
+<h3 id="performance-considerations:">Performance Considerations:</h3>
+<ul>
+<li>Specific attributes queries are more efficient as they compute fewer aggregations</li>
+<li>'All' queries might be slower and more resource-intensive</li>
+<li>Combining multiple fields (e.g., decision_ground__platform_id) allows for more complex analysis while maintaining
+reasonable performance</li>
+</ul>
+<h2 id="labels">LABELS</h2>
+<p>This endpoint returns all available labels and their corresponding keystone values that can be used for filtering in
+queries. Keystone values are machine-friendly strings that represent specific categories or attributes in the system.
+For example, when filtering statements by category in your queries, you would use the keystone value
+STATEMENT_CATEGORY_ANIMAL_WELFARE rather than the human-readable label "Animal Welfare".</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>GET</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/labels</code></p>
+<p>Response:</p>
+<pre><code class="language-json">{
+    "decision_visibilities": {
+        "DECISION_VISIBILITY_CONTENT_REMOVED": "Removal of content",
+        "DECISION_VISIBILITY_CONTENT_DISABLED": "Disabling access to content",
+        "DECISION_VISIBILITY_CONTENT_DEMOTED": "Demotion of content",
+        "DECISION_VISIBILITY_CONTENT_AGE_RESTRICTED": "Age restricted content",
+        "DECISION_VISIBILITY_CONTENT_INTERACTION_RESTRICTED": "Restricting interaction with content",
+        "DECISION_VISIBILITY_CONTENT_LABELLED": "Labelled content",
+        "DECISION_VISIBILITY_OTHER": "Other restriction (please specify)"
+    },
+    "decision_monetaries": {
+        "DECISION_MONETARY_SUSPENSION": "Suspension of monetary payments",
+        "DECISION_MONETARY_TERMINATION": "Termination of monetary payments",
+        "DECISION_MONETARY_OTHER": "Other restriction (please specify)"
+    },
+    "decision_provisions": {
+        "DECISION_PROVISION_PARTIAL_SUSPENSION": "Partial suspension of the provision of the service",
+        "DECISION_PROVISION_TOTAL_SUSPENSION": "Total suspension of the provision of the service",
+        "DECISION_PROVISION_PARTIAL_TERMINATION": "Partial termination of the provision of the service",
+        "DECISION_PROVISION_TOTAL_TERMINATION": "Total termination of the provision of the service"
+    }
+    // ... additional label categories
+}</code></pre>
+<h2 id="platforms">PLATFORMS</h2>
+<p>This endpoint returns a list of all platforms in the system along with their unique identifier and VLOP (Very Large
+Online Platform) status. The platform IDs can be used for filtering in queries when you need to target specific
+platforms.</p>
+<h3 id="endpoint-name">Endpoint Name</h3>
+<p><strong>GET</strong> <code>https://transparency.dsa.ec.europa.eu/api/v1/research/platforms</code></p>
+<h2 id="support-and-query-responsibility">Support and Query Responsibility</h2>
+<p>These API endpoints are provided as-is and act as direct interfaces to the OpenSearch index. Please note:</p>
+<ul>
+<li>Queries are passed directly to the OpenSearch engine</li>
+<li>Users are responsible for constructing valid queries according to OpenSearch documentation</li>
+<li>Support is not provided for query syntax or optimization</li>
+<li>Before reporting issues:<ul>
+<li>Verify your query syntax is correct</li>
+<li>Check for common errors (date formats, field names)</li>
+<li>Test simpler versions of complex queries</li>
+<li>Test your query against the OpenSearch documentation</li>
+<li>Ensure the error is not due to malformed queries</li>
+<li>Document reproducible test cases</li>
+</ul>
+</li>
+<li>Contact support (<a href="mailto:CNECT-DSA-HELPDESK@ec.europa.eu">CNECT-DSA-HELPDESK@ec.europa.eu</a>) only if you have strong
+evidence of a technical issue with one of the endpoints itself</li>
+</ul>
+<p>For more detailed query guidance, refer to:</p>
+<ul>
+<li><a href="https://opensearch.org/docs/latest/query-dsl/">OpenSearch Query DSL Documentation</a></li>
+<li><a href="https://opensearch.org/docs/latest/search-plugins/sql/sql/index/">OpenSearch SQL Documentation</a>- <a href="https://opensearch.org/docs/latest/dashboards/dql/">OpenSearch DQL Documentation</a></li>
+</ul>
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="common-error-responses-and-their-implications:">Common error responses and their implications:</h3>
+<h4 id="401:-unauthorized">401: Unauthorized</h4>
+<ul>
+<li>Invalid or missing Bearer token</li>
+<li>Check authentication credentials</li>
+</ul>
+<h4 id="403:-forbidden">403: Forbidden</h4>
+<ul>
+<li>Insufficient permissions</li>
+<li>Check authentication credentials</li>
+</ul>
+<h4 id="404:-not-found">404: Not Found</h4>
+<ul>
+<li>Invalid endpoint or parameter</li>
+<li>Verify API endpoint URLs</li>
+<li>Check parameter formatting</li>
+</ul>
+<h4 id="500:-internal-server-error">500: Internal Server Error</h4>
+<ul>
+<li>Server-side processing issue</li>
+<li>Document error context</li>
+<li>Consider simplifying complex queries</li>
+</ul>
+<h4 id="504:-gateway-timeout">504: Gateway Timeout</h4>
+<ul>
+<li>Query exceeded 30-second timeout</li>
+<li>Optimize query performance</li>
+<li>Break down into smaller time ranges</li>
+</ul>
+<h4 id="413:-payload-too-large">413: Payload Too Large</h4>
+<ul>
+<li>Response exceeds 5MB limit</li>
+<li>Reduce query scope</li>
+<li>Use pagination or date partitioning</li>
+</ul>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script>
+        const slugify = str => str.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '');
+
+        jQuery(document).ready(function ($) {
+            $('#content-area > h1').each(function (e) {
+                var dis = $(this)
+                var t = dis.text()
+                var id = slugify(t)
+                dis.attr('id', id)
+                if (!dis.hasClass('ecl-u-type-heading-1')) {
+                  dis.addClass('ecl-u-type-heading-1')
+                }
+
+                $('#ecl-inpage-navigation-default-list').append('<li class="ecl-inpage-navigation__item"><a href="#' + id +
+                    '" class="ecl-link ecl-inpage-navigation__link" data-ecl-inpage-navigation-link="">' + t + '</a></li>');
+            })
+        })
+
+        jQuery(document).ready(function ($) {
+            $('#content-area > h2').each(function (e) {
+                var dis = $(this)
+                var t = dis.text()
+                var id = slugify(t)
+                dis.attr('id', id)
+                if (!dis.hasClass('ecl-u-type-heading-2')) {
+                  dis.addClass('ecl-u-type-heading-2');
+                }
+
+                $('#ecl-inpage-navigation-default-list').append('<li class="ecl-inpage-navigation__item"><a href="#' + id +
+                    '" class="ecl-link ecl-inpage-navigation__link" data-ecl-inpage-navigation-link="">' + t + '</a></li>');
+                $('#toc-wrapper').removeClass('ecl-u-d-none');
+                $('#content-wrapper').removeClass('ecl-col-l-12');
+                $('#content-wrapper').addClass('ecl-col-l-9');
+            })
+        })
+
+
+        // Slugify the id so it can be linked but not necessarily in the TOC
+        jQuery(document).ready(function ($) {
+            $('#content-area > h3').each(function (e) {
+                var dis = $(this)
+                var t = dis.text()
+                var id = slugify(t)
+                dis.attr('id', id)
+                if (!dis.hasClass('ecl-u-type-heading-3')) {
+                  dis.addClass('ecl-u-type-heading-3')
+                }
+            })
+        })
+
+        // Slugify the id so it can be linked but not necessarily in the TOC
+        jQuery(document).ready(function ($) {
+            $('#content-area > h4').each(function (e) {
+                var dis = $(this)
+                var t = dis.text()
+                var id = slugify(t)
+                dis.attr('id', id)
+                if (!dis.hasClass('ecl-u-type-heading-4')) {
+                    dis.addClass('ecl-u-type-heading-4')
+                }
+            })
+        })
+
+        // Slugify the id so it can be linked but not necessarily in the TOC
+        jQuery(document).ready(function ($) {
+            $('#content-area > h5').each(function (e) {
+                var dis = $(this)
+                var t = dis.text()
+                var id = slugify(t)
+                dis.attr('id', id)
+                if (!dis.hasClass('ecl-u-type-heading-5')) {
+                    dis.addClass('ecl-u-type-heading-5')
+                }
+            })
+        })
+
+        jQuery(document).ready(function ($) {
+            $('#content-area > p').each(function (e) {
+                var dis = $(this)
+                dis.addClass('ecl-u-type-paragraph')
+            })
+        })
+
+        jQuery(document).ready(function ($) {
+            $('#content-area > ul').each(function (e) {
+                var dis = $(this)
+                dis.addClass('ecl-unordered-list')
+            })
+        })
+
+        jQuery(document).ready(function ($) {
+            $('#content-area > ul > li').each(function (e) {
+                var dis = $(this)
+                dis.addClass('ecl-unordered-list__item')
+            })
+        })
+
+        jQuery(document).ready(function ($) {
+            $('#content-area > p > a').each(function (e) {
+                var dis = $(this)
+                dis.addClass('ecl-link')
+            })
+        })
+
+        hljs.highlightAll();
+    </script>
+
+            </div>
+        </div>
+    </div>
+    <footer class="ecl-site-footer">
+    <div class="ecl-container ecl-site-footer__container">
+        <div class="ecl-site-footer__row">
+            <div class="ecl-site-footer__column">
+                <div class="ecl-site-footer__section">
+                    <a href="https://ec.europa.eu"
+                       class="ecl-link ecl-link--standalone ecl-site-footer__logo-link"
+                       aria-label="European Commission">
+                        <img alt="European Commission logo" title="European Commission"
+                             class="ecl-site-footer__logo-image-desktop"
+                             src="https://transparency.dsa.ec.europa.eu/static/ecl/images/logo/negative/logo-ec--en.svg">
+                    </a>
+                    <div class="ecl-site-footer__description">
+                        This site is managed by the Directorate-General for "Communications Networks, Content and Technology"
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="ecl-site-footer__column">
+                <div class="ecl-site-footer__section">
+                    <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">
+                        Contact us </h2>
+                    <ul class="ecl-site-footer__list">
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://digital-strategy.ec.europa.eu/en/write-us"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Contact information">Contact information</a></li>
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://transparency.dsa.ec.europa.eu/feedback"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Feedback">Feedback</a>
+                        </li>
+                        <div class="ecl-u-mt-6xl">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/accessibility-statement"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Data Retention Policy">Accessibility</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="ecl-site-footer__column">
+                <div class="ecl-site-footer__section">
+                    <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">
+                        About us </h2>
+                    <ul class="ecl-site-footer__list">
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2065&qid=1671203215141"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Digital Services Act Regulation">Digital Services Act Regulation</a></li>
+
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://digital-strategy.ec.europa.eu/en/policies/safer-online"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Learn more about the DSA">Learn more about the DSA</a></li>
+
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://digital-strategy.ec.europa.eu/en/faqs/dsa-transparency-database-questions-and-answers"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="FAQ">FAQ</a></li>
+
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/announcements"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Announcements">Announcements</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="ecl-site-footer__section">
+                    <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">
+                        Policies </h2>
+                    <ul class="ecl-site-footer__list">
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/privacy-policy"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label=" Privacy Policy">Privacy Policy</a></li>
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/legal-information"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Legal Notice">Legal Notice</a></li>
+
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/data-retention-policy"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Data Retention Policy">Data Retention Policy</a></li>
+
+                        <li class="ecl-site-footer__list-item">
+                            <a href="https://transparency.dsa.ec.europa.eu/page/data-license"
+                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"
+                               aria-label="Data Retention Policy">Data License</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
+
+
+<script defer src="https://webtools.europa.eu/load.js?globan=1110" type="text/javascript"></script>
+<script src="https://transparency.dsa.ec.europa.eu/static/ecl/scripts/ecl-ec.js" crossorigin="anonymous"></script>
+
+<script>
+
+        ECL.autoInit();
+    </script>
+<script type="application/json">{"utility": "cck","url": "https://transparency.dsa.ec.europa.eu/page/cookie-policy"}</script>
+
+
+
+</body>
+</html>

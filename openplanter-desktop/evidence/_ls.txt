@@ -1,0 +1,6 @@
+ls: unknown option -- á
+Try 'ls --help' for more information.
+2 evidence/_ls.txt
+ls: unknown option -- á
+Try 'ls --help' for more information.
+2 evidence/_ls.txt

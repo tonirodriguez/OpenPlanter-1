@@ -1,0 +1,7 @@
+4:    <title>Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por nivel de estudios y situación laboral.</title>
+200:      <span class="cab2">2. Museos, monumentos y archivos</span>
+201:        <h1 class="cab3">Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por nivel de estudios y situación laboral.</h1>
+203:          <span id="tablaDetalle"><strong class="paddingRight">Unidades:</strong>En % del total de cada colectivo</span>
+311:					<option class="jP_0" value="16" selected="selected">Museos</option>
+314:						<option class="jP_0" value="19" >Monumentos</option>
+344:					<option class="jP_0" value="21" selected="selected">Total han visitado en el último año</option>

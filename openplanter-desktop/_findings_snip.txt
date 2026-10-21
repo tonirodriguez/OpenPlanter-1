@@ -1,0 +1,60 @@
+61:   - (línea 456) “**Durante los siete primeros meses de 2026 el gasto total de los turistas internacionales aumentó un 7,8% y alcanzó los 82.054 millones de euros.**”
+62: 
+63: ### Barcelona — OTB (universo de turistas)
+64: Fuente: `evidence/otb_2025_capsula1_IAOTB_1.pdf.txt`
+65: 
+66: - (líneas 136–138) “**...durant el 2025... 16,0M... sumats als 10,1M... la Destinació Barcelona... 26,1M.**”
+67: 
+68: ## Mercados de origen / emisores (España vs Barcelona): 2025 y 2026; indicios 2027
+69: 
+70: ### España (INE - FRONTUR: llegadas por país de residencia)
+71: - **2025 (año completo)**: FRONTUR identifica como principales países de residencia a **Reino Unido, Francia y Alemania**. Además, indica variación anual por mercado: **Reino Unido +3,7%**, **Francia -1,0%**, **Alemania +0,6%**.  
+72:   Evidencia: `evidence/ine_FRONTUR1225.html` (líneas **1023** y **1025**).
+73: - **Ene-jul 2026 (acumulado, vs ene-jul 2025)**: principales países emisores: **Reino Unido (con 11,5 millones y un aumento del 4,6%)**, **Francia (con más de 7,2 millones y un incremento del 1,2%)** y **Alemania (con cerca de 6,9 millones, un 0,5% menos)**.  
+74:   Evidencia: `evidence/ine_FRONTUR0726.html` (línea **627**).
+75: 
+76: ### España (INE - EGATUR: gasto por país de residencia)
+77: - **2025 (año completo)** (ranking por gasto): **Reino Unido** es el país con mayor gasto en 2025 (**23.650 millones de euros; +4,9%**), seguido de **Alemania** (**15.831 millones; +2,0%**) y **Francia** (**11.613 millones; +5,9%**).  
+78:   Evidencia: `evidence/ine_EGATUR1225.html` (líneas **1171** y **1173**).
+79: - **Ene-jul 2026 (cuota de gasto acumulado)**: **Reino Unido 16,9%**, **Alemania 11,3%**, **Francia 7,8%** del gasto total acumulado.  
+80:   Evidencia: `evidence/ine_EGATUR0726.html` (línea **604**).
+81: 
+82: ### Barcelona (OTB)
+83: - En el **PDF** OTB "Càpsula" IAOTB 2025 descargado y extraído en esta ejecución **no se localizaron** tablas/texto explícitos de **mercados de origen** (país/mercado emisor). Con esta evidencia solo es posible reportar el **universo total** de turistas 2025, no un ranking por países.
+84: 
+85: ### ¿Hay previsiones 2027?
+86: - **Global / UN Tourism**: en las fuentes consultadas aquí (comunicado 2025 y extracto del Barometer mayo 2026) **no aparece** una previsión cuantitativa explícita de llegadas internacionales para 2027.
+87: - **España / WTTC (inferencia)**: WTTC publica una previsión para **2036** de *international tourist arrivals* (**143,565,000**) y que supone **+1,8% anual desde 2026**. El informe no publica 2027 explícitamente, pero puede inferirse aplicando esa tasa media:  
+88:   - **2026 (inferido)**: `120107684.71784913424870891994194038982960568537563449453188443539470215603152481`  
+89:   - **2027 (inferido)**: `122269623.04277041866518568050089531684653858771239591543345835523180679484009226`  
+90:   Evidencia: `evidence/wttc_spain_economic_impact_report.pdf.txt` (línea **563**); cálculo en `_wttc_infer_2026_2027.txt`.
+91: 
+92: ## Lectura analítica (2026 vs 2025)
+93: - **2026 arranca más moderado**: +2% interanual en Q1 2026 vs Q1 2025 (a nivel mundial), frente a un 2025 que cerró con +4% sobre 2024.
+94: - **Dispersión regional notable en Q1 2026**: Europa y África +4%, Asia-Pacífico +3%, Américas +2% y Oriente Medio -14% (impacto del conflicto y conectividad aérea).
+95: - **Riesgo de revisión a la baja en 2026**: el barómetro explicita un posible recorte de 1–2 pp sobre el rango +3% a +4% inicialmente previsto.
+96: 
+97: ## Qué se puede afirmar (y qué no) sobre 2027
+98: - **Sí**: el barómetro incorpora supuestos macro (IMF/UNDESA) con cifras de crecimiento del PIB mundial para 2027.
+99: - **No**: en las fuentes capturadas aquí **no hay** una previsión explícita de **llegadas internacionales 2027** (ni global ni por regiones). Para una cifra 2027 habría que consultar una edición posterior del barómetro o un informe específico con forecast anual.
+100: 
+101: ## España (INE): lectura 2025 vs 2026 (YTD)
+102: 
+103: - **Volumen (FRONTUR)**: 2025 cerró con **96,8M** turistas (+3,2% vs 2024). En **ene–jul 2026**, el acumulado “supera 58,1M” y crece **+4,6%** vs ene–jul 2025.
+104: - **Valor (EGATUR)**: 2025 cerró con **134.712M€** (+6,8% vs 2024). En **ene–jul 2026**, el gasto acumulado **82.054M€** crece **+7,8%** vs ene–jul 2025.
+105: 
+106: Nota: las cifras de 2026 citadas aquí son **acumulado de 7 meses**, por lo que no se comparan directamente con el total anual 2025.
+107: 
+108: ## Barcelona (OTB): lectura 2025 y encaje con España
+109: 
+110: - El OTB reporta para 2025 un **universo de turistas** de **16,0M** (Barcelona ciudad) + **10,1M** (Barcelona región) = **26,1M** (Destinació Barcelona). Esta métrica no es idéntica a FRONTUR (turistas internacionales), por lo que se usa como **indicador local** y no como subconjunto directo de FRONTUR.
+111: 
+112: ## Metodología (proveniencia)
+113: 1) Se usaron solo fuentes disponibles en el workspace (archivos en `evidence/`).
+114: 2) Para PDF/Texto, se trabajó con extractos de texto localmente extraídos (conversión de ISO-8859-1 a UTF-8 cuando fue necesario).
+115: 3) No se “inventan” cifras 2027: si no hay forecast explícito, se reporta como ausencia de evidencia.
+116: 
+117: 4) Para INE (FRONTUR/EGATUR), se capturaron páginas HTML concretas y se citan las frases con cifras y periodos.
+118: 5) Para OTB, se descargó el PDF “Càpsula” y se extrajo texto con `pdftotext -layout`.
+119: 
+120: ## Limitaciones

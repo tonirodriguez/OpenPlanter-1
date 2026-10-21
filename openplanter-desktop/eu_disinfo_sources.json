@@ -1,0 +1,255 @@
+{
+  "retrieved_utc": "2026-09-14T11:04:49Z",
+  "scope": {
+    "topic": ["disinformation", "misinformation", "information integrity", "FIMI"],
+    "jurisdictions": ["European Union", "EU Member States"]
+  },
+  "sources": [
+    {
+      "id": "dsa_transparency_database",
+      "name": "DSA Transparency Database",
+      "jurisdiction": "EU",
+      "operator": "European Commission",
+      "type": "transparency portal",
+      "urls": ["https://transparency.dsa.ec.europa.eu/"],
+      "access": {
+        "homepage_http": "200 OK",
+        "download_page": "https://transparency.dsa.ec.europa.eu/explore-data/download",
+        "notes": "Homepage accessible; rate-limit headers observed in response."
+      },
+      "evidence": [
+        {
+          "kind": "html_title",
+          "quote": "<title>Home - DSA Transparency Database</title>",
+          "source_file": "evidence/dsa_home.html"
+        }
+      ]
+    },
+    {
+      "id": "dsa_transparency_research_api",
+      "name": "DSA Transparency Database Research API",
+      "jurisdiction": "EU",
+      "operator": "European Commission",
+      "type": "api",
+      "urls": [
+        "https://transparency.dsa.ec.europa.eu/page/research-api",
+        "https://transparency.dsa.ec.europa.eu/api/v1/research"
+      ],
+      "access": {
+        "auth": "Bearer token required (per docs)",
+        "base_url": "https://transparency.dsa.ec.europa.eu/api/v1/research",
+        "example_endpoints": [
+          "https://transparency.dsa.ec.europa.eu/api/v1/research/search",
+          "https://transparency.dsa.ec.europa.eu/api/v1/research/sql",
+          "https://transparency.dsa.ec.europa.eu/api/v1/research/count",
+          "https://transparency.dsa.ec.europa.eu/api/v1/research/platforms"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "doc_excerpt",
+          "quote": "All Research API endpoints are accessible under the base URL: https://transparency.dsa.ec.europa.eu/api/v1/research",
+          "source_file": "evidence/dsa_research_api.html"
+        },
+        {
+          "kind": "doc_excerpt",
+          "quote": "All endpoints require authentication using a Bearer token.",
+          "source_file": "evidence/dsa_research_api.html"
+        }
+      ]
+    },
+    {
+      "id": "euvsdisinfo",
+      "name": "EUvsDisinfo",
+      "jurisdiction": "EU",
+      "operator": "EEAS East StratCom Task Force (per wiki entry)",
+      "type": "case database (public archive) + editorial",
+      "urls": [
+        "https://euvsdisinfo.eu/",
+        "https://euvsdisinfo.eu/disinformation-cases/"
+      ],
+      "access": {
+        "homepage_http": "403 Forbidden (Cloudflare managed challenge)",
+        "notes": "Automated access blocked in this environment; separate attempt to /disinformation-cases/ returned an AV block page (HTTP 499 in this environment)."
+      },
+      "evidence": [
+        {
+          "kind": "http_header",
+          "quote": "HTTP/1.1 403 Forbidden; Cf-Mitigated: challenge; Server: cloudflare",
+          "source_file": "evidence/euvsdisinfo_headers.txt"
+        }
+      ]
+    },
+    {
+      "id": "eeas_information_integrity_fimi",
+      "name": "EEAS — Information Integrity and countering FIMI",
+      "jurisdiction": "EU",
+      "operator": "European External Action Service (EEAS)",
+      "type": "institutional landing page / reports hub",
+      "urls": [
+        "https://www.eeas.europa.eu/eeas/information-integrity-and-countering-foreign-information-manipulation-interference-fimi_en"
+      ],
+      "access": {"homepage_http": "200 OK"},
+      "evidence": [
+        {
+          "kind": "html_title",
+          "quote": "<title>Information Integrity and Countering Foreign Information Manipulation &amp; Interference (FIMI) | EEAS</title>",
+          "source_file": "(not saved in evidence/; captured in /tmp during session)"
+        },
+        {
+          "kind": "in_page_quote",
+          "quote": "It includes the world’s largest public archive of pro-Kremlin disinformation",
+          "source_file": "/tmp/fimi2.html"
+        }
+      ]
+    },
+    {
+      "id": "ec_code_practice_disinformation",
+      "name": "European Commission — The 2022 Code of Practice on Disinformation",
+      "jurisdiction": "EU",
+      "operator": "European Commission",
+      "type": "policy portal",
+      "urls": ["https://digital-strategy.ec.europa.eu/en/policies/code-practice-disinformation"],
+      "access": {"homepage_http": "200 OK"},
+      "evidence": [
+        {
+          "kind": "meta",
+          "quote": "<meta property=\"og:title\" content=\"The 2022 Code of Practice on Disinformation\" />",
+          "source_file": "evidence/ec_code_of_practice.html"
+        }
+      ]
+    },
+    {
+      "id": "disinfocode_reports",
+      "name": "DisinfoCode.eu — Reports (Code of Practice/Conduct transparency reports)",
+      "jurisdiction": "EU",
+      "operator": "Transparency Center at disinfocode.eu (site)",
+      "type": "report repository + per-report exports",
+      "urls": [
+        "https://disinfocode.eu/reports",
+        "https://disinfocode.eu/reports/{signatory}/{report_id}/json",
+        "https://disinfocode.eu/reports/{signatory}/{report_id}/csv"
+      ],
+      "access": {"homepage_http": "200 OK"},
+      "evidence": [
+        {
+          "kind": "html_link_pattern",
+          "quote": "Example export endpoints in HTML: /reports/avaaz/8/json and /reports/avaaz/8/csv",
+          "source_file": "evidence/disinfocode_reports.html"
+        },
+        {
+          "kind": "json_sample",
+          "quote": "{\n    \"id\": 8,\n    \"name\": \"March 2026\", ... }",
+          "source_file": "evidence/disinfocode_avaaz8.json"
+        }
+      ]
+    },
+    {
+      "id": "edmo",
+      "name": "European Digital Media Observatory (EDMO)",
+      "jurisdiction": "EU",
+      "operator": "EDMO consortium (site)",
+      "type": "observatory portal (publications/outputs)",
+      "urls": [
+        "https://edmo.eu/",
+        "https://edmo.eu/wp-json/"
+      ],
+      "access": {
+        "homepage_http": "200 OK",
+        "api_http": "200 OK for /wp-json/ (headers captured); deeper endpoint fetch timed out in this environment"
+      },
+      "evidence": [
+        {
+          "kind": "http_header",
+          "quote": "Link: <https://edmo.eu/wp-json/>; rel=\"https://api.w.org/\"",
+          "source_file": "evidence/edmo_home.html"
+        }
+      ]
+    },
+    {
+      "id": "soma_disinfobservatory",
+      "name": "SOMA Disinfobservatory",
+      "jurisdiction": "EU (project) / international",
+      "operator": "SOMA project (site)",
+      "type": "observatory / publications portal",
+      "urls": [
+        "https://www.disinfobservatory.org/",
+        "https://www.disinfobservatory.org/wp-json/"
+      ],
+      "access": {"homepage_http": "200 OK"},
+      "evidence": [
+        {
+          "kind": "http_header",
+          "quote": "Link: <https://www.disinfobservatory.org/wp-json/>; rel=\"https://api.w.org/\"",
+          "source_file": "evidence/soma_home.html"
+        }
+      ]
+    },
+    {
+      "id": "mmf_mapping_media_freedom",
+      "name": "Mapping Media Freedom",
+      "jurisdiction": "EU + candidate countries",
+      "operator": "MMF consortium (site)",
+      "type": "incident database",
+      "urls": [
+        "https://www.mappingmediafreedom.org/",
+        "https://www.mappingmediafreedom.org/wp-json/"
+      ],
+      "access": {"homepage_http": "200 OK"},
+      "evidence": [
+        {
+          "kind": "meta",
+          "quote": "Mapping Media Freedom documents all press and media freedom violations that occur across EU Member States and candidate countries.",
+          "source_file": "(captured in /tmp/mfrr.html during session; homepage saved to evidence/mmf_home.html)"
+        }
+      ]
+    },
+    {
+      "id": "mpf_sweden",
+      "name": "Myndigheten för psykologiskt försvar (Sweden)",
+      "jurisdiction": "Sweden",
+      "operator": "Government of Sweden",
+      "type": "national authority portal",
+      "urls": ["https://www.mpf.se/"],
+      "access": {"homepage_http": "200 OK"},
+      "evidence": [
+        {
+          "kind": "html_title",
+          "quote": "<title>Myndigheten för psykologiskt försvar</title>",
+          "source_file": "evidence/mpf_home.html"
+        }
+      ]
+    },
+    {
+      "id": "dsn_spain_system",
+      "name": "DSN (Spain) — Sistema de lucha contra la desinformación",
+      "jurisdiction": "Spain",
+      "operator": "Departamento de Seguridad Nacional (DSN)",
+      "type": "national framework portal",
+      "urls": ["https://www.dsn.gob.es/es/actualidad/sistema-lucha-contra-desinformacion"],
+      "access": {"notes": "Blocked by WAF in this environment (Request Denied HTML)."},
+      "evidence": [
+        {
+          "kind": "block_page",
+          "quote": "<title>Request Denied!</title>",
+          "source_file": "/tmp/dsn_desinfo.html"
+        }
+      ]
+    },
+    {
+      "id": "viginum_france",
+      "name": "Viginum (France)",
+      "jurisdiction": "France",
+      "operator": "Government of France",
+      "type": "national capability portal",
+      "urls": ["https://www.viginum.gouv.fr/"],
+      "access": {"notes": "curl connection failed (exit code 6) in this environment; not verified."},
+      "evidence": []
+    }
+  ],
+  "limitations": [
+    "Web search via Exa API is not available in this environment (EXA_API_KEY not configured), so the list is seeded from sources directly fetched/verified during this session and well-known portals.",
+    "Several relevant sources are blocked by anti-bot/WAF controls from this environment (notably EUvsDisinfo and Spain DSN page).",
+    "Not all portals are strictly 'databases'; many are report repositories or transparency portals relevant to disinformation/misinformation research."
+  ]
+}

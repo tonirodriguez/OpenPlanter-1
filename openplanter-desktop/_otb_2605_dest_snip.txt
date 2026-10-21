@@ -1,0 +1,26 @@
+   165	
+   166	                                                                                                                                                                                                                                                  Mitjana   NPS
+   167	
+   168	Font: Observatori del Turisme a Barcelona: ciutat i regió. / Nota: Dades provisionals sense ponderar. / 1 Resposta múltiple.                                                                                                                                                                                               5
+   169	                Perfil del turista a la Destinació Barcelona                                                                                                                                                                                                             Maig 2026
+   170	
+   171	Sexe                                                     Origen                                                               Estada mitjana (nits)                    Motiu de viatge                                                                Canal de contractació
+   172	
+   173	      34,9%                65,1%                         12,8% 12,1%                   51,8%      23,2%                                   4,1                                                                  56,4%         29,5% 14,1%                    44,0%              41,2%              1,9%
+   174	                                                                                                                                                                                                                                                                                            12,8%
+   175	
+   176	             Dona Home                                                 Catalunya       Resta d'Espanya                                                                                                   Oci Professional Personal i altres                 Directe TTOO Altres Ns/Nc
+   177	                                                                       Resta d'Europa  Resta del món
+   178	
+   179	Edat                                                     Repetibilitat                                   Acompanyants1                                                 Transport arribada                                                             Transport intern1
+   180	
+   181	                                                                                                                              Parella                      38,9%                           6,5% 1,6% 1,4%
+   182	
+   183	    18-24 anys              11,4%                                                                 9,9%                        Sol                         27,9%                    19,8%                                                              A peu                                                33,1%
+   184	    25-34 anys                                30,1%                                               9,9%                                                                                                                                                Metro
+   185	    35-44 anys                                                         53,7% 46,3%                                            Amics                 17,2%
+   186	    45-54 anys                       21,4%                                                        25,9%                                                                                                                                                 Taxi
+   187	    55-64 anys                      20,0%                                                         0,5%                        Fills menors d'edat  10,4%                                                                                                                       19,5%
+   188	65 anys o més               12,0%                                                                                                                                                                                                                                        13,3%
+   189	                      5,0%                                                                                                    Companys de feina    10,0%
+   190	

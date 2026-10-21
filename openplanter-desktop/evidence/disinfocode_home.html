@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="oigTs4zz9WZ5E6pu5yCfrGZAMLkVBSA6EhanXdb0" />
+
+    <title>Transparency Center</title>
+    <link rel="icon" href="https://disinfocode.eu/favicon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=figtree:300,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer type="be8f6d5a451ca5239f611b0b-text/javascript"></script>
+    <!-- <script async src="https://static.linguise.com/script-js/switcher.bundle.js?d=pk_yHWxUOjuKwPfLNrOxK4cLt6TLiqrzaDF"></script> -->
+    <script async src="https://static.linguise.com/script-js/switcher.bundle.js?d=pk_r1kmA2zoQg0tT91BuOkWEdgtFngZFe6K" type="be8f6d5a451ca5239f611b0b-text/javascript"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/trix@2.0.8/dist/trix.css"
+    />
+    <script type="be8f6d5a451ca5239f611b0b-text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
+    <!-- Scripts -->
+    <link rel="preload" as="style" href="https://disinfocode.eu/build/assets/app-DCYPhuXm.css" /><link rel="modulepreload" href="https://disinfocode.eu/build/assets/app-FnD7FlrN.js" /><link rel="stylesheet" href="https://disinfocode.eu/build/assets/app-DCYPhuXm.css" data-navigate-track="reload" /><script type="be8f6d5a451ca5239f611b0b-module" src="https://disinfocode.eu/build/assets/app-FnD7FlrN.js" data-navigate-track="reload"></script>
+    <!-- Styles -->
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+  </head>
+  <body class="font-sans antialiased">
+    <div x-data="{&quot;show&quot;:true,&quot;style&quot;:&quot;success&quot;,&quot;message&quot;:null}"
+    :class="{ 'bg-indigo-500': style == 'success', 'bg-red-700': style == 'danger', 'bg-yellow-500': style == 'warning', 'bg-gray-500': style != 'success' && style != 'danger' && style != 'warning'}"
+            style="display: none;"
+            x-show="show && message"
+            x-on:banner-message.window="
+                style = event.detail.style;
+                message = event.detail.message;
+                show = true;
+            ">
+    <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap">
+            <div class="w-0 flex-1 flex items-center min-w-0">
+                <span class="flex p-2 rounded-lg" :class="{ 'bg-indigo-600': style == 'success', 'bg-red-600': style == 'danger', 'bg-yellow-600': style == 'warning' }">
+                    <svg x-show="style == 'success'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <svg x-show="style == 'danger'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                    </svg>
+                    <svg x-show="style != 'success' && style != 'danger' && style != 'warning'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                    </svg>
+                    <svg x-show="style == 'warning'" class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4v.01 0 0 " />
+                    </svg>
+                </span>
+
+                <p class="ms-3 font-medium text-sm text-white truncate" x-text="message"></p>
+            </div>
+
+            <div class="shrink-0 sm:ms-3">
+                <button
+                    type="button"
+                    class="-me-1 flex p-2 rounded-md focus:outline-none sm:-me-2 transition"
+                    :class="{ 'hover:bg-indigo-600 focus:bg-indigo-600': style == 'success', 'hover:bg-red-600 focus:bg-red-600': style == 'danger', 'hover:bg-yellow-600 focus:bg-yellow-600': style == 'warning'}"
+                    aria-label="Dismiss"
+                    x-on:click="show = false">
+                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div
+      class=" min-h-screen"
+    >
+      <nav
+  x-data="{ open: false }"
+  class="relative m-auto flex justify-between bg-white md:max-h-36 md:max-w-[1200px] md:items-center md:p-4 md:px-8"
+  :class="{'relative': !open, 'absolute min-h-screen': open}"
+>
+  <div class="absolute left-8 top-0 z-10 flex items-center bg-white md:hidden">
+    <button
+      @click="open = ! open"
+      :class="{'block': !open, 'hidden': open}"
+      class="inline-flex items-center justify-center rounded-md pt-4 text-blue-700 outline-none"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  class="size-6"
+>
+  <path
+    fill-rule="evenodd"
+    d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+    clip-rule="evenodd"
+  />
+</svg>
+    </button>
+  </div>
+
+  <a href="https://disinfocode.eu" class="hidden min-w-60 lg:block">
+    <img src="/assets/logo.svg" class="max-w-60" alt="Logo" />
+  </a>
+
+  <a
+    href="https://disinfocode.eu"
+    class="hidden max-h-12 min-h-12 md:block lg:hidden"
+  >
+    <img src="/assets/logo-initials.svg" class="max-h-12 min-h-12" alt="Logo" />
+  </a>
+
+  <div
+    x-cloak
+    :class="{'block': open, 'hidden': !open}"
+    class="absolute -top-16 flex min-h-screen flex-col gap-4 bg-white md:relative md:top-0 md:ml-0 md:mt-0 md:flex md:min-h-0 md:flex-row md:items-center"
+  >
+    <div class="flex items-start justify-between gap-8 p-8 md:hidden">
+      <a href="https://disinfocode.eu" class="block min-w-56">
+        <img src="/assets/logo.svg" class="max-w-56" alt="Logo" />
+      </a>
+      <button
+        @click="open = false"
+        class="text-blue-700 outline-none"
+        x-cloak
+        x-show="open"
+        role="button"
+        alt="Close menu"
+      >
+        <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  class="size-6"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+    clip-rule="evenodd"
+  />
+</svg>
+      </button>
+    </div>
+
+    <div
+      class="flex-grow flex-col items-start p-8 md:flex md:flex-row md:items-center md:p-0"
+    >
+              <a class="w-fit items-center border-b-2 px-0 py-2 text-center text-xl font-medium text-primary transition duration-150 ease-in-out md:px-2 md:text-sm border-transparent hover:text-primary hover:border-secondary block" href="https://disinfocode.eu/the-code">
+  The Code
+</a>
+              <a class="w-fit items-center border-b-2 px-0 py-2 text-center text-xl font-medium text-primary transition duration-150 ease-in-out md:px-2 md:text-sm border-transparent hover:text-primary hover:border-secondary block" href="https://disinfocode.eu/signatories">
+  Signatories
+</a>
+              <a class="w-fit items-center border-b-2 px-0 py-2 text-center text-xl font-medium text-primary transition duration-150 ease-in-out md:px-2 md:text-sm border-transparent hover:text-primary hover:border-secondary block" href="https://disinfocode.eu/reports">
+  Reports
+</a>
+              <a class="w-fit items-center border-b-2 px-0 py-2 text-center text-xl font-medium text-primary transition duration-150 ease-in-out md:px-2 md:text-sm border-transparent hover:text-primary hover:border-secondary block" href="https://disinfocode.eu/prospective-signatories">
+  Prospective Signatories
+</a>
+              <a class="w-fit items-center border-b-2 px-0 py-2 text-center text-xl font-medium text-primary transition duration-150 ease-in-out md:px-2 md:text-sm border-transparent hover:text-primary hover:border-secondary block" href="https://disinfocode.eu/structural-indicators">
+  Structural Indicators
+</a>
+              <a class="w-fit items-center border-b-2 px-0 py-2 text-center text-xl font-medium text-primary transition duration-150 ease-in-out md:px-2 md:text-sm border-transparent hover:text-primary hover:border-secondary block" href="https://disinfocode.eu/elections">
+  Elections
+</a>
+      
+    </div>
+  </div>
+</nav>
+      <main class="mt-16 min-h-screen md:mt-8">
+        <div class="flex flex-col gap-16">
+    <div class="px-8">
+      <section
+        class="m-auto max-w-[1200px] flex h-full w-full rounded-3xl bg-primary"
+      >
+        <div
+          class="flex h-full w-2/3 flex-grow flex-col justify-center gap-4 rounded-3xl bg-primary bg-hero bg-cover bg-left bg-no-repeat px-8 py-12 md:px-16 md:py-24"
+        >
+          <h2
+            class="text-2xl font-bold text-white sm:text-4xl md:text-6xl [&>span]:font-bold [&>span]:text-secondary"
+          >
+            Discover the Code of Conduct on <span>Disinformation</span>
+          </h2>
+          <p class="text-white">Find out what online platforms, civil society, fact-checkers, ad tech players, and many others do to combat disinformation and misinformation online.</p>
+          <div class="items-centar flex justify-start gap-4">
+            <a
+              href="https://disinfocode.eu/the-code"
+              class="flex items-center gap-2 rounded-full bg-secondary px-4 py-1 text-xs text-primary transition hover:bg-white"
+            >
+              Read more about the Code
+            </a>
+            <a
+              href="https://disinfocode.eu/the-code"
+              class="flex items-center gap-2 rounded-full border border-white bg-transparent px-2 py-1 text-xs text-white transition hover:bg-white hover:text-primary"
+            >
+              Go to Reports
+            </a>
+          </div>
+        </div>
+        <div class="hidden w-1/3 bg-white/65 lg:block"></div>
+      </section>
+    </div>
+
+    <section class="px-8">
+      <div class="m-auto max-w-[1200px]">
+        <h2 class="mb-2 uppercase text-primary">Transparency Centre</h2>
+        <div class="flex flex-col gap-4 md:flex-row">
+          <div class="md:w-1/2">
+            <h3 class="mb-2 text-2xl font-bold text-primary">Who we are</h3>
+            <p>
+              We are a broad group of online platforms, players in the
+              advertising industry, fact-checkers, research and civil society
+              organisations.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4 md:w-1/2">
+            <div>
+              <h3 class="mb-2 text-2xl font-bold text-primary">Our mission</h3>
+              <p>
+                To counter the threat of disinformation and misinformation and
+                in response to the European Democracy Action Plan and the
+                European Commission’s Guidance, we jointly wrote and signed a
+                new Code of Practice on Disinformation in June 2022 (now a Code
+                of Conduct under the DSA).
+              </p>
+            </div>
+            <div>
+              <h3 class="mb-2 text-2xl font-bold text-primary">Our service</h3>
+              <p>
+                Through this Transparency Centre, you can find all information
+                on the Code and each of our actions to implement it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary px-8">
+      <div class="m-auto max-w-[1200px] py-12">
+        <h2 class="mb-2 uppercase text-secondary">The project</h2>
+        <div class="mb-2">
+          <h3 class="text-2xl font-bold text-secondary">
+            The 2022 Code of Practice on Disinformation
+          </h3>
+          <p class="text-white">
+            The Code of Practice on Disinformation is a first-of-its kind tool
+            through which relevant players in the online information ecosystem
+            active in the EU agreed on self-regulatory standards to fight
+            disinformation, – for the first time in 2018.
+          </p>
+        </div>
+
+        <div
+          class="my-8 flex flex-col justify-evenly gap-16 text-white md:flex-row"
+        >
+          <div class="flex flex-col gap-6 md:w-1/3">
+            <div>
+              <h3 class="text-2xl font-bold text-secondary">
+                A unique initiative
+              </h3>
+              <p>
+                In June 2021, signatories launched a revision process that
+                culminated in the signature of a new Code on 16 June 2022 by 34
+                <a
+                  class="underline"
+                  href="https://digital-strategy.ec.europa.eu/en/library/signatories-2022-strengthened-code-practice-disinformation"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  signatories.
+                </a>
+                The new Code fulfills the objectives of the
+                <a
+                  class="underline"
+                  href="https://ec.europa.eu/commission/presscorner/detail/en/ip_21_2585"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Commission’s Guidance
+                </a>
+                presented in May 2021.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-6 md:w-1/3">
+            <div>
+              <h3 class="text-2xl font-bold text-secondary">Multipurpose</h3>
+              <p>
+                Signatories committed to take action in several domains, such
+                as; demonetising the dissemination of disinformation; ensuring
+                the transparency of political advertising; empowering users;
+                enhancing the cooperation with fact-checkers; and providing
+                researchers with better access to data.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-6 md:w-1/3">
+            <div>
+              <h3 class="text-2xl font-bold text-secondary">
+                Led by the main actors
+              </h3>
+              <p>
+                Recognising the importance to make the Code future-proof,
+                signatories agreed to establish a framework for further
+                collaboration through a permanent Task-force, alongside a
+                strengthened monitoring framework and service-level indicators
+                to measure the implementation and impact of the code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col items-center gap-12">
+      <div>
+        <h2 class="text-4xl font-bold text-black">Join 40+ signatories</h2>
+      </div>
+      <div class="w-full overflow-x-auto">
+        
+        <div class="w-full overflow-x-auto">
+          <div class="flex gap-4">
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #000000"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/Avaaz1733997747.svg"
+                  alt="Avaaz"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #0051AE"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/Debunk1733997980.svg"
+                  alt="Debunk"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #0051AE"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/globsec1773762145.png"
+                  alt="Globsec"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #646567"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/Microsoft1733999768.png"
+                  alt="Microsoft"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #646567"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/Seznam1734000483.svg"
+                  alt="Seznam"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #0090FF"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/TikTok1734000613.png"
+                  alt="TikTok"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #C5C6C8"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/ebiquity1742554310.png"
+                  alt="Ebiquity"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #0051AE"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/demagogcz1742901129.png"
+                  alt="Demagog.cz"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #0090FF"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/microsoft-bing1742289790.jpg"
+                  alt="Microsoft Bing"
+                />
+              </div>
+                          <div
+                class="flex min-w-[150px] flex-shrink-0 items-center justify-center overflow-hidden rounded-3xl shadow-md md:min-w-[300px]"
+                style="background-color: #0090FF"
+              >
+                <img
+                  class="h-24 w-full max-w-[100px] object-contain md:h-36 md:max-w-[200px]"
+                  src="/images/clean-up-the-internet1764330386.png"
+                  alt="Clean Up The Internet"
+                />
+              </div>
+                      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-12 pt-0">
+      <div class="m-auto max-w-[1200px]">
+        <h2 class="mb-2 uppercase text-primary">Take part in the initiative</h2>
+        <div class="flex flex-col justify-between gap-4 md:flex-row">
+          <div class="md:w-1/2">
+            <h3 class="mb-2 text-2xl font-bold text-primary">
+              Becoming a signatory
+            </h3>
+            <p class="text-lg/6">
+              The Call is addressed to a wide range of stakeholders including:
+              providers of online services that participate in the dissemination
+              of content to the public such as social media, private messaging
+              applications and search engines; players from the online
+              advertising industry; providers of e-payment services, e-commerce
+              platforms, crowd-funding/donation systems, which may be used to
+              spread disinformation; stakeholders who provide technological
+              solutions to combat disinformation; fact-checkers and civil
+              society organisations specialising in countering disinformation.
+              By joining the Code, new signatories will be part of an EU-wide
+              forum bringing together a variety of relevant players who seek to
+              strengthen their actions, share best practices and improve
+              cooperation in order to mitigate the risks stemming from
+              disinformation in the EU. disinformation in the EU.
+            </p>
+          </div>
+
+          <div class="max-w-[400px] md:w-1/2">
+            <picture>
+              <img
+                class="rounded-3xl"
+                src="https://disinfocode.eu/assets/becoming_a_signatory.webp"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-secondary px-8 py-12">
+      <div class="m-auto max-w-[1200px]">
+        <h2 class="mb-2 uppercase text-primary">How we got here</h2>
+        <div class="flex flex-col justify-between gap-4">
+          <h3 class="mb-2 text-2xl font-bold text-primary">
+            The road that led to the Code of Conduct
+          </h3>
+          <div class="flex flex-col gap-8 md:flex-row md:gap-16">
+            <div class="md:w-1/3">
+              <p class="text-lg/6">
+                The 2018 Code of Practice on Disinformation brought together for
+                the first time worldwide industry players to commit to counter
+                disinformation. At the core of the EU strategy against
+                disinformation, the Code has proven to be an effective tool to
+                limit the spread of online disinformation, including during
+                electoral periods and to quickly respond to crises, such as the
+                coronavirus pandemic and the war in Ukraine.
+              </p>
+            </div>
+            <div class="md:w-1/3">
+              <p class="text-lg/6">
+                Following the Commission’s Assessment of its first period of
+                implementation, the Commission published in May 2021 detailed
+                Guidance to address the shortcomings of the 2018 Code, proposing
+                solutions to make it more effective. The signatories of the 2018
+                Code, joined by a broad range of prospective signatories,
+                engaged in the revision process that led to the Strengthened
+                Code presented to the Commission on 16th of June 2022.
+              </p>
+            </div>
+            <div class="md:w-1/3">
+              <p class="text-lg/6">
+                The 2022 Code was drafted with the aim of becoming a
+                <a
+                  class="inline-block text-primary underline"
+                  href="https://digital-strategy.ec.europa.eu/en/library/code-conduct-disinformation"
+                >
+                  Code of Conduct
+                </a>
+                under the Digital Services Act (DSA). In January 2025 the
+                Signatories of the Code submitted all necessary documents
+                supporting their request for its conversion into a DSA “Code of
+                Conduct”. Apart from technical amendments and minimal changes to
+                the Preamble, to adapt to the DSA’s entry into force, the text
+                of the Code remained unchanged compared to the 2022 version. On
+                that basis, the European Board for Digital Services and the
+                Commission adopted their positive opinions in February 2025,
+                concluding that the Code meets the conditions specified in the
+                DSA and endorsing its official integration into the DSA
+                framework.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 py-12">
+      <div class="m-auto max-w-[1200px]">
+        <div class="flex flex-col justify-between gap-4 md:flex-row">
+          <div class="max-w-[400px] md:w-1/2">
+            <picture>
+              <img
+                class="rounded-3xl"
+                src="https://disinfocode.eu/assets/becoming_a_signatory.webp"
+              />
+            </picture>
+          </div>
+
+          <div class="md:w-1/2">
+            <h2 class="mb-2 uppercase text-primary">Permanent Taskforce</h2>
+
+            <div class="flex flex-col gap-4">
+              <p class="text-lg/6">
+                The permanent Task-force will keep the Code future-proof and
+                fit-for-purpose, by establishing a forum to review and adapt the
+                commitments in view of technological, societal, market and
+                legislative developments.
+              </p>
+              <p class="text-lg/6">
+                The Task-force is composed of representatives of signatories,
+                the European Regulators’ Group for Audiovisual Media Services
+                (now European Board for Media Services), the European Digital
+                Media Observatory and the European External Action Service, and
+                is chaired by the Commission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+      </main>
+    </div>
+    <footer class="mt-32 bg-primary px-8">
+      <div class="m-auto max-w-[1200px] py-8 pb-0">
+        <div
+          class="flex flex-col items-start justify-between gap-4 border-b border-white pb-4 sm:flex-row lg:items-center"
+        >
+          <div>
+            <a href="https://disinfocode.eu" class="block min-w-56">
+              <img src="/assets/logo-white.svg" class="max-w-56" alt="Logo" />
+            </a>
+          </div>
+          <div class="flex flex-col gap-4 text-sm lg:flex-row">
+            <a
+              href="https://disinfocode.eu/the-code"
+              class="text-white hover:underline"
+            >
+              The Code
+            </a>
+
+            <a
+              href="https://disinfocode.eu/signatories"
+              class="text-white hover:underline"
+            >
+              Signatories
+            </a>
+            <a
+              href="https://disinfocode.eu/reports"
+              class="text-white hover:underline"
+            >
+              Reports
+            </a>
+            <a
+              href="https://disinfocode.eu/prospective-signatories"
+              class="text-white hover:underline"
+            >
+              Propspective Signatories
+            </a>
+            <a
+              href="https://disinfocode.eu/structural-indicators"
+              class="text-white hover:underline"
+            >
+              Structural indicators
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="m-auto max-w-[1200px] py-2 text-xs text-white">
+        © 2024 Transparency Centre. All rights reserved.
+      </div>
+    </footer>
+
+    
+    <script type="be8f6d5a451ca5239f611b0b-text/javascript">
+    console.warn('Livewire: The published Livewire assets are out of date\n See: https://livewire.laravel.com/docs/installation#publishing-livewires-frontend-assets')
+</script>
+<script src="https://disinfocode.eu/vendor/livewire/livewire.min.js?id=02b08710" data-csrf="oigTs4zz9WZ5E6pu5yCfrGZAMLkVBSA6EhanXdb0" data-update-uri="/livewire/update" data-navigate-once="true" type="be8f6d5a451ca5239f611b0b-text/javascript"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J4JR7HD0K2" type="be8f6d5a451ca5239f611b0b-text/javascript"></script>
+    <script type="be8f6d5a451ca5239f611b0b-text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-J4JR7HD0K2');
+    </script>
+  <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="be8f6d5a451ca5239f611b0b-|49" defer></script></body>
+</html>

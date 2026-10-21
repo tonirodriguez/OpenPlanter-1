@@ -1,0 +1,514 @@
+{
+  "question": "Tendencias de turismo internacional 2026 vs 2025 y lo previsto para 2027",
+  "scope": {
+    "geography": "Global",
+    "metric_definition": "International tourist arrivals (overnight visitors)"
+  },
+  "sources_used": [
+    {
+      "name": "UN Tourism  -  News release: International tourist arrivals up 4% in 2025",
+      "canonical_url": "https://www.untourism.int/news/international-tourist-arrivals-up-4-in-2025-reflecting-strong-travel-demand-around-the-world",
+      "local_evidence_files": [
+        "evidence/unwto_2025_full_year.html",
+        "evidence/unwto_2025_full_year_excerpt_1368_1565.html",
+        "evidence/unwto_2025_pressrelease.pdf",
+        "evidence/unwto_2025_pressrelease.pdf.utf8.txt"
+      ]
+    },
+    {
+      "name": "UN Tourism  -  World Tourism Barometer (Volume 24, Issue 2, May 2026 Excerpt; revised July 2026)",
+      "doi": "https://doi.org/10.18111/wtobarometereng",
+      "local_evidence_files": [
+        "evidence/unwto_barometer_may26_excerpt.pdf",
+        "evidence/unwto_barometer_may26_excerpt.pdf.utf8.txt",
+        "evidence/unwto_barometer_may26_excerpt_lines_52_120.utf8.txt",
+        "evidence/unwto_barometer_may26_excerpt_lines_150_220.utf8.txt"
+      ]
+    },
+    {
+      "name": "INE (España)  -  FRONTUR (Nota de Prensa) HTML",
+      "canonical_url": "https://www.ine.es/dyngs/Prensa/FRONTUR1225.htm",
+      "local_evidence_files": [
+        "evidence/ine_FRONTUR1225.html",
+        "evidence/ine_FRONTUR0726.html"
+      ]
+    },
+    {
+      "name": "INE (España)  -  EGATUR (Nota de Prensa) HTML",
+      "canonical_url": "https://www.ine.es/dyngs/Prensa/EGATUR1225.htm",
+      "local_evidence_files": [
+        "evidence/ine_EGATUR1225.html",
+        "evidence/ine_EGATUR0726.html"
+      ]
+    },
+    {
+      "name": "Observatori del Turisme a Barcelona (OTB)  -  IAOTB Càpsula PDF (2025)",
+      "canonical_url": "https://observatoriturisme.barcelona/wp-content/uploads/2026/02/2025_Capsula-1-IAOTB-1.pdf",
+      "local_evidence_files": [
+        "evidence/otb_2025_capsula1_IAOTB_1.pdf",
+        "evidence/otb_2025_capsula1_IAOTB_1.pdf.txt"
+      ]
+    },
+    {
+      "name": "WTTC (World Travel & Tourism Council) - Spain Economic Impact Report (Travel & Tourism Impact 2026) PDF",
+      "canonical_url": "https://researchhub.wttc.org/product/spain-economic-impact-report",
+      "local_evidence_files": [
+        "evidence/wttc_spain_economic_impact_report.pdf",
+        "evidence/wttc_spain_economic_impact_report.pdf.txt"
+      ]
+    },
+    {
+      "name": "Observatori del Turisme a Barcelona (OTB)  -  Informe mensual perfil Destinació (Abril 2026) PDF",
+      "canonical_url": "https://observatoriturisme.barcelona/wp-content/uploads/2026/05/2604_Informe-mensual-perfil-Destinacio.pdf",
+      "local_evidence_files": [
+        "evidence/otb_2604_informe_mensual_perfil_destinacio.pdf",
+        "evidence/otb_2604_informe_mensual_perfil_destinacio.pdf.txt",
+        "_otb_2604_dest_snip.txt"
+      ]
+    },
+    {
+      "name": "Observatori del Turisme a Barcelona (OTB)  -  Informe mensual perfil Destinació (Maig 2026) PDF",
+      "canonical_url": "https://observatoriturisme.barcelona/wp-content/uploads/2026/06/2605_Informe-mensual-perfil-Destinacio.pdf",
+      "local_evidence_files": [
+        "evidence/otb_2605_informe_mensual_perfil_destinacio.pdf",
+        "evidence/otb_2605_informe_mensual_perfil_destinacio.pdf.txt",
+        "_otb_2605_dest_snip.txt"
+      ]
+    }
+	  ],
+	  "cultural_tourism_segmentation": {
+	    "question": "Do we have Spain vs Barcelona segregated data for cultural tourism?",
+	    "barcelona_otb": {
+	      "status": "available_in_monthly_profile_pdfs",
+	      "definition_used": "Share of surveyed tourists reporting 'Visites culturals' among activities carried out in the municipality (OTB monthly destination profile).",
+	      "observations": [
+	        {
+	          "period": "April 2026",
+	          "indicator": "Visites culturals",
+	          "value": "79,8%",
+	          "evidence": {
+	            "local_file": "evidence/otb_2604_informe_mensual_perfil_destinacio.pdf.txt",
+	            "line_numbers": [
+	              82
+	            ]
+	          },
+	          "confidence": "confirmed"
+	        },
+	        {
+	          "period": "May 2026",
+	          "indicator": "Visites culturals",
+	          "value": "76,0%",
+	          "evidence": {
+	            "local_file": "evidence/otb_2605_informe_mensual_perfil_destinacio.pdf.txt",
+	            "line_numbers": [
+	              75
+	            ]
+	          },
+	          "confidence": "confirmed"
+	        }
+	      ]
+	    },
+	    "spain_ine_frontur_egatur_press_html": {
+	      "status": "not_found_in_captures",
+	      "note": "In the INE FRONTUR/EGATUR press release HTML evidence files used for this report (2025 and Jan-Jul 2026), a text search did not find explicit cultural-tourism activity/motive breakdowns (e.g., 'cultur*', 'muse*').",
+	      "evidence_files_checked": [
+	        "evidence/ine_FRONTUR1225.html",
+	        "evidence/ine_FRONTUR0726.html",
+	        "evidence/ine_EGATUR1225.html",
+	        "evidence/ine_EGATUR0726.html"
+	      ],
+	      "confidence": "absence_in_these_captures"
+	    },
+	    "spain_ine_tempus_operaciones_snapshot": {
+	      "status": "no_operation_name_match",
+	      "snapshot_file": "data_ine_operaciones.json",
+	      "match_logic": "Nombre contains both 'turismo' and 'cultur' (case-insensitive)",
+	      "matches": 0,
+	      "confidence": "confirmed"
+	    }
+	  },
+  	  "observations": [
+    {
+      "period": "2025 (full year)",
+      "statement": "International tourist arrivals (overnight visitors) grew by 4% in 2025; estimated 1.52 billion international tourists in 2025.",
+      "values": {
+        "yoy_growth_percent": "4%",
+        "international_tourists": "1.52 billion"
+      },
+      "evidence": {
+        "local_file": "evidence/unwto_2025_pressrelease.pdf.utf8.txt",
+        "line_numbers": [
+          4
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "Q1 2026 vs Q1 2025",
+      "statement": "International tourist arrivals increased by 2% in Q1 2026 vs the same period in 2025; estimated 307 million tourists travelled internationally in Q1 2026 (~6 million more than Q1 2025).",
+      "values": {
+        "yoy_growth_percent": "2%",
+        "international_tourists_q1": "307 million",
+        "delta_vs_q1_2025": "about 6 million"
+      },
+      "regional_breakdown_yoy": {
+        "Europe": "+4%",
+        "Africa": "+4%",
+        "Asia and the Pacific": "+3%",
+        "Americas": "+2%",
+        "Middle East": "-14%"
+      },
+      "evidence": {
+        "local_file": "evidence/unwto_barometer_may26_excerpt_lines_52_120.utf8.txt",
+        "line_numbers": [
+          8,
+          9,
+          15
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "2026 outlook (vs 2025)",
+      "statement": "Initial expectation: international tourism expected to grow 3% to 4% in 2026 vs 2025; May 2026 barometer warns the Middle East conflict could reduce 2026 growth by 1 to 2 percentage points below the initial 3% to 4% forecast.",
+      "values": {
+        "initial_growth_range": "3% to 4%",
+        "expected_reduction_due_to_conflict": "1 to 2 percentage points"
+      },
+      "evidence": {
+        "initial_forecast": {
+          "local_file": "evidence/unwto_2025_pressrelease.pdf.utf8.txt",
+          "line_numbers": [
+            31
+          ]
+        },
+        "reduction_language": {
+          "local_file": "evidence/unwto_barometer_may26_excerpt_lines_150_220.utf8.txt",
+          "line_numbers": [
+            16
+          ]
+        }
+      },
+      "confidence": "confirmed (range and scenario-based)"
+    },
+    {
+      "period": "2027",
+      "statement": "No explicit quantified forecast of international tourist arrivals for 2027 was found in the accessed UN Tourism sources (press release Jan 2026 + WTB May 2026 excerpt). The May 2026 excerpt includes macroeconomic growth projections for 2027 (IMF/UNDESA) as context.",
+      "values": {
+        "imf_global_gdp_growth_2027": "3.2%",
+        "undesa_global_gdp_growth_2027": "3.3%"
+      },
+      "evidence": {
+        "local_file": "evidence/unwto_barometer_may26_excerpt_lines_150_220.utf8.txt",
+        "line_numbers": [
+          20,
+          21
+        ]
+      },
+      "confidence": "confirmed (for macro context); unresolved (for tourism forecast)"
+    },
+    {
+      "period": "2025 (España, FRONTUR full year)",
+      "statement": "Durante el año 2025 visitaron España 96,8 millones de turistas; nuevo máximo histórico; +3,2% vs 2024.",
+      "values": {
+        "tourists_international_millions": "96,8 millones",
+        "yoy_growth_percent": "3,2%"
+      },
+      "evidence": {
+        "local_file": "evidence/ine_FRONTUR1225.html",
+        "line_numbers": [
+          963
+        ],
+        "also_present_as_embedded_numeric_string": "96.770.515"
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "Ene-Jul 2026 vs Ene-Jul 2025 (España, FRONTUR)",
+      "statement": "En los siete primeros meses de 2026 el número de turistas aumentó un 4,6% y superó los 58,1 millones.",
+      "values": {
+        "tourists_international": "superó los 58,1 millones",
+        "yoy_growth_percent": "4,6%"
+      },
+      "evidence": {
+        "local_file": "evidence/ine_FRONTUR0726.html",
+        "line_numbers": [
+          380
+        ],
+        "embedded_numeric_string": "58.106.406"
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "2025 (España, EGATUR full year)",
+      "statement": "El gasto total de turistas internacionales en 2025 fue de 134.712 millones de euros; +6,8% vs 2024.",
+      "values": {
+        "spend_total_million_eur": "134.712",
+        "yoy_growth_percent": "6,8%"
+      },
+      "evidence": {
+        "local_file": "evidence/ine_EGATUR1225.html",
+        "line_numbers": [
+          1103
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "Ene-Jul 2026 vs Ene-Jul 2025 (España, EGATUR)",
+      "statement": "Durante los siete primeros meses de 2026 el gasto total aumentó un 7,8% y alcanzó los 82.054 millones de euros.",
+      "values": {
+        "spend_total_million_eur": "82.054",
+        "yoy_growth_percent": "7,8%"
+      },
+      "evidence": {
+        "local_file": "evidence/ine_EGATUR0726.html",
+        "line_numbers": [
+          456
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "2025 (Barcelona, OTB universe of tourists)",
+      "statement": "OTB reporta en 2025: Barcelona ciudad 16,0M de turistas; Barcelona región 10,1M; Destinació Barcelona 26,1M.",
+      "values": {
+        "barcelona_city_tourists": "16,0M",
+        "barcelona_region_tourists": "10,1M",
+        "destination_barcelona_tourists": "26,1M"
+      },
+      "evidence": {
+        "local_file": "evidence/otb_2025_capsula1_IAOTB_1.pdf.txt",
+        "line_numbers": [
+          136,
+          137,
+          138
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "Maig 2026 (Barcelona, OTB - Perfil del turista a la Destinació Barcelona)",
+      "statement": "OTB (informe mensual de perfil) muestra para mayo 2026, en el bloque “Perfil del turista a la Destinació Barcelona”, una estada mitjana (nits) de 4,1 y distribuciones de sexo/origen/motivo/canal de contratación.",
+      "values": {
+        "average_stay_nights": "4,1",
+        "sex": {
+          "female": "34,9%",
+          "male": "65,1%"
+        },
+        "origin": {
+          "catalunya": "12,8%",
+          "resta_d_europa": "12,1%",
+          "resta_d_espanya": "51,8%",
+          "resta_del_mon": "23,2%"
+        },
+        "trip_purpose": {
+          "oci": "56,4%",
+          "professional": "29,5%",
+          "personal_i_altres": "14,1%"
+        },
+        "booking_channel": {
+          "directe": "44,0%",
+          "ttoo": "41,2%",
+          "altres": "1,9%",
+          "ns_nc": "12,8%"
+        }
+      },
+      "evidence": {
+        "local_file": "evidence/otb_2605_informe_mensual_perfil_destinacio.pdf.txt",
+        "line_numbers": [
+          169,
+          171,
+          173,
+          174
+        ]
+      },
+      "confidence": "confirmed (monthly profile snapshot; provisional/unweighted per footnote in PDF)"
+    },
+    {
+      "period": "Abril 2026 (Barcelona, OTB - Perfil del turista a la Destinació Barcelona)",
+      "statement": "OTB (informe mensual de perfil) muestra para abril 2026, en el bloque “Perfil del turista a la Destinació Barcelona”, una estada mitjana (nits) de 4,0 y distribuciones de sexo/origen/motivo/canal de contratación.",
+      "values": {
+        "average_stay_nights": "4,0",
+        "sex": {
+          "female": "36,4%",
+          "male": "63,6%"
+        },
+        "origin": {
+          "catalunya": "16,3%",
+          "resta_d_europa": "15,2%",
+          "resta_d_espanya": "49,1%",
+          "resta_del_mon": "19,5%"
+        },
+        "trip_purpose": {
+          "oci": "63,2%",
+          "professional": "19,6%",
+          "personal_i_altres": "17,1%"
+        },
+        "booking_channel": {
+          "directe": "44,2%",
+          "ttoo": "43,0%",
+          "altres": "1,9%",
+          "ns_nc": "11,0%"
+        }
+      },
+      "evidence": {
+        "local_file": "evidence/otb_2604_informe_mensual_perfil_destinacio.pdf.txt",
+        "line_numbers": [
+          169,
+          171,
+          173,
+          174
+        ]
+      },
+      "confidence": "confirmed (monthly profile snapshot; provisional/unweighted per footnote in PDF)"
+    },
+    {
+      "period": "2025 (España, FRONTUR)  -  principales mercados emisores (país de residencia)",
+      "statement": "FRONTUR indica que los principales países de residencia de los turistas que visitaron España durante 2025 fueron Reino Unido, Francia y Alemania; con variación anual: Reino Unido +3,7%, Francia -1,0%, Alemania +0,6%.",
+      "values": {
+        "top_markets": [
+          "Reino Unido",
+          "Francia",
+          "Alemania"
+        ],
+        "yoy_change": {
+          "Reino Unido": "+3,7%",
+          "Francia": "-1,0%",
+          "Alemania": "+0,6%"
+        }
+      },
+      "evidence": {
+        "local_file": "evidence/ine_FRONTUR1225.html",
+        "line_numbers": [
+          1023,
+          1025
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "Ene-Jul 2026 vs Ene-Jul 2025 (España, FRONTUR)  -  principales mercados emisores (YTD)",
+      "statement": "En los siete primeros meses de 2026, los principales países emisores fueron Reino Unido (con 11,5 millones y un aumento del 4,6%), Francia (con más de 7,2 millones y un incremento del 1,2%) y Alemania (con cerca de 6,9 millones, un 0,5% menos).",
+      "values": {
+        "ytd_top_markets": [
+          "Reino Unido",
+          "Francia",
+          "Alemania"
+        ],
+        "ytd_levels_and_yoy": {
+          "Reino Unido": {
+            "level": "11,5 millones",
+            "yoy": "+4,6%"
+          },
+          "Francia": {
+            "level": "más de 7,2 millones",
+            "yoy": "+1,2%"
+          },
+          "Alemania": {
+            "level": "cerca de 6,9 millones",
+            "yoy": "-0,5%"
+          }
+        }
+      },
+      "evidence": {
+        "local_file": "evidence/ine_FRONTUR0726.html",
+        "line_numbers": [
+          627
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "2025 (España, EGATUR)  -  mercados emisores por gasto (ranking)",
+      "statement": "EGATUR indica que el país que más gasto realizó en 2025 fue Reino Unido, con 23.650 millones de euros (+4,9% vs 2024); le siguieron Alemania (15.831 millones; +2,0%) y Francia (11.613 millones; +5,9%).",
+      "values": {
+        "top_spend_markets": [
+          "Reino Unido",
+          "Alemania",
+          "Francia"
+        ],
+        "spend_2025_million_eur": {
+          "Reino Unido": "23.650",
+          "Alemania": "15.831",
+          "Francia": "11.613"
+        },
+        "yoy_change": {
+          "Reino Unido": "+4,9%",
+          "Alemania": "+2,0%",
+          "Francia": "+5,9%"
+        }
+      },
+      "evidence": {
+        "local_file": "evidence/ine_EGATUR1225.html",
+        "line_numbers": [
+          1171,
+          1173
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "Ene-Jul 2026 (España, EGATUR)  -  cuota de gasto acumulado por mercado",
+      "statement": "En los siete primeros meses de 2026, Reino Unido fue el país con mayor gasto acumulado (16,9% del total), seguido de Alemania (11,3%) y Francia (7,8%).",
+      "values": {
+        "spend_share_ytd": {
+          "Reino Unido": "16,9%",
+          "Alemania": "11,3%",
+          "Francia": "7,8%"
+        }
+      },
+      "evidence": {
+        "local_file": "evidence/ine_EGATUR0726.html",
+        "line_numbers": [
+          604
+        ]
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "period": "2027 (España, WTTC)  -  inferencia a partir de previsión 2036 y CAGR",
+      "statement": "WTTC publica una previsión para 2036 de \"international tourist arrivals\" (143,565,000) y que supone +1,8% anual desde 2026; el informe no publica explícitamente 2027, pero puede inferirse aplicando esa tasa media.",
+      "values": {
+        "wttc_forecast_2036_international_tourist_arrivals": "143,565,000",
+        "wttc_cagr_since_2026": "+1.8% pa",
+        "inferred_2026_international_tourist_arrivals": "120107684.71784913424870891994194038982960568537563449453188443539470215603152481",
+        "inferred_2027_international_tourist_arrivals": "122269623.04277041866518568050089531684653858771239591543345835523180679484009226"
+      },
+      "evidence": {
+        "wttc_forecast_statement": {
+          "local_file": "evidence/wttc_spain_economic_impact_report.pdf.txt",
+          "line_numbers": [
+            563
+          ]
+        },
+        "computation": {
+          "formula": "arr_2036 = arr_2026 * (1.018)^10; arr_2027 = arr_2026 * 1.018",
+          "local_file": "_wttc_infer_2026_2027.txt"
+        }
+      },
+      "confidence": "probable (inferred from published CAGR; not a direct 2027 publication)"
+    },
+    {
+      "period": "Barcelona (mercados de origen)  -  evidencia disponible en esta ejecución",
+      "statement": "En el PDF OTB (Càpsula IAOTB 2025) descargado y extraído aquí no se localizaron tablas/texto explícitos de mercados de origen (país/mercado emisor). Esta ejecución solo permite afirmar el total de turistas 2025 (ciudad, región, destinació) y no un ranking por origen.",
+      "values": {
+        "origin_markets_data_found": false
+      },
+      "evidence": {
+        "local_file": "evidence/otb_2025_capsula1_IAOTB_1.pdf.txt",
+        "note": "Keyword searches for origin-market terms in the extracted PDF text returned no matches."
+      },
+      "confidence": "confirmed (absence within accessed document only)"
+    }
+  ],
+  "methodology": {
+    "approach": "Extract quoted statements and numeric values from locally cached UN Tourism PDF/HTML artifacts in evidence/. No external API calls were possible (EXA_API_KEY not configured). Added INE FRONTUR/EGATUR press release HTML captures and OTB capsule PDF text extraction (pdftotext -layout) for Spain/Barcelona segmentation.",
+    "processing_notes": "Some PDF-to-text outputs were ISO-8859-1 encoded; they were converted to UTF-8 (files suffixed .utf8.txt) to enable parsing/quoting."
+  },
+  "limitations": [
+    "The May 2026 World Tourism Barometer file is an excerpt (pages 1-6) and may not contain all forecasts or the full statistical annex.",
+    "No numeric tourism forecast for 2027 was available in the accessed sources; only macroeconomic projections for 2027 are included as context.",
+    "Barcelona OTB metrics are not directly comparable to INE FRONTUR international-arrivals totals (different universe/definition)."
+  ]
+}

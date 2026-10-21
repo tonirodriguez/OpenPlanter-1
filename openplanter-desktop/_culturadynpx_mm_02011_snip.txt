@@ -1,0 +1,41 @@
+
+				<a href="#" class="tooltip tooltip-evnt" id="t_-9223372036854775797Tooltip" aria-label="Información sobre última modificación, dimensiones y periodo" aria-haspopup="true" role="button"><img class="icono" src="/menus//plantillas/inebase/img/i.gif" alt="Informacion tabla"></a>
+					<dl class="tooltip-content" role="tooltip" aria-labelledby="t_-9223372036854775797Tooltip">
+						<dt class="FechCambio">Ultima modificacion: </dt>
+						  <dd class="FechCambio">29/07/2025</dd>
+						<dt class="Tamanyo">Tamaño del fichero:</dt>
+						  <dd class="Tamanyo">3.824,00 bytes</dd>
+						<dt class="Variables">Dimensiones:</dt>
+						  <dd class="Variables">
+						  	Sexo, edad y situación personal, Indicador, Asistencia</dd>
+					</dl>
+					</span>
+			<a href="/CulturaJaxiPx/Tabla.htm?path=/t9/p9/a1a2024-2025/c02/l0/&amp;file=02010.px&amp;L=0" data-tabla="1--9223372036854775797" class="titulo t2">2.10. Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por sexo, edad y situación personal </a>
+				<li role="none">
+		<span class="additional">
+				<a href="/CulturaJaxiPx/dlgExport.htm?path=/t9/p9/a1a2024-2025/c02//&file=02011.px&nocab=1&L=0" class="thickbox" title="Descarga ficheros" role="button"><img class="iconoDown" src="/menus//plantillas/inebase/img/down.gif"  alt="Descarga ficheros"></a>
+
+				<a href="#" class="tooltip tooltip-evnt" id="t_-9223372036854775796Tooltip" aria-label="Información sobre última modificación, dimensiones y periodo" aria-haspopup="true" role="button"><img class="icono" src="/menus//plantillas/inebase/img/i.gif" alt="Informacion tabla"></a>
+					<dl class="tooltip-content" role="tooltip" aria-labelledby="t_-9223372036854775796Tooltip">
+						<dt class="FechCambio">Ultima modificacion: </dt>
+						  <dd class="FechCambio">17/09/2025</dd>
+						<dt class="Tamanyo">Tamaño del fichero:</dt>
+						  <dd class="Tamanyo">3.728,00 bytes</dd>
+						<dt class="Variables">Dimensiones:</dt>
+						  <dd class="Variables">
+						  	Nivel de estudios y situación laboral, Indicador, Asistencia</dd>
+					</dl>
+					</span>
+			<a href="/CulturaJaxiPx/Tabla.htm?path=/t9/p9/a1a2024-2025/c02/l0/&amp;file=02011.px&amp;L=0" data-tabla="1--9223372036854775796" class="titulo t2">2.11. Personas según la asistencia o visita a museos, exposiciones, galerías de arte, monumentos y yacimientos arqueológicos por nivel de estudios y situación laboral </a>
+				<li role="none">
+		<span class="additional">
+				<a href="/CulturaJaxiPx/dlgExport.htm?path=/t9/p9/a1a2024-2025/c02//&file=02012.px&nocab=1&L=0" class="thickbox" title="Descarga ficheros" role="button"><img class="iconoDown" src="/menus//plantillas/inebase/img/down.gif"  alt="Descarga ficheros"></a>
+
+				<a href="#" class="tooltip tooltip-evnt" id="t_-9223372036854775795Tooltip" aria-label="Información sobre última modificación, dimensiones y periodo" aria-haspopup="true" role="button"><img class="icono" src="/menus//plantillas/inebase/img/i.gif" alt="Informacion tabla"></a>
+					<dl class="tooltip-content" role="tooltip" aria-labelledby="t_-9223372036854775795Tooltip">
+						<dt class="FechCambio">Ultima modificacion: </dt>
+						  <dd class="FechCambio">29/07/2025</dd>
+						<dt class="Tamanyo">Tamaño del fichero:</dt>
+						  <dd class="Tamanyo">4.441,00 bytes</dd>
+						<dt class="Variables">Dimensiones:</dt>
+						  <dd class="Variables">

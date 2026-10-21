@@ -1,0 +1,34 @@
+./.openplanter/wiki/ine_turismo_moviles_experimental.md
+./.openplanter/wiki/observatori_turisme_barcelona.md
+./.openplanter/wiki/observatori_turisme_barcelona_iaotb_capsula_pdfs.md
+./.openplanter/wiki/observatori_turisme_barcelona_otb.md
+./.openplanter/wiki/turisme_de_barcelona_thisisbarcelona.md
+./.openplanter/wiki/untourism_news_international_tourism_up_2_q1_2026.md
+./.openplanter/wiki/untourism_world_tourism_barometer_data.md
+./.openplanter/wiki/untourism_world_tourism_barometer_may_2026_excerpt.md
+./.openplanter/wiki/unwto_2025_international_tourist_arrivals_press_release.md
+./.openplanter/wiki/un_tourism_press_releases.md
+./.openplanter/wiki/un_tourism_unwto.md
+./.openplanter/wiki/un_tourism_unwto_news_international_tourist_arrivals_up_4_in_2025.md
+./.openplanter/wiki/un_tourism_unwto_news_world_tourism_barometer_q1_2026.md
+./.openplanter/wiki/un_tourism_world_tourism_barometer.md
+./.openplanter/wiki/un_tourism_world_tourism_barometer_may_2026_excerpt_pdf.md
+./findings.md
+16 _report_files.txt
+./.openplanter/wiki/ine_turismo_moviles_experimental.md
+./.openplanter/wiki/observatori_turisme_barcelona.md
+./.openplanter/wiki/observatori_turisme_barcelona_iaotb_capsula_pdfs.md
+./.openplanter/wiki/observatori_turisme_barcelona_otb.md
+./.openplanter/wiki/turisme_de_barcelona_thisisbarcelona.md
+./.openplanter/wiki/untourism_news_international_tourism_up_2_q1_2026.md
+./.openplanter/wiki/untourism_world_tourism_barometer_data.md
+./.openplanter/wiki/untourism_world_tourism_barometer_may_2026_excerpt.md
+./.openplanter/wiki/unwto_2025_international_tourist_arrivals_press_release.md
+./.openplanter/wiki/un_tourism_press_releases.md
+./.openplanter/wiki/un_tourism_unwto.md
+./.openplanter/wiki/un_tourism_unwto_news_international_tourist_arrivals_up_4_in_2025.md
+./.openplanter/wiki/un_tourism_unwto_news_world_tourism_barometer_q1_2026.md
+./.openplanter/wiki/un_tourism_world_tourism_barometer.md
+./.openplanter/wiki/un_tourism_world_tourism_barometer_may_2026_excerpt_pdf.md
+./findings.md
+16 _report_files.txt
